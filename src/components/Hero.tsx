@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.svg";
+import logoNegative from "@/assets/logo-negative.png";
 import pizza1 from "@/assets/pizza-1.png";
 import { Button } from "@/components/ui/button";
 
@@ -12,9 +12,9 @@ const Hero = () => {
       <div className="absolute inset-0 bg-foreground/70" />
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
         <img
-          src={logo}
+          src={logoNegative}
           alt="Carinostri"
-          className="h-28 md:h-40 mx-auto mb-8 invert brightness-200"
+          className="h-28 md:h-40 mx-auto mb-8"
         />
         <p className="text-primary-foreground/70 tracking-[0.25em] uppercase text-xs md:text-sm mb-10" style={{ fontFamily: 'var(--font-body)' }}>
           Pizza Artigianale · Forno a Legna
