@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-foreground/70" />
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
         <img
-          src={logo}
+          src={logoNegative}
           alt="Carinostri"
           className="h-28 md:h-40 mx-auto mb-8"
         />
