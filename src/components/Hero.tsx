@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.svg";
+import logoNegative from "@/assets/logo-negative.png";
 import pizza1 from "@/assets/pizza-1.png";
 import { Button } from "@/components/ui/button";
 
