@@ -1,24 +1,41 @@
+import pattern from "@/assets/pattern.svg";
+import dough from "@/assets/dough-2.jpg";
+
 const About = () => {
   return (
-    <section className="py-24 px-4 bg-background">
-      <div className="max-w-4xl mx-auto text-center">
-        <p className="text-primary tracking-[0.3em] uppercase text-sm mb-2 font-body">
-          Our Story
-        </p>
-        <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-          A Family Tradition
-        </h2>
-        <div className="w-16 h-0.5 bg-accent mx-auto mb-8" />
-        <p className="text-muted-foreground font-body text-lg leading-relaxed max-w-2xl mx-auto mb-6">
-          Since 1987, La Bella Pizzeria has been serving the neighborhood with 
-          love, passion, and the finest ingredients imported straight from Italy. 
-          Our dough is made fresh every morning, left to rise for 48 hours, and 
-          baked in our wood-fired oven at 900°F.
-        </p>
-        <p className="text-muted-foreground font-body text-lg leading-relaxed max-w-2xl mx-auto">
-          Every pizza tells a story — one of tradition, craftsmanship, and the 
-          simple joy of sharing a meal with the people you love.
-        </p>
+    <section className="relative py-24 px-4 bg-card overflow-hidden">
+      <img
+        src={pattern}
+        alt=""
+        className="absolute top-0 right-0 w-64 opacity-[0.06] pointer-events-none"
+      />
+      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="aspect-[4/5] overflow-hidden rounded-sm">
+          <img
+            src={dough}
+            alt="Impasto artigianale"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <p className="text-primary tracking-[0.3em] uppercase text-xs mb-3">
+            Chi Siamo
+          </p>
+          <h2 className="text-4xl md:text-5xl font-normal text-card-foreground mb-6">
+            La Nostra Storia
+          </h2>
+          <div className="w-12 h-px bg-primary mb-8" />
+          <p className="text-muted-foreground text-base leading-relaxed mb-5">
+            Da Carinostri, ogni pizza racconta una storia di passione e
+            tradizione. Il nostro impasto viene preparato ogni mattina con
+            farine selezionate e lasciato lievitare per 48 ore.
+          </p>
+          <p className="text-muted-foreground text-base leading-relaxed">
+            Cotto nel nostro forno a legna a 450°C, ogni morso è un viaggio
+            nella vera pizza artigianale italiana.
+          </p>
+        </div>
       </div>
     </section>
   );

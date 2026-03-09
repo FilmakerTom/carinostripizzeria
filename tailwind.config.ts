@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Playfair Display', 'serif'],
-        body: ['Lato', 'sans-serif'],
+        display: ['GFS Didot', 'Didot', 'serif'],
+        body: ['Raleway', 'sans-serif'],
+        script: ['Dancing Script', 'cursive'],
       },
       colors: {
         border: "hsl(var(--border))",
