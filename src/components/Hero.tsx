@@ -14,7 +14,7 @@ const Hero = () => {
         <img
           src={logo}
           alt="Carinostri"
-          className="h-28 md:h-40 mx-auto mb-8 invert brightness-200"
+          className="h-28 md:h-40 mx-auto mb-8"
         />
         <p className="text-primary-foreground/70 tracking-[0.25em] uppercase text-xs md:text-sm mb-10" style={{ fontFamily: 'var(--font-body)' }}>
           Pizza Artigianale · Forno a Legna

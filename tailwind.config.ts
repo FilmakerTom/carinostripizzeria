@@ -16,7 +16,7 @@ export default {
       fontFamily: {
         display: ['GFS Didot', 'Didot', 'serif'],
         body: ['Raleway', 'sans-serif'],
-        script: ['Dancing Script', 'cursive'],
+        script: ['Julietta Messie', 'cursive'],
       },
       colors: {
         border: "hsl(var(--border))",
