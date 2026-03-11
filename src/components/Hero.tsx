@@ -24,15 +24,17 @@ const Hero = () => {
           <Button
             size="lg"
             className="bg-primary text-primary-foreground hover:bg-primary/90 text-sm px-8 py-6 tracking-widest uppercase"
+            asChild
           >
-            Il Nostro Menu
+            <Link to="/menu">Il Nostro Menu</Link>
           </Button>
           <Button
             size="lg"
             variant="outline"
             className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-sm px-8 py-6 tracking-widest uppercase"
+            asChild
           >
-            Prenota un Tavolo
+            <Link to="/chi-siamo">Chi Siamo</Link>
           </Button>
         </div>
       </div>
