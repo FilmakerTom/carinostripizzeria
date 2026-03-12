@@ -1,7 +1,7 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const pizzas = [
-{ name: "Margherita", description: "Pomodoro San Marzano, fior di latte, basilico fresco, olio EVO", price: "€8" },
+{ name: "La Trevigiana DOC", description: "morlacco del Grappa, sopressa, Radicchio trevigiano IGP, olio e.v.o.", price: "€13" },
 { name: "Diavola", description: "Salame piccante, peperoni arrostiti, mozzarella, olio al peperoncino", price: "€10" },
 { name: "Quattro Formaggi", description: "Mozzarella, gorgonzola, fontina, parmigiano reggiano", price: "€11" },
 { name: "Prosciutto e Rucola", description: "Prosciutto di Parma, rucola selvatica, scaglie di parmigiano, olio al tartufo", price: "€12" },
