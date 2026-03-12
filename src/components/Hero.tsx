@@ -31,7 +31,7 @@ const Hero = () => {
           <Button
             size="lg"
             variant="outline"
-            className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-sm px-8 py-6 tracking-widest uppercase"
+            className="border-foreground/30 text-foreground hover:bg-foreground/10 text-sm px-8 py-6 tracking-widest uppercase"
             asChild
           >
             <Link to="/chi-siamo">Chi Siamo</Link>
