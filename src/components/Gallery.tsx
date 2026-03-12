@@ -1,3 +1,4 @@
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import pizza1 from "@/assets/pizza-1.png";
 import pizza2 from "@/assets/pizza-2.png";
 import foodDetail from "@/assets/food-detail.jpg";
@@ -9,10 +10,18 @@ const gallery = [
 ];
 
 const Gallery = () => {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
+  const { ref: gridRef, isVisible: gridVisible } = useScrollReveal({ threshold: 0.1 });
+
   return (
     <section className="py-20 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-14">
+        <div
+          ref={headerRef}
+          className={`text-center mb-14 transition-all duration-700 ease-out ${
+            headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <p className="text-primary tracking-[0.3em] uppercase text-xs mb-3">
             Le Nostre Creazioni
           </p>
@@ -21,9 +30,15 @@ const Gallery = () => {
           </h2>
           <div className="w-12 h-px bg-primary mx-auto mt-5" />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {gallery.map((img, i) => (
-            <div key={i} className="aspect-square overflow-hidden rounded-sm">
+            <div
+              key={i}
+              className={`aspect-square overflow-hidden rounded-sm transition-all duration-700 ease-out ${
+                gridVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-95"
+              }`}
+              style={{ transitionDelay: gridVisible ? `${i * 150}ms` : "0ms" }}
+            >
               <img
                 src={img.src}
                 alt={img.alt}
