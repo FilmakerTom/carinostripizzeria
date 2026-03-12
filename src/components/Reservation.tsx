@@ -11,6 +11,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const timeSlots = [
   "12:00", "12:30", "13:00", "13:30", "14:00",
@@ -26,6 +27,7 @@ const Reservation = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [notes, setNotes] = useState("");
+  const { ref, isVisible } = useScrollReveal({ threshold: 0.1 });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,7 +53,12 @@ const Reservation = () => {
 
   return (
     <section id="prenota" className="py-20 md:py-28 bg-card">
-      <div className="max-w-2xl mx-auto px-4">
+      <div
+        ref={ref}
+        className={`max-w-2xl mx-auto px-4 transition-all duration-700 ease-out ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <h2
           className="text-4xl md:text-5xl text-center text-foreground mb-3"
           style={{ fontFamily: "var(--font-display)" }}
@@ -67,7 +74,6 @@ const Reservation = () => {
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {/* Date */}
             <div className="space-y-2">
               <Label className="text-xs uppercase tracking-widest text-muted-foreground" style={{ fontFamily: "var(--font-body)" }}>
                 Data *
@@ -98,7 +104,6 @@ const Reservation = () => {
               </Popover>
             </div>
 
-            {/* Time */}
             <div className="space-y-2">
               <Label className="text-xs uppercase tracking-widest text-muted-foreground" style={{ fontFamily: "var(--font-body)" }}>
                 Ora *
@@ -116,7 +121,6 @@ const Reservation = () => {
               </Select>
             </div>
 
-            {/* Guests */}
             <div className="space-y-2">
               <Label className="text-xs uppercase tracking-widest text-muted-foreground" style={{ fontFamily: "var(--font-body)" }}>
                 Ospiti *

@@ -1,3 +1,5 @@
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+
 const pizzas = [
   { name: "Margherita", description: "Pomodoro San Marzano, fior di latte, basilico fresco, olio EVO", price: "€8" },
   { name: "Diavola", description: "Salame piccante, peperoni arrostiti, mozzarella, olio al peperoncino", price: "€10" },
@@ -8,10 +10,18 @@ const pizzas = [
 ];
 
 const MenuSection = () => {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollReveal();
+  const { ref: listRef, isVisible: listVisible } = useScrollReveal({ rootMargin: "0px 0px -20px 0px" });
+
   return (
     <section id="menu" className="py-24 px-4 bg-background">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
+        <div
+          ref={headerRef}
+          className={`text-center mb-16 transition-all duration-700 ease-out ${
+            headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <p className="text-primary tracking-[0.3em] uppercase text-xs mb-3">
             Dal Nostro Forno
           </p>
@@ -20,11 +30,14 @@ const MenuSection = () => {
           </h2>
           <div className="w-12 h-px bg-primary mx-auto mt-5" />
         </div>
-        <div className="space-y-0 divide-y divide-border">
-          {pizzas.map((pizza) => (
+        <div ref={listRef} className="space-y-0 divide-y divide-border">
+          {pizzas.map((pizza, i) => (
             <div
               key={pizza.name}
-              className="flex justify-between items-start py-6 group"
+              className={`flex justify-between items-start py-6 group transition-all duration-500 ease-out ${
+                listVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+              }`}
+              style={{ transitionDelay: listVisible ? `${i * 80}ms` : "0ms" }}
             >
               <div className="flex-1 pr-4">
                 <h3 className="text-xl md:text-2xl text-foreground group-hover:text-primary transition-colors">

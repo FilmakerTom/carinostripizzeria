@@ -1,7 +1,11 @@
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import pattern from "@/assets/pattern.svg";
 import dough from "@/assets/dough-2.jpg";
 
 const About = () => {
+  const { ref: imgRef, isVisible: imgVisible } = useScrollReveal({ threshold: 0.2 });
+  const { ref: textRef, isVisible: textVisible } = useScrollReveal({ threshold: 0.2 });
+
   return (
     <section className="relative py-24 px-4 bg-card overflow-hidden">
       <img
@@ -10,7 +14,12 @@ const About = () => {
         className="absolute top-0 right-0 w-64 opacity-[0.06] pointer-events-none"
       />
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <div className="aspect-[4/5] overflow-hidden rounded-sm">
+        <div
+          ref={imgRef}
+          className={`aspect-[4/5] overflow-hidden rounded-sm transition-all duration-700 ease-out ${
+            imgVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+          }`}
+        >
           <img
             src={dough}
             alt="Impasto artigianale"
@@ -18,7 +27,12 @@ const About = () => {
             loading="lazy"
           />
         </div>
-        <div>
+        <div
+          ref={textRef}
+          className={`transition-all duration-700 ease-out delay-200 ${
+            textVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+          }`}
+        >
           <p className="text-primary tracking-[0.3em] uppercase text-xs mb-3">
             Chi Siamo
           </p>
