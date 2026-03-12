@@ -27,7 +27,7 @@ const Gallery = () => {
               <img
                 src={img.src}
                 alt={img.alt}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                className={`w-full h-full object-cover hover:scale-105 transition-transform duration-500 ${i === 0 ? "scale-[1.2] object-[center_40%]" : ""}`}
                 loading="lazy"
               />
             </div>
