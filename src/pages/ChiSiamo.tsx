@@ -88,7 +88,7 @@ const ChiSiamo = () => {
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { icon: MapPin, label: "Indirizzo", value: "Via Roma 123\n00100 Roma" },
+              { icon: MapPin, label: "Indirizzo", value: "Via Francesco Baracca, 64\n31036 Sala TV" },
               { icon: Phone, label: "Telefono", value: "+39 06 1234 5678" },
               { icon: Mail, label: "Email", value: "info@carinostri.it" },
               { icon: Clock, label: "Orari", value: "Lun–Sab: 18–23\nDom: 12–15 · 18–23" },

@@ -13,8 +13,8 @@ const Footer = () => {
             <MapPin className="text-primary" size={24} />
             <h3 className="text-background text-sm tracking-widest uppercase">Dove Siamo</h3>
             <p className="text-background/50 text-sm">
-              Via Roma 123<br />
-              00100 Roma, Italia
+              Via Francesco Baracca, 64<br />
+              31036 Sala TV
             </p>
           </div>
           <div className="flex flex-col items-center gap-3">
