@@ -220,7 +220,7 @@ const MenuPage = () => {
           </p>
           <h1 className="text-5xl md:text-6xl font-normal text-background">Menù</h1>
           <div className="w-12 h-px bg-primary mx-auto mt-5" />
-          <p className="text-muted-foreground/60 text-sm mt-4">Coperto: €2,50</p>
+          <p className="text-sm mt-4 text-muted">Coperto: €2,50</p>
         </div>
       </section>
 
