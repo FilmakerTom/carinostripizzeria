@@ -1,12 +1,13 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const pizzas = [
-{ name: "La Trevigiana DOC", description: "morlacco del Grappa, sopressa, Radicchio trevigiano IGP, olio e.v.o.", price: "€13" },
-{ name: "Diavola", description: "Salame piccante, peperoni arrostiti, mozzarella, olio al peperoncino", price: "€10" },
-{ name: "Quattro Formaggi", description: "Mozzarella, gorgonzola, fontina, parmigiano reggiano", price: "€11" },
-{ name: "Prosciutto e Rucola", description: "Prosciutto di Parma, rucola selvatica, scaglie di parmigiano, olio al tartufo", price: "€12" },
-{ name: "Funghi", description: "Funghi misti, crema di tartufo, mozzarella, timo fresco", price: "€10" },
-{ name: "Napoli", description: "Acciughe, capperi, olive taggiasche, pomodoro San Marzano, origano", price: "€9" }];
+  { name: "Carinostri", description: "Porchetta, salsa di pomodoro, fiordilatte", price: "€9" },
+  { name: "La Margherita D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, olio e.v.o., basilico", price: "€9" },
+  { name: "La Diavola D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, nduja, capperi, basilico", price: "€11" },
+  { name: "Porchetta Tonnata", description: "Porchetta, salsa tonnata, pomodorini confit, rucola, frutto di cappero", price: "€13" },
+  { name: "Carbonara d'Asparagi", description: "Fiordilatte, asparagi verdi al forno, guanciale, carbonara, pecorino", price: "€15" },
+  { name: "Oro Verde", description: "Mozzarella di bufala DOP, zucchine, pomodorini, pesto di pistacchi, basilico", price: "€12" },
+];
 
 
 const MenuSection = () => {
