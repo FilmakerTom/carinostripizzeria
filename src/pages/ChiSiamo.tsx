@@ -91,7 +91,7 @@ const ChiSiamo = () => {
               { icon: MapPin, label: "Indirizzo", value: "Via Francesco Baracca, 64\n31036 Sala TV" },
               { icon: Phone, label: "Telefono", value: "+39 06 1234 5678" },
               { icon: Mail, label: "Email", value: "info@carinostri.it" },
-              { icon: Clock, label: "Orari", value: "Lun–Sab: 18–23\nDom: 12–15 · 18–23" },
+              { icon: Clock, label: "Orari", value: "Mer–Dom: 18:00 – 23:00" },
             ].map((c) => (
               <div key={c.label} className="flex flex-col items-center gap-3">
                 <c.icon className="text-primary" size={22} />
