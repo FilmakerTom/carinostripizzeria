@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 import pattern from "@/assets/pattern.svg";
 import dough1 from "@/assets/dough-1.jpg";
 import pizza1 from "@/assets/pizza-1.png";
-import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import { MapPin, Phone, Clock, Mail, Facebook, Instagram } from "lucide-react";
 
 const ChiSiamo = () => {
   return (
@@ -86,11 +86,11 @@ const ChiSiamo = () => {
             <h2 className="text-3xl md:text-4xl font-normal text-foreground">Contatti</h2>
             <div className="w-10 h-px bg-primary mx-auto mt-5" />
           </div>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid sm:grid-cols-2 md:grid-cols-5 gap-8 text-center">
             {[
               { icon: MapPin, label: "Indirizzo", value: "Via Francesco Baracca, 64\n31036 Sala TV" },
-              { icon: Phone, label: "Telefono", value: "+39 06 1234 5678" },
-              { icon: Mail, label: "Email", value: "info@carinostri.it" },
+              { icon: Phone, label: "Telefono", value: "0422 547305" },
+              { icon: Mail, label: "Email", value: "carinostri@gmail.com" },
               { icon: Clock, label: "Orari", value: "Mer–Dom: 18:00 – 23:00" },
             ].map((c) => (
               <div key={c.label} className="flex flex-col items-center gap-3">
@@ -99,6 +99,17 @@ const ChiSiamo = () => {
                 <p className="text-muted-foreground text-sm whitespace-pre-line">{c.value}</p>
               </div>
             ))}
+            <div className="flex flex-col items-center gap-3">
+              <h3 className="text-xs tracking-widest uppercase text-foreground">Social</h3>
+              <div className="flex gap-4">
+                <a href="https://www.facebook.com/share/1b2Kszp4Gi/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Facebook size={22} />
+                </a>
+                <a href="https://www.instagram.com/carinostri?igsh=cnE4bTl2amdweW11&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Instagram size={22} />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

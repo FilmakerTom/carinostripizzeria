@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Clock, Facebook, Instagram } from "lucide-react";
 import pittogramma from "@/assets/pittogramma.svg";
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex justify-center mb-10">
           <img src={pittogramma} alt="Carinostri" className="h-12" />
         </div>
-        <div className="grid md:grid-cols-3 gap-10 text-center">
+        <div className="grid md:grid-cols-4 gap-10 text-center">
           <div className="flex flex-col items-center gap-3">
             <MapPin className="text-primary" size={24} />
             <h3 className="text-background text-sm tracking-widest uppercase">Dove Siamo</h3>
@@ -28,9 +28,20 @@ const Footer = () => {
             <Phone className="text-primary" size={24} />
             <h3 className="text-background text-sm tracking-widest uppercase">Contatti</h3>
             <p className="text-background/50 text-sm">
-              +39 06 1234 5678<br />
-              info@carinostri.it
+              0422 547305<br />
+              carinostri@gmail.com
             </p>
+          </div>
+          <div className="flex flex-col items-center gap-3">
+            <h3 className="text-background text-sm tracking-widest uppercase">Social</h3>
+            <div className="flex gap-4">
+              <a href="https://www.facebook.com/share/1b2Kszp4Gi/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-background/50 hover:text-primary transition-colors">
+                <Facebook size={22} />
+              </a>
+              <a href="https://www.instagram.com/carinostri?igsh=cnE4bTl2amdweW11&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-background/50 hover:text-primary transition-colors">
+                <Instagram size={22} />
+              </a>
+            </div>
           </div>
         </div>
         <div className="border-t border-background/10 mt-12 pt-8 text-center">
