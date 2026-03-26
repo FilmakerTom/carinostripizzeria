@@ -1,12 +1,9 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const pizzas = [
-  { name: "Carinostri", description: "Porchetta, salsa di pomodoro, fiordilatte", price: "€9" },
-  { name: "La Margherita D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, olio e.v.o., basilico", price: "€9" },
-  { name: "La Diavola D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, nduja, capperi, basilico", price: "€11" },
-  { name: "Porchetta Tonnata", description: "Porchetta, salsa tonnata, pomodorini confit, rucola, frutto di cappero", price: "€13" },
+  { name: "Agretti Tonno e Peperoni", description: "Fiordilatte, insalata di agretti, tonno, peperoni affumicati, salamino piccante, origano", price: "€14" },
+  { name: "Cavolo Nero", description: "Cavolo nero, spaccatello, salamino piccante, mortadella del Grappa, pomodori secchi", price: "€14" },
   { name: "Carbonara d'Asparagi", description: "Fiordilatte, asparagi verdi al forno, guanciale, carbonara, pecorino", price: "€15" },
-  { name: "Oro Verde", description: "Mozzarella di bufala DOP, zucchine, pomodorini, pesto di pistacchi, basilico", price: "€12" },
 ];
 
 
