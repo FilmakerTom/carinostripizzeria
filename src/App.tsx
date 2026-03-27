@@ -22,6 +22,7 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <Navbar />
+        <BackToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/menu" element={<MenuPage />} />
