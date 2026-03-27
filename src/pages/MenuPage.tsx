@@ -46,9 +46,9 @@ const MenuCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => (
 );
 
 const categories = [
+  { id: "antipasti", label: "Antipasti" },
   { id: "pizze", label: "Pizze" },
-  { id: "primi", label: "Primi Piatti" },
-  { id: "secondi", label: "Secondi Piatti" },
+  { id: "sandwiches", label: "Sandwiches" },
   { id: "bibite", label: "Bibite" },
 ];
 
@@ -125,7 +125,9 @@ const MenuPage = () => {
         <div className="max-w-4xl mx-auto">
 
           {/* ── ANTIPASTI & APERITIVI ── */}
-          <MenuCategory title="Aperitivi" subtitle="Per Iniziare" items={aperitivi} />
+          <div id="antipasti">
+            <MenuCategory title="Aperitivi" subtitle="Per Iniziare" items={aperitivi} />
+          </div>
           <MenuCategory title="Focaccia a Spicchi" subtitle="Antipasti & Fritti" items={focaccia} />
           <MenuCategory title="Taglieri di Affettati e Formaggi" subtitle="Antipasti & Fritti" items={taglieri} />
           <MenuCategory title="Fritti" subtitle="Antipasti & Fritti" items={fritti} />
@@ -142,19 +144,14 @@ const MenuPage = () => {
           <MenuCategory title="Pizze Tagliate Classiche" subtitle="Le Pizze Tagliate" items={pizzeTagliateClassiche} />
           <MenuCategory title="Pizze Tagliate Piccole" subtitle="Le Pizze Tagliate" items={pizzeTagliatePiccole} />
 
-          {/* ── PRIMI PIATTI ── */}
-          <div id="primi">
+          {/* ── SANDWICHES ── */}
+          <div id="sandwiches">
             <MenuCategory
               title="Sandwiches"
               subtitle="Pane Pizza Farcito"
               items={sandwiches}
               note="Il nostro pane pizza farcito servito con patate fritte e salsa rosa"
             />
-          </div>
-
-          {/* ── SECONDI PIATTI ── */}
-          <div id="secondi" className="pt-4">
-            <p className="text-muted-foreground text-center italic mb-16">Sezione in aggiornamento — chiedete al personale le proposte del giorno.</p>
           </div>
 
           {/* ── BIBITE ── */}
