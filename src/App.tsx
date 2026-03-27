@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/Navbar";
 import ScrollToTop from "@/components/ScrollToTop";
+import BackToTop from "@/components/BackToTop";
 import Index from "./pages/Index.tsx";
 import MenuPage from "./pages/MenuPage.tsx";
 import LaNostraStoria from "./pages/LaNostraStoria.tsx";
@@ -21,6 +22,7 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <Navbar />
+        <BackToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/menu" element={<MenuPage />} />
