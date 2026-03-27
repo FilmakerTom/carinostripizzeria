@@ -137,8 +137,8 @@ const MenuPage = () => {
           <MenuCategory title="Con Il Tonno" subtitle="Le Nostre Pizze" items={pizzeTonno} />
           <MenuCategory title="Le Pizze di Stagione" subtitle="Stagionali" items={pizzeStagione} />
           <MenuCategory title="Le Pizze D.O.C." subtitle="D'Eccellenza" items={pizzeDoc} />
-          <MenuCategory title="Le Carenestre Rosse" subtitle="Le Carenestre" items={carenestreRosse} />
-          <MenuCategory title="Le Carenestre Bianche" subtitle="Le Carenestre" items={carenestreBianche} />
+          <MenuCategory title="Le Carenostre" subtitle="Le Carenestre" items={carenestreRosse} />
+          <MenuCategory title="Le Carenostre Bianche" subtitle="Le Carenestre" items={carenestreBianche} />
           <MenuCategory title="Pizze Tagliate Classiche" subtitle="Le Pizze Tagliate" items={pizzeTagliateClassiche} />
           <MenuCategory title="Pizze Tagliate Piccole" subtitle="Le Pizze Tagliate" items={pizzeTagliatePiccole} />
 

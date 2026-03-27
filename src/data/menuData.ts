@@ -25,7 +25,7 @@ export const fritti: MenuItem[] = [
   { name: "Mozzarelle Panate", description: "", price: "€5" },
   { name: "Patate Fritte", description: "", price: "€5" },
   { name: "Fritto Misto", description: "", price: "€14" },
-  { name: "Aguglia Salsa", description: "", price: "€0,80" },
+  { name: "Aggiunta Salsa", description: "", price: "€0,80" },
 ];
 
 // ── APERITIVI ──
