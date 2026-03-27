@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logoNegative from "@/assets/logo-negative.png";
-import pizza1 from "@/assets/pizza-1.png";
+import pizza1 from "@/assets/pizza-hero.jpg";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
