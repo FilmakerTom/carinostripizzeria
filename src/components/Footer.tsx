@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-foreground py-16 px-4">
       <div className="max-w-5xl mx-auto">
         <div className="flex justify-center mb-10">
-          <img src={pittogramma} alt="Carinostri" className="h-12" />
+          <img alt="Carinostri" className="h-12" src="/lovable-uploads/b6c5eed4-e746-4d86-8129-0c4e19eb789c.png" />
         </div>
         <div className="grid md:grid-cols-4 gap-10 text-center">
           <div className="flex flex-col items-center gap-3">
@@ -50,8 +50,8 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
+
 };
 
 export default Footer;
