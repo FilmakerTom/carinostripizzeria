@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock, Facebook, Instagram } from "lucide-react";
+import { MapPin, Phone, Clock, Facebook, Instagram, Youtube } from "lucide-react";
 import pittogramma from "@/assets/pittogramma.svg";
 
 const Footer = () => {
@@ -40,6 +40,9 @@ const Footer = () => {
               </a>
               <a href="https://www.instagram.com/carinostri?igsh=cnE4bTl2amdweW11&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-background/50 hover:text-primary transition-colors">
                 <Instagram size={22} />
+              </a>
+              <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="text-background/50 hover:text-primary transition-colors">
+                <Youtube size={22} />
               </a>
             </div>
           </div>
