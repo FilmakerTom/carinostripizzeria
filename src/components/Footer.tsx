@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock, Facebook, Instagram } from "lucide-react";
+import { MapPin, Phone, Clock, Facebook, Instagram, Youtube } from "lucide-react";
 import pittogramma from "@/assets/pittogramma.svg";
 
 const Footer = () => {
