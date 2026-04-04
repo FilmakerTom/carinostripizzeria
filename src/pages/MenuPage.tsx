@@ -194,10 +194,10 @@ const MenuPage = () => {
           <MenuCategory title="Birre Speciali" subtitle="Dal Fusto" items={birreSpeciali} />
           <div className="flex items-center justify-center gap-6 mb-8">
             <span className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span className="text-lg" style={{ filter: "saturate(1.4) contrast(1.1)" }}>🍷</span> Calice
+              <WineGlassIcon className="w-4 h-4 text-primary" /> Calice
             </span>
             <span className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span className="text-lg" style={{ filter: "saturate(1.4) contrast(1.1)" }}>🍾</span> Bottiglia
+              <BottleIcon className="w-4 h-4 text-primary" /> Bottiglia
             </span>
           </div>
           <MenuCategory title="Bollicine" subtitle="I Nostri Vini" items={bollicine} />
