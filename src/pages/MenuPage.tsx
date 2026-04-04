@@ -40,12 +40,12 @@ const MenuCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => (
             item.price.includes("|") ? (
               <div className="flex items-center gap-3 shrink-0">
               <div className="flex items-center gap-4 shrink-0">
-                <span className="flex items-center gap-1.5 bg-primary/10 rounded-full px-3 py-1">
-                  <span className="text-sm grayscale-0 drop-shadow-sm">🍷</span>
+                <span className="flex items-center gap-1.5">
+                  <span className="text-lg" style={{ filter: "saturate(1.4) contrast(1.1)" }}>🍷</span>
                   <span className="text-sm font-semibold text-primary">{item.price.split("|")[0].trim()}</span>
                 </span>
-                <span className="flex items-center gap-1.5 bg-primary/10 rounded-full px-3 py-1">
-                  <span className="text-sm grayscale-0 drop-shadow-sm">🍾</span>
+                <span className="flex items-center gap-1.5">
+                  <span className="text-lg" style={{ filter: "saturate(1.4) contrast(1.1)" }}>🍾</span>
                   <span className="text-sm font-semibold text-primary">{item.price.split("|")[1].trim()}</span>
                 </span>
               </div>
@@ -176,11 +176,11 @@ const MenuPage = () => {
           <MenuCategory title="Novità" subtitle="Bevande" items={birreNovita} />
           <MenuCategory title="Birre Speciali" subtitle="Dal Fusto" items={birreSpeciali} />
           <div className="flex items-center justify-center gap-6 mb-8">
-            <span className="flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 text-sm text-muted-foreground">
-              <span className="drop-shadow-sm">🍷</span> Calice
+            <span className="flex items-center gap-2 text-sm text-muted-foreground">
+              <span className="text-lg" style={{ filter: "saturate(1.4) contrast(1.1)" }}>🍷</span> Calice
             </span>
-            <span className="flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 text-sm text-muted-foreground">
-              <span className="drop-shadow-sm">🍾</span> Bottiglia
+            <span className="flex items-center gap-2 text-sm text-muted-foreground">
+              <span className="text-lg" style={{ filter: "saturate(1.4) contrast(1.1)" }}>🍾</span> Bottiglia
             </span>
           </div>
           <MenuCategory title="Bollicine" subtitle="I Nostri Vini" items={bollicine} />
