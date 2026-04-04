@@ -1,4 +1,21 @@
 import { useState, useEffect } from "react";
+
+const WineGlassIcon = ({ className = "" }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M8 2h8l-1.5 9a4.5 4.5 0 0 1-5 0L8 2z" />
+    <path d="M12 11v7" />
+    <path d="M8 22h8" />
+    <path d="M7.5 7h9" />
+  </svg>
+);
+
+const BottleIcon = ({ className = "" }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M10 2h4v3l1.5 3v12a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2V8L10 5V2z" />
+    <path d="M8.5 8h7" />
+    <path d="M10 2h4" />
+  </svg>
+);
 import Footer from "@/components/Footer";
 import pattern from "@/assets/pattern.svg";
 import {
