@@ -39,14 +39,16 @@ const MenuCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => (
           {item.price && (
             item.price.includes("|") ? (
               <div className="flex items-center gap-3 shrink-0">
-                <span className="flex items-center gap-1 text-primary font-semibold text-sm">
-                  <span className="text-base">🍷</span>
-                  {item.price.split("|")[0].trim()}
+              <div className="flex items-center gap-4 shrink-0">
+                <span className="flex items-center gap-1.5 bg-primary/10 rounded-full px-3 py-1">
+                  <span className="text-sm grayscale-0 drop-shadow-sm">🍷</span>
+                  <span className="text-sm font-semibold text-primary">{item.price.split("|")[0].trim()}</span>
                 </span>
-                <span className="flex items-center gap-1 text-primary font-semibold text-sm">
-                  <span className="text-base">🍾</span>
-                  {item.price.split("|")[1].trim()}
+                <span className="flex items-center gap-1.5 bg-primary/10 rounded-full px-3 py-1">
+                  <span className="text-sm grayscale-0 drop-shadow-sm">🍾</span>
+                  <span className="text-sm font-semibold text-primary">{item.price.split("|")[1].trim()}</span>
                 </span>
+              </div>
               </div>
             ) : (
               <span className="text-lg text-primary font-semibold shrink-0">{item.price}</span>
