@@ -58,11 +58,11 @@ const MenuCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => (
               <div className="flex items-center gap-3 shrink-0">
               <div className="flex items-center gap-4 shrink-0">
                 <span className="flex items-center gap-1.5">
-                  <span className="text-lg" style={{ filter: "saturate(1.4) contrast(1.1)" }}>🍷</span>
+                  <WineGlassIcon className="w-4 h-4 text-primary" />
                   <span className="text-sm font-semibold text-primary">{item.price.split("|")[0].trim()}</span>
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="text-lg" style={{ filter: "saturate(1.4) contrast(1.1)" }}>🍾</span>
+                  <BottleIcon className="w-4 h-4 text-primary" />
                   <span className="text-sm font-semibold text-primary">{item.price.split("|")[1].trim()}</span>
                 </span>
               </div>
