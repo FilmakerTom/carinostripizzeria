@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Wine, GlassWater } from "lucide-react";
 import Footer from "@/components/Footer";
 import pattern from "@/assets/pattern.svg";
 import {
