@@ -38,7 +38,20 @@ const MenuCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => (
             )}
           </div>
           {item.price && (
-            <span className="text-lg text-primary font-semibold shrink-0">{item.price}</span>
+            item.price.includes("|") ? (
+              <div className="flex items-center gap-3 shrink-0">
+                <span className="flex items-center gap-1 text-primary font-semibold text-sm">
+                  <GlassWater size={14} className="text-muted-foreground" />
+                  {item.price.split("|")[0].trim()}
+                </span>
+                <span className="flex items-center gap-1 text-primary font-semibold text-sm">
+                  <Wine size={14} className="text-muted-foreground" />
+                  {item.price.split("|")[1].trim()}
+                </span>
+              </div>
+            ) : (
+              <span className="text-lg text-primary font-semibold shrink-0">{item.price}</span>
+            )
           )}
         </div>
       ))}
