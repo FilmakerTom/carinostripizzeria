@@ -57,11 +57,11 @@ const ChiSiamo = () => {
             {[
               {
                 title: "Qualità",
-                text: "Solo ingredienti di prima scelta, selezionati dai migliori produttori italiani.",
+                text: "Usiamo prodotti freschi e di prima qualità per un gusto unico e piacevole",
               },
               {
                 title: "Tradizione",
-                text: "Rispettiamo le tecniche centenarie della pizza napoletana, dal forno a legna alla lievitazione naturale.",
+                text: "Portiamo avanti la cura e la lavorazione del lievito madre da decenni",
               },
               {
                 title: "Accoglienza",
