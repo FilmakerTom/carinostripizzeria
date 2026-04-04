@@ -39,14 +39,16 @@ const MenuCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => (
           {item.price && (
             item.price.includes("|") ? (
               <div className="flex items-center gap-3 shrink-0">
-                <span className="flex items-center gap-1 text-primary font-semibold text-sm">
-                  <span className="text-base">🍷</span>
-                  {item.price.split("|")[0].trim()}
+              <div className="flex items-center gap-4 shrink-0">
+                <span className="flex items-center gap-1.5 bg-primary/10 rounded-full px-3 py-1">
+                  <span className="text-sm grayscale-0 drop-shadow-sm">🍷</span>
+                  <span className="text-sm font-semibold text-primary">{item.price.split("|")[0].trim()}</span>
                 </span>
-                <span className="flex items-center gap-1 text-primary font-semibold text-sm">
-                  <span className="text-base">🍾</span>
-                  {item.price.split("|")[1].trim()}
+                <span className="flex items-center gap-1.5 bg-primary/10 rounded-full px-3 py-1">
+                  <span className="text-sm grayscale-0 drop-shadow-sm">🍾</span>
+                  <span className="text-sm font-semibold text-primary">{item.price.split("|")[1].trim()}</span>
                 </span>
+              </div>
               </div>
             ) : (
               <span className="text-lg text-primary font-semibold shrink-0">{item.price}</span>
@@ -173,9 +175,13 @@ const MenuPage = () => {
           </div>
           <MenuCategory title="Novità" subtitle="Bevande" items={birreNovita} />
           <MenuCategory title="Birre Speciali" subtitle="Dal Fusto" items={birreSpeciali} />
-          <div className="flex items-center justify-center gap-6 mb-8 text-xs text-muted-foreground">
-            <span className="flex items-center gap-1"><span>🍷</span> Calice</span>
-            <span className="flex items-center gap-1"><span>🍾</span> Bottiglia</span>
+          <div className="flex items-center justify-center gap-6 mb-8">
+            <span className="flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 text-sm text-muted-foreground">
+              <span className="drop-shadow-sm">🍷</span> Calice
+            </span>
+            <span className="flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 text-sm text-muted-foreground">
+              <span className="drop-shadow-sm">🍾</span> Bottiglia
+            </span>
           </div>
           <MenuCategory title="Bollicine" subtitle="I Nostri Vini" items={bollicine} />
           <MenuCategory title="Vini Bianchi Fermi" subtitle="I Nostri Vini" items={viniBianchi} />
