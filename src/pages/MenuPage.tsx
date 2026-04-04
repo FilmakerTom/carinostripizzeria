@@ -174,6 +174,10 @@ const MenuPage = () => {
           </div>
           <MenuCategory title="Novità" subtitle="Bevande" items={birreNovita} />
           <MenuCategory title="Birre Speciali" subtitle="Dal Fusto" items={birreSpeciali} />
+          <div className="flex items-center justify-center gap-6 mb-8 text-xs text-muted-foreground">
+            <span className="flex items-center gap-1"><GlassWater size={14} /> Calice</span>
+            <span className="flex items-center gap-1"><Wine size={14} /> Bottiglia</span>
+          </div>
           <MenuCategory title="Bollicine" subtitle="I Nostri Vini" items={bollicine} />
           <MenuCategory title="Vini Bianchi Fermi" subtitle="I Nostri Vini" items={viniBianchi} />
           <MenuCategory title="Rossi" subtitle="I Nostri Vini" items={viniRossi} />
