@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Wine, GlassWater } from "lucide-react";
 import Footer from "@/components/Footer";
 import pattern from "@/assets/pattern.svg";
 import {
@@ -41,11 +40,11 @@ const MenuCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => (
             item.price.includes("|") ? (
               <div className="flex items-center gap-3 shrink-0">
                 <span className="flex items-center gap-1 text-primary font-semibold text-sm">
-                  <GlassWater size={14} className="text-muted-foreground" />
+                  <span className="text-base">🍷</span>
                   {item.price.split("|")[0].trim()}
                 </span>
                 <span className="flex items-center gap-1 text-primary font-semibold text-sm">
-                  <Wine size={14} className="text-muted-foreground" />
+                  <span className="text-base">🍾</span>
                   {item.price.split("|")[1].trim()}
                 </span>
               </div>
@@ -175,8 +174,8 @@ const MenuPage = () => {
           <MenuCategory title="Novità" subtitle="Bevande" items={birreNovita} />
           <MenuCategory title="Birre Speciali" subtitle="Dal Fusto" items={birreSpeciali} />
           <div className="flex items-center justify-center gap-6 mb-8 text-xs text-muted-foreground">
-            <span className="flex items-center gap-1"><GlassWater size={14} /> Calice</span>
-            <span className="flex items-center gap-1"><Wine size={14} /> Bottiglia</span>
+            <span className="flex items-center gap-1"><span>🍷</span> Calice</span>
+            <span className="flex items-center gap-1"><span>🍾</span> Bottiglia</span>
           </div>
           <MenuCategory title="Bollicine" subtitle="I Nostri Vini" items={bollicine} />
           <MenuCategory title="Vini Bianchi Fermi" subtitle="I Nostri Vini" items={viniBianchi} />
