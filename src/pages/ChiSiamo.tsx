@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 import pattern from "@/assets/pattern.svg";
 import dough1 from "@/assets/dough-1.jpg";
 import pizza1 from "@/assets/pizza-1.png";
-import { MapPin, Phone, Clock, Mail, Facebook, Instagram } from "lucide-react";
+import { MapPin, Phone, Clock } from "lucide-react";
 
 const ChiSiamo = () => {
   return (
