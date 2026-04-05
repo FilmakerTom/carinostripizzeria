@@ -49,16 +49,21 @@ const Navbar = () => {
             <Link
               key={link.to}
               to={link.to}
-              className={`text-xs tracking-[0.2em] uppercase transition-colors ${
+              className={`text-xs tracking-[0.2em] uppercase transition-colors flex items-center gap-1.5 ${
                 location.pathname === link.to
                   ? "text-primary"
                   : solid
                   ? "text-foreground/70 hover:text-primary"
                   : "text-primary-foreground/80 hover:text-primary-foreground"
-              }`}
+              } ${link.soon ? "opacity-70" : ""}`}
               style={{ fontFamily: "var(--font-body)" }}
             >
               {link.label}
+              {link.soon && (
+                <span className="text-[9px] bg-primary/20 text-primary px-1.5 py-0.5 rounded-full tracking-normal normal-case">
+                  soon
+                </span>
+              )}
             </Link>
           ))}
         </div>
