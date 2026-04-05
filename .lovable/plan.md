@@ -1,23 +1,26 @@
 
 
-## Piano: Disattivare temporaneamente "La Nostra Storia"
+## Piano: Mappa Google Maps + Riquadro Info nella sezione "Vieni a Trovarci"
 
-### Cosa faremo
-Quando un utente visita `/la-nostra-storia`, vedrà una pagina "Coming Soon" elegante con un messaggio che indica che la pagina è in preparazione. Il link nella navigazione verrà mantenuto ma con uno stile attenuato per indicare che non è ancora disponibile.
+### Cosa cambia
+La sezione "Vieni a Trovarci" nella pagina Chi Siamo verrà riprogettata con un layout a due colonne:
+- **Sinistra**: embed di Google Maps che mostra la posizione della pizzeria
+- **Destra**: card compatta con nome, indirizzo, orari e telefono
+
+La griglia attuale con 5 colonne (indirizzo, telefono, email, orari, social) verrà sostituita da questo nuovo layout più visivo e immediato.
 
 ### Dettagli tecnici
 
-**1. Creare una pagina ComingSoon (`src/pages/ComingSoon.tsx`)**
-- Layout coerente con il sito: hero scuro con pattern, titolo della pagina, messaggio tipo "Stiamo lavorando a questa sezione. Torna presto!"
-- Pulsante per tornare alla Home
+**File: `src/pages/ChiSiamo.tsx`**
 
-**2. Aggiornare la rotta in `src/App.tsx`**
-- Sostituire `<LaNostraStoria />` con `<ComingSoon />` sulla rotta `/la-nostra-storia`
-- Commentare l'import originale per riattivarlo facilmente in futuro
+1. Sostituire la griglia contatti con un layout `grid md:grid-cols-[2fr_1fr]`:
+   - Colonna sinistra: `<iframe>` Google Maps embed centrato su "Via Francesco Baracca 64, Istrana TV" con aspect-ratio 16/9, bordo arrotondato
+   - Colonna destra: card con sfondo `bg-card` contenente:
+     - Nome "Carinostri" in stile titolo
+     - Indirizzo con icona MapPin
+     - Orari con icona Clock
+     - Telefono con icona Phone (cliccabile con `tel:`)
+   - Stile coerente col sito: icone `text-primary`, testo `text-muted-foreground`, separatori sottili
 
-**3. Navbar (opzionale)**
-- Aggiungere un piccolo badge "Soon" accanto al link "La Nostra Storia" nella navigazione, per segnalare che la pagina non è ancora pronta
-
-### Come riattivare
-Basterà ripristinare l'import e il componente originale in `App.tsx`.
+2. Le info rimanenti (email, social) restano nel Footer che è già presente in fondo alla pagina.
 
