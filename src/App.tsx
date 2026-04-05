@@ -8,7 +8,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 import BackToTop from "@/components/BackToTop";
 import Index from "./pages/Index.tsx";
 import MenuPage from "./pages/MenuPage.tsx";
-import LaNostraStoria from "./pages/LaNostraStoria.tsx";
+// import LaNostraStoria from "./pages/LaNostraStoria.tsx"; // Temporaneamente disattivata
+import ComingSoon from "./pages/ComingSoon.tsx";
 import ChiSiamo from "./pages/ChiSiamo.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -26,7 +27,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/menu" element={<MenuPage />} />
-          <Route path="/la-nostra-storia" element={<LaNostraStoria />} />
+          <Route path="/la-nostra-storia" element={<ComingSoon />} />
           <Route path="/chi-siamo" element={<ChiSiamo />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

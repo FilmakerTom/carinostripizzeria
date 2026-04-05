@@ -4,10 +4,10 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/pittogramma-1.png";
 import logoNegative from "@/assets/logo-negative.png";
 
-const navLinks = [
+const navLinks: { label: string; to: string; soon?: boolean }[] = [
   { label: "Home", to: "/" },
   { label: "Menù", to: "/menu" },
-  { label: "La Nostra Storia", to: "/la-nostra-storia" },
+  { label: "La Nostra Storia", to: "/la-nostra-storia", soon: true },
   { label: "Chi Siamo", to: "/chi-siamo" },
 ];
 
@@ -49,16 +49,21 @@ const Navbar = () => {
             <Link
               key={link.to}
               to={link.to}
-              className={`text-xs tracking-[0.2em] uppercase transition-colors ${
+              className={`text-xs tracking-[0.2em] uppercase transition-colors flex items-center gap-1.5 ${
                 location.pathname === link.to
                   ? "text-primary"
                   : solid
                   ? "text-foreground/70 hover:text-primary"
                   : "text-primary-foreground/80 hover:text-primary-foreground"
-              }`}
+              } ${link.soon ? "opacity-70" : ""}`}
               style={{ fontFamily: "var(--font-body)" }}
             >
               {link.label}
+              {link.soon && (
+                <span className="text-[9px] bg-primary/20 text-primary px-1.5 py-0.5 rounded-full tracking-normal normal-case">
+                  soon
+                </span>
+              )}
             </Link>
           ))}
         </div>
@@ -82,14 +87,19 @@ const Navbar = () => {
                 key={link.to}
                 to={link.to}
                 onClick={() => setMenuOpen(false)}
-                className={`text-sm tracking-[0.15em] uppercase py-2 transition-colors ${
+                className={`text-sm tracking-[0.15em] uppercase py-2 transition-colors flex items-center gap-2 ${
                   location.pathname === link.to
                     ? "text-primary"
                     : "text-foreground/70 hover:text-primary"
-                }`}
+                } ${link.soon ? "opacity-70" : ""}`}
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 {link.label}
+                {link.soon && (
+                  <span className="text-[9px] bg-primary/20 text-primary px-1.5 py-0.5 rounded-full tracking-normal normal-case">
+                    soon
+                  </span>
+                )}
               </Link>
             ))}
           </div>
