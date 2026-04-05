@@ -8,7 +8,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 import BackToTop from "@/components/BackToTop";
 import Index from "./pages/Index.tsx";
 import MenuPage from "./pages/MenuPage.tsx";
-import LaNostraStoria from "./pages/LaNostraStoria.tsx";
+// import LaNostraStoria from "./pages/LaNostraStoria.tsx"; // Temporaneamente disattivata
+import ComingSoon from "./pages/ComingSoon.tsx";
 import ChiSiamo from "./pages/ChiSiamo.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
