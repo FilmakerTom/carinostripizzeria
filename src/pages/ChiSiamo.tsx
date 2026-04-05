@@ -126,6 +126,7 @@ const ChiSiamo = () => {
               </div>
             </div>
           </div>
+        </div>
       </section>
 
       <Footer />
