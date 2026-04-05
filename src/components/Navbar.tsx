@@ -7,7 +7,7 @@ import logoNegative from "@/assets/logo-negative.png";
 const navLinks = [
   { label: "Home", to: "/" },
   { label: "Menù", to: "/menu" },
-  { label: "La Nostra Storia", to: "/la-nostra-storia" },
+  { label: "La Nostra Storia", to: "/la-nostra-storia", soon: true },
   { label: "Chi Siamo", to: "/chi-siamo" },
 ];
 
