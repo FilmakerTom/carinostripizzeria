@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/pittogramma-1.png";
 import logoNegative from "@/assets/logo-negative.png";
 
-const navLinks = [
+const navLinks: { label: string; to: string; soon?: boolean }[] = [
   { label: "Home", to: "/" },
   { label: "Menù", to: "/menu" },
   { label: "La Nostra Storia", to: "/la-nostra-storia", soon: true },
