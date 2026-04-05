@@ -87,14 +87,19 @@ const Navbar = () => {
                 key={link.to}
                 to={link.to}
                 onClick={() => setMenuOpen(false)}
-                className={`text-sm tracking-[0.15em] uppercase py-2 transition-colors ${
+                className={`text-sm tracking-[0.15em] uppercase py-2 transition-colors flex items-center gap-2 ${
                   location.pathname === link.to
                     ? "text-primary"
                     : "text-foreground/70 hover:text-primary"
-                }`}
+                } ${link.soon ? "opacity-70" : ""}`}
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 {link.label}
+                {link.soon && (
+                  <span className="text-[9px] bg-primary/20 text-primary px-1.5 py-0.5 rounded-full tracking-normal normal-case">
+                    soon
+                  </span>
+                )}
               </Link>
             ))}
           </div>
