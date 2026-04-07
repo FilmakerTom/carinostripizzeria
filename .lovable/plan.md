@@ -1,26 +1,25 @@
-
-
-## Piano: Mappa Google Maps + Riquadro Info nella sezione "Vieni a Trovarci"
+## Piano: Aggiornare la sezione Aperitivi
 
 ### Cosa cambia
-La sezione "Vieni a Trovarci" nella pagina Chi Siamo verrà riprogettata con un layout a due colonne:
-- **Sinistra**: embed di Google Maps che mostra la posizione della pizzeria
-- **Destra**: card compatta con nome, indirizzo, orari e telefono
 
-La griglia attuale con 5 colonne (indirizzo, telefono, email, orari, social) verrà sostituita da questo nuovo layout più visivo e immediato.
+Riscrivere l'array `aperitivi` in `src/data/menuData.ts` con i nuovi nomi, descrizioni e rimuovere i prezzi non più indicati.
 
 ### Dettagli tecnici
 
-**File: `src/pages/ChiSiamo.tsx`**
+**File: `src/data/menuData.ts**`
 
-1. Sostituire la griglia contatti con un layout `grid md:grid-cols-[2fr_1fr]`:
-   - Colonna sinistra: `<iframe>` Google Maps embed centrato su "Via Francesco Baracca 64, Istrana TV" con aspect-ratio 16/9, bordo arrotondato
-   - Colonna destra: card con sfondo `bg-card` contenente:
-     - Nome "Carinostri" in stile titolo
-     - Indirizzo con icona MapPin
-     - Orari con icona Clock
-     - Telefono con icona Phone (cliccabile con `tel:`)
-   - Stile coerente col sito: icone `text-primary`, testo `text-muted-foreground`, separatori sottili
+Sostituire l'array `aperitivi` con:
 
-2. Le info rimanenti (email, social) restano nel Footer che è già presente in fondo alla pagina.
+```ts
+export const aperitivi: MenuItem[] = [
+  { name: "Della Casa", description: "Analcolico a base di frutta", price: "€3" },
+  { name: "Cortesino", description: "Ginger Analcolico Artigianale", price: "€3,20" },
+  { name: "Gli Spritz", description: "Aperol / Campari / Select / Cynar", price: "€3,50" },
+  { name: "Hugo", description: "Vino Frizzante, Sambuco, Menta Fresca, Lime", price: "€3,50" },
+  { name: "Americano", description: "Vermouth Rosso, Campari, Seltz", price: "€6" },
+  { name: "Negroni", description: "Vermouth Rosso, Campari, Gin", price: "€7" },
+  { name: "Negroni \"Sbagliato\"", description: "Vermouth Rosso, Campari, Vino Frizzante", price: "€6,50" },
+];
+```
 
+I prezzi sono mantenuti come prima (€3,30 e €3,20 per i primi due, €3,50 per gli altri). Se i prezzi sono diversi, indicamelo e li aggiorno.
