@@ -1,25 +1,17 @@
-## Piano: Aggiornare la sezione Aperitivi
+
+
+## Piano: Sottotitolo "Servito con pane pizza caldo" per i Taglieri
 
 ### Cosa cambia
-
-Riscrivere l'array `aperitivi` in `src/data/menuData.ts` con i nuovi nomi, descrizioni e rimuovere i prezzi non più indicati.
+- La frase "Servito con pane pizza caldo" diventa una nota sotto il titolo "Taglieri di Affettati e Formaggi" (usando la prop `note` già supportata dal componente `MenuCategory`)
+- Viene rimossa dalla descrizione di ogni singolo prodotto nell'array `taglieri`
 
 ### Dettagli tecnici
 
-**File: `src/data/menuData.ts**`
+**1. `src/data/menuData.ts`** — Rimuovere "Servito con pane pizza caldo" da tutte le description dei taglieri, lasciandole vuote (`""`)
 
-Sostituire l'array `aperitivi` con:
-
-```ts
-export const aperitivi: MenuItem[] = [
-  { name: "Della Casa", description: "Analcolico a base di frutta", price: "€3" },
-  { name: "Cortesino", description: "Ginger Analcolico Artigianale", price: "€3,20" },
-  { name: "Gli Spritz", description: "Aperol / Campari / Select / Cynar", price: "€3,50" },
-  { name: "Hugo", description: "Vino Frizzante, Sambuco, Menta Fresca, Lime", price: "€3,50" },
-  { name: "Americano", description: "Vermouth Rosso, Campari, Seltz", price: "€6" },
-  { name: "Negroni", description: "Vermouth Rosso, Campari, Gin", price: "€7" },
-  { name: "Negroni \"Sbagliato\"", description: "Vermouth Rosso, Campari, Vino Frizzante", price: "€6,50" },
-];
+**2. `src/pages/MenuPage.tsx`** (riga 164) — Aggiungere `note="Servito con pane pizza caldo"` alla MenuCategory dei taglieri:
+```tsx
+<MenuCategory title="Taglieri di Affettati e Formaggi" subtitle="Antipasti & Fritti" items={taglieri} note="Servito con pane pizza caldo" />
 ```
 
-I prezzi sono mantenuti come prima (€3,30 e €3,20 per i primi due, €3,50 per gli altri). Se i prezzi sono diversi, indicamelo e li aggiorno.
