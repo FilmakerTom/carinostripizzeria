@@ -161,7 +161,7 @@ const MenuPage = () => {
             <MenuCategory title="Aperitivi" subtitle="Per Iniziare" items={aperitivi} />
           </div>
           <MenuCategory title="Focaccia a Spicchi" subtitle="Antipasti & Fritti" items={focaccia} />
-          <MenuCategory title="Taglieri di Affettati e Formaggi" subtitle="Antipasti & Fritti" items={taglieri} />
+          <MenuCategory title="Taglieri di Affettati e Formaggi" subtitle="Antipasti & Fritti" items={taglieri} note="Servito con pane pizza caldo" />
           <MenuCategory title="Fritti" subtitle="Antipasti & Fritti" items={fritti} />
 
           {/* ── PIZZE ── */}
