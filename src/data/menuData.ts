@@ -7,7 +7,7 @@ export interface MenuItem {
 // ── ANTIPASTI & FRITTI ──
 export const focaccia: MenuItem[] = [
   { name: "Focaccia a Spicchi", description: "Salsa pomodoro, aglio e origano", price: "€3,50" },
-  { name: "Focaccia Porchetta", description: "Porchetta affettata", price: "€4" },
+  
   { name: "Focaccia Varietà di Gusti", description: "", price: "€5" },
 ];
 
