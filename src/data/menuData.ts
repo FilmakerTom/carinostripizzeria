@@ -30,12 +30,13 @@ export const fritti: MenuItem[] = [
 
 // ── APERITIVI ──
 export const aperitivi: MenuItem[] = [
-  { name: "Della Casa", description: "", price: "€3,30" },
-  { name: "Cortesino", description: "", price: "€3,20" },
-  { name: "Gin Spritz", description: "", price: "€3,50" },
-  { name: "Aperol / Campari / Select / Italicus", description: "", price: "€3,50" },
-  { name: "Hugo", description: "", price: "€3,50" },
-  { name: "Vino Frizzante", description: "", price: "€3,50" },
+  { name: "Della Casa", description: "Analcolico a base di frutta", price: "€3" },
+  { name: "Cortesino", description: "Ginger Analcolico Artigianale", price: "€3,20" },
+  { name: "Gli Spritz", description: "Aperol / Campari / Select / Cynar", price: "€3,50" },
+  { name: "Hugo", description: "Vino Frizzante, Sambuco, Menta Fresca, Lime", price: "€3,50" },
+  { name: "Americano", description: "Vermouth Rosso, Campari, Seltz", price: "€6" },
+  { name: "Negroni", description: "Vermouth Rosso, Campari, Gin", price: "€7" },
+  { name: "Negroni \"Sbagliato\"", description: "Vermouth Rosso, Campari, Vino Frizzante", price: "€6,50" },
 ];
 
 // ── LE PIZZE – CON LA PORCHETTA ──
