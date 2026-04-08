@@ -1,7 +1,7 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import pizza1 from "@/assets/pizza-1.png";
-import pizza2 from "@/assets/pizza-2.png";
-import foodDetail from "@/assets/food-detail.jpg";
+import pizza1 from "@/assets/gallery-1.jpg";
+import pizza2 from "@/assets/gallery-2.jpg";
+import foodDetail from "@/assets/gallery-3.jpg";
 
 const gallery = [
   { src: pizza1, alt: "Pizza margherita dal forno a legna" },
