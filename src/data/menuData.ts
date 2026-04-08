@@ -14,9 +14,9 @@ export const focaccia: MenuItem[] = [
 export const taglieri: MenuItem[] = [
   { name: "Porchetta Carinostri", description: "", price: "€7,50" },
   { name: "Prosciutto Crudo Parma 30 mesi", description: "", price: "€9" },
-  { name: "Selezione di Formaggi", description: "Servito con pane pizza caldo", price: "€12" },
-  { name: "Selezione di Affettati", description: "Servito con pane pizza caldo", price: "€15" },
-  { name: "Selezione di Affettati e Formaggi", description: "Servito con pane pizza caldo", price: "€18" },
+  { name: "Selezione di Formaggi", description: "", price: "€12" },
+  { name: "Selezione di Affettati", description: "", price: "€15" },
+  { name: "Selezione di Affettati e Formaggi", description: "", price: "€18" },
 ];
 
 export const fritti: MenuItem[] = [
