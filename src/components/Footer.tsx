@@ -1,4 +1,6 @@
 import { MapPin, Phone, Clock, Facebook, Instagram, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
+import { openCookiePreferencesGlobal } from "@/contexts/CookieConsentContext";
 import pittogramma from "@/assets/pittogramma.svg";
 
 const Footer = () => {
@@ -47,8 +49,22 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="border-t border-background/10 mt-12 pt-8 text-center">
-          <p className="text-background/30 text-xs">
+        <div className="border-t border-background/10 mt-12 pt-8">
+          <div className="flex flex-wrap justify-center gap-4 mb-4 text-xs">
+            <Link to="/privacy-policy" className="text-background/50 hover:text-primary transition-colors">
+              Privacy Policy
+            </Link>
+            <Link to="/cookie-policy" className="text-background/50 hover:text-primary transition-colors">
+              Cookie Policy
+            </Link>
+            <button
+              onClick={openCookiePreferencesGlobal}
+              className="text-background/50 hover:text-primary transition-colors"
+            >
+              Preferenze cookie
+            </button>
+          </div>
+          <p className="text-background/30 text-xs text-center">
             © 2026 Carinostri. Tutti i diritti riservati.
           </p>
         </div>
