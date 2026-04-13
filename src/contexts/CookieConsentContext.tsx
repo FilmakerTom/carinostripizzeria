@@ -132,7 +132,7 @@ export const CookieConsentProvider: React.FC<{ children: React.ReactNode }> = ({
   );
 };
 
-export function useCookieConsent() {
+export function useCookieConsent(): CookieConsentContextValue {
   const ctx = useContext(CookieConsentContext);
   if (!ctx) throw new Error("useCookieConsent must be used within CookieConsentProvider");
   return ctx;
