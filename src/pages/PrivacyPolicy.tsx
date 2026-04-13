@@ -19,17 +19,17 @@ const PrivacyPolicy = () => {
           </div>
 
           <h1 className="text-2xl font-semibold text-foreground">Informativa sulla Privacy</h1>
-          <p className="text-xs text-muted-foreground">Ultimo aggiornamento: [DATA_AGGIORNAMENTO]</p>
+          <p className="text-xs text-muted-foreground">Ultimo aggiornamento: 16 aprile 2026</p>
 
           <section className="mt-8">
             <h2 className="text-lg font-semibold text-foreground">1. Titolare del trattamento</h2>
             <p className="text-sm text-foreground/80">
               Il Titolare del trattamento dei dati personali è:<br />
-              <strong>[NOME_TITOLARE]</strong><br />
-              Sede: [INDIRIZZO]<br />
+              <strong>Francesco Gastaldon</strong><br />
+              Sede: via Francesco Baracca, 64<br />
               P.IVA: [P.IVA]<br />
-              Email: [EMAIL]<br />
-              Telefono: [TELEFONO]
+              Email: carinostri@gmail.com<br />
+              Telefono: +39 340 6264069
             </p>
           </section>
 
@@ -67,7 +67,7 @@ const PrivacyPolicy = () => {
           <section className="mt-8">
             <h2 className="text-lg font-semibold text-foreground">5. Conservazione dei dati</h2>
             <p className="text-sm text-foreground/80">
-              I dati personali sono conservati per il tempo strettamente necessario alle finalità per cui sono stati raccolti, e comunque non oltre [PERIODO_CONSERVAZIONE]. I dati relativi ai cookie sono conservati secondo le durate indicate nella <Link to="/cookie-policy" className="text-primary hover:underline">Cookie Policy</Link>.
+              I dati personali sono conservati per il tempo strettamente necessario alle finalità per cui sono stati raccolti, e comunque non oltre 6 mesi. I dati relativi ai cookie sono conservati secondo le durate indicate nella <Link to="/cookie-policy" className="text-primary hover:underline">Cookie Policy</Link>.
             </p>
           </section>
 
@@ -77,8 +77,8 @@ const PrivacyPolicy = () => {
               I dati potranno essere comunicati a:
             </p>
             <ul className="text-sm text-foreground/80">
-              <li>Provider di hosting: [HOSTING_PROVIDER]</li>
-              <li>[ELENCO_STRUMENTI_TERZI]</li>
+              <li>Provider di hosting: lovable.app</li>
+              <li>Servizi di terze parti: Google Maps</li>
             </ul>
             <p className="text-sm text-foreground/80">
               I dati non saranno diffusi né trasferiti a paesi terzi al di fuori dell'UE, salvo quanto specificato.
@@ -100,7 +100,7 @@ const PrivacyPolicy = () => {
               <li>Proporre reclamo al Garante per la protezione dei dati personali</li>
             </ul>
             <p className="text-sm text-foreground/80">
-              Per esercitare i tuoi diritti, scrivi a: <strong>[EMAIL]</strong>
+              Per esercitare i tuoi diritti, scrivi a: <strong>carinostri@gmail.com</strong>
             </p>
           </section>
 
