@@ -43,16 +43,16 @@ export const aperitivi: MenuItem[] = [
 export const pizzePorchetta: MenuItem[] = [
   { name: "Carinostri", description: "Porchetta, salsa di pomodoro, fiordilatte", price: "€9" },
   { name: "Rivasecca", description: "Porchetta, fiordilatte, pomodoro fresco, cipolla viola, rucola", price: "€11" },
-  { name: "Bosciaola", description: "Porchetta, funghi, insalata, salsa di pomodoro, fiordilatte", price: "€11" },
+  { name: "Bosciaola", description: "Porchetta, funghi misti, salsa di pomodoro, fiordilatte", price: "€11" },
   { name: "Rustica", description: "Porchetta, patate al forno, funghi champignon, ricotta affumicata, salsa di pomodoro, fiordilatte", price: "€11" },
-  { name: "Valli e Porchetta", description: "Porchetta, fiordilatte, peperoni pelati, cipolla viola candita in agrodolce", price: "€12" },
+  { name: "Viola e Porchetta", description: "Porchetta, fiordilatte, peperoni pelati, cipolla viola caramellata in agrodolce", price: "€12" },
   { name: "Porchetta Tonnata", description: "Porchetta, salsa tonnata, pomodorini confit, rucola, frutto di cappero", price: "€13" },
 ];
 
 // ── LE PIZZE – CON IL TONNO ──
 export const pizzeTonno: MenuItem[] = [
-  { name: "Tonno e Cipolla", description: "Tonno al forno, cipolla, salsa di pomodoro, fiordilatte", price: "€9" },
-  { name: "Tonno e Carciofi", description: "Tonno al forno, carciofi, salsa di pomodoro, fiordilatte", price: "€9" },
+  { name: "Tonno e Cipolla", description: "Tonno al forno, cipolla viola, salsa di pomodoro, fiordilatte", price: "€9" },
+  { name: "Tonno e Carciofi", description: "Tonno al forno, carciofi stufati a spicchi, salsa di pomodoro, fiordilatte", price: "€9" },
   { name: "Tonno e Zucchine", description: "Tonno al forno, zucchine grigliate, salsa di pomodoro, fiordilatte", price: "€9" },
   { name: "Tonno e Leccino", description: "Tonno al forno, olive leccino, salsa di pomodoro, fiordilatte", price: "€10" },
   { name: "Emergency", description: "Tonno, cipolla viola, olive leccino, peperoni pelati, salsa di pomodoro, fiordilatte", price: "€12" },
@@ -60,22 +60,22 @@ export const pizzeTonno: MenuItem[] = [
 
 // ── LE PIZZE DI STAGIONE ──
 export const pizzeStagione: MenuItem[] = [
-  { name: "Agretti Tonno e Peperoni", description: "Fiordilatte, insalata di agretti, tonno, peperoni affumicati, salamino piccante, origano", price: "€14" },
-  { name: "Cavolo Nero", description: "Cavolo nero, spaccatello, salamino piccante, mortadella del Grappa, pomodori secchi", price: "€14" },
-  { name: "Carbonara d'Asparagi", description: "Fiordilatte, asparagi verdi al forno, guanciale, carbonara, pecorino", price: "€15" },
+  { name: "Agretti Tonno e Peperoni", description: "Fiordilatte, insalata di agretti (Barbe di Frate), tonno Carinostri, peperoni sbucciati, origano", price: "€14" },
+  { name: "Cavolo Nero", description: "Cavolo nero spadellato, salamino piccante, Morlacco del Grappa, pomodori secchi", price: "€14" },
+  { name: "Carbonara d'Asparagi", description: "Fiordilatte, asparagi verdi al forno, guanciale, carbocrema, pecorino", price: "€15" },
 ];
 
 // ── LE PIZZE D.O.C. ──
 export const pizzeDoc: MenuItem[] = [
   { name: "La Margherita D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, olio e.v.o. aromatizzato all'aglio, basilico", price: "€9" },
-  { name: "La Diavola D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, nduja, capperi, olio e.v.o., basilico", price: "€11" },
-  { name: "La Romana D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, rigatini di Sciacca, capperi, pomodori secchi, acciughe, basilico", price: "€12" },
-  { name: "L'Amatriciana D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, guanciale, pecorino romano, olio e.v.o., basilico", price: "€12" },
-  { name: "La Triestina D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, cetriolini, noci, olio e.v.o., basilico", price: "€12" },
-  { name: "La Melanzana D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, melanzane fritte, finocchiona IGP, pomodori secchi, basilico", price: "€12" },
-  { name: "La Ligure D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, pesto alla genovese, patate, pinoli, basilico", price: "€13" },
-  { name: "La Verdure D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, verdure miste, olio e.v.o., basilico", price: "€13" },
-  { name: "La PiovraPatatè D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, piovra al vapore, patate, olio e.v.o., basilico", price: "€13" },
+  { name: "La Diavola D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, nduja, capperi, olio e.v.o. aromatizzato all'aglio, basilico", price: "€11" },
+  { name: "La Romana D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, acciughe di Sciacca a crudo, capperi, olio e.v.o. aromatizzato all'aglio, basilico", price: "€12" },
+  { name: "L'Amatriciana D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, guanciale, pecorino romano, olio e.v.o. aromatizzato all'aglio, basilico", price: "€12" },
+  { name: "La Triestina D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, cotto affumicato, noci, olio e.v.o. aromatizzato all'aglio, basilico", price: "€12" },
+  { name: "La Melanzane D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, melanzane fritte, finocchiona IGP, olio e.v.o. aromatizzato all'aglio, basilico", price: "€12" },
+  { name: "La Ligure D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, pesto alla genovese, patate, pinoli, olio e.v.o. aromatizzato all'aglio, basilico", price: "€13" },
+  { name: "La Verdure D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, caponata di verdure, olio e.v.o. aromatizzato all'aglio, basilico", price: "€13" },
+  { name: "La Piovra&Patate D.O.C.", description: "Pelati S. Marzano DOP, mozzarella di bufala DOP, piovra al vapore, patate, olio e.v.o. aromatizzato all'aglio, basilico", price: "€13" },
 ];
 
 // ── LE PIZZE TAGLIATE ──
