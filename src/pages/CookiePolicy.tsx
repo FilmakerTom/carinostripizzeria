@@ -21,7 +21,7 @@ const CookiePolicy = () => {
           </div>
 
           <h1 className="text-2xl font-semibold text-foreground">Cookie Policy</h1>
-          <p className="text-xs text-muted-foreground">Ultimo aggiornamento: [DATA_AGGIORNAMENTO]</p>
+          <p className="text-xs text-muted-foreground">Ultimo aggiornamento: 13 aprile 2026</p>
 
           <section className="mt-8">
             <h2 className="text-lg font-semibold text-foreground">Cosa sono i cookie</h2>
@@ -68,7 +68,7 @@ const CookiePolicy = () => {
                   </div>
                 ) : (
                   <p className="text-xs text-muted-foreground italic">
-                    Nessun cookie attualmente configurato per questa categoria. [DA_COMPLETARE]
+                    {cat.id === 'thirdParty' ? "Google Maps" : "Nessun cookie attualmente configurato per questa categoria."}
                   </p>
                 )}
               </div>
@@ -81,7 +81,7 @@ const CookiePolicy = () => {
               Il sito potrebbe integrare servizi di terze parti che installano cookie propri. Di seguito l'elenco dei servizi utilizzati:
             </p>
             <ul className="text-sm text-foreground/80">
-              <li>[ELENCO_STRUMENTI_TERZI — es. Google Analytics, Meta Pixel, YouTube, Google Maps]</li>
+              <li>Google Maps</li>
             </ul>
             <p className="text-sm text-foreground/80">
               Per ciascun servizio, si rimanda alla rispettiva informativa privacy e cookie del fornitore.
@@ -98,7 +98,7 @@ const CookiePolicy = () => {
           <section className="mt-8">
             <h2 className="text-lg font-semibold text-foreground">Tempi di conservazione</h2>
             <p className="text-sm text-foreground/80">
-              La durata dei cookie varia in base alla tipologia e al fornitore. I dettagli sono riportati nella tabella sopra per ciascun cookie. La preferenza di consenso dell'utente è conservata per 12 mesi.
+              La durata dei cookie varia in base alla tipologia e al fornitore. I dettagli sono riportati nella tabella sopra per ciascun cookie. La preferenza di consenso dell'utente è conservata per 6 mesi.
             </p>
           </section>
 
