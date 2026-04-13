@@ -188,9 +188,9 @@ const MenuPage = () => {
 
           {/* ── BIBITE ── */}
           <div id="bibite">
-            <MenuCategory title="Misure Birre" subtitle="DAL BANCO" items={birreSpinaFormati} />
+            <MenuCategory title="Birre alla spina" subtitle="DAL BANCO" items={birreNovita} />
           </div>
-          <MenuCategory title="Birre alla spina" subtitle="DAL BANCO" items={birreNovita} />
+          <MenuCategory title="Misure Birre" subtitle="DAL BANCO" items={birreSpinaFormati} />
           <MenuCategory title="Birre Speciali" subtitle="DAL BANCO" items={birreSpeciali} />
           <MenuCategory title="Bevande" subtitle="DAL BANCO" items={bevande} />
           <div className="flex items-center justify-center gap-6 mb-8">
