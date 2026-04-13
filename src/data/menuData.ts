@@ -104,15 +104,15 @@ export const carenestreRosse: MenuItem[] = [
   { name: "Tirolese", description: "Speck tirolese, formaggio Dobbiaco, salsa di pomodoro, fiordilatte", price: "€11" },
   { name: "Sicilia", description: "Acciughe, capperi, olive leccino, salsa di pomodoro, fiordilatte", price: "€11" },
   { name: "Francese", description: "Olive leccino, prosciutto crudo 24 mesi, stracchino, salsa di pomodoro, fiordilatte", price: "€11" },
-  { name: "Chef Ramsay", description: "Lardo tipo colonnata, melanzana, scamorza affumicata, salsa di pomodoro, fiordilatte", price: "€11" },
+  { name: "Chef Ramsay", description: "Lardo tipo colonnata, melanzane, scamorza affumicata, salsa di pomodoro, fiordilatte", price: "€11" },
   { name: "Parmigiana", description: "Prosciutto crudo di Parma 24 mesi, melanzane, grana, salsa di pomodoro, fiordilatte", price: "€11" },
   { name: "Barcis", description: "Salsiccia, pomodorini, gorgonzola, salsa di pomodoro, fiordilatte", price: "€11" },
-  { name: "Capri", description: "Prosciutto crudo, funghi champignon, carciofi, brie, salsa di pomodoro, fiordilatte", price: "€11" },
+  { name: "Capri 2", description: "Prosciutto crudo, funghi champignon, carciofi, brie, salsa di pomodoro, fiordilatte", price: "€11" },
   { name: "Fra&Cri", description: "Mozzarella di bufala, pomodori secchi, formaggio Asiago, rucola, salsa di pomodoro", price: "€11" },
 ];
 
 export const carenestreBianche: MenuItem[] = [
-  { name: "Di Magro", description: "Fiordilatte, verdure al vapore, ricotta fresca, pinoli", price: "€11" },
+  { name: "Di Magro", description: "Fiordilatte, bietolina al vapore, ricotta fresca dopo cottura, pinoli", price: "€11" },
   { name: "Salsiccia & Friarielli", description: "Fiordilatte, pomodorini confit, salsiccia, friarielli", price: "€12" },
   { name: "Miss Stella", description: "Fiordilatte, zucchine, scalogno, scamorza affumicata, salamino piccante", price: "€12" },
   { name: "Oro Verde", description: "Mozzarella di bufala DOP, zucchine, pomodorini, pesto di pistacchi, basilico", price: "€12" },
