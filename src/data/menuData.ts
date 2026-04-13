@@ -135,8 +135,8 @@ export const sandwiches: MenuItem[] = [
 
 // ── BIRRE SPECIALI ──
 export const birreSpeciali: MenuItem[] = [
-  { name: "Tongerlo Bruin", description: "Birra Bruna d'Abbazia. 33 cl, 5.1%", price: "€3" },
-  { name: "IPA Super 8", description: "Birra Doppia Pale Ale. 33 cl, 8%", price: "€5,50" },
+  { name: "Tongerlo Bruin", description: "Birra Bruna d'Abbazia, stile Belga. 33 cl, 6,5%", price: "€5" },
+  { name: "IPA Super 8", description: "Birra Indian Pale Ale. 33 cl, 6%", price: "€5,50" },
 ];
 
 // ── BEVANDE ──
@@ -160,21 +160,21 @@ export const birreNovita: MenuItem[] = [
 
 // ── VINI ──
 export const bollicine: MenuItem[] = [
-  { name: "Cal Fondo Frizzante sui Livinz – Az. Agr. \"Le Valpere\" (TV)", description: "", price: "€2,50 | €14" },
-  { name: "Frizzante Col Foroni \"Le Bertole\" – Valdobbiadene (TV)", description: "", price: "€3 | €16" },
-  { name: "Valdobbiadene D.O.C.G Brut – \"Le Bertole\" (TV)", description: "", price: "€3,50 | €21" },
-  { name: "Valdobbiadene D.O.C.G Extra Brut Franco Mili. – Le Bertole (TV)", description: "", price: "€4 | €24" },
-  { name: "Ortrepo' Pavese Brut D.O.C. metodo classico", description: "", price: "€4,50 | €27" },
-  { name: "Treiso D.O.C. Brut Nature Pedroni metodo classico (TN)", description: "", price: "€5 | €21" },
+  { name: "Col Fondo Frizzante sui Lieviti Az. Agr. \"Le Valpere\" (TV)", description: "", price: "€2,50 | €14" },
+  { name: "Frizzante Col Torront \"Le Bertole\" Valdobbiadene (TV)", description: "", price: "€3 | €16" },
+  { name: "Valdobbiadene D.O.C.G. Brut \"Le Bertole\" (TV)", description: "", price: "€3,50 | €21" },
+  { name: "Valdobbiadene D.O.C.G. Extra Brut Franco Mill. \"Le Bertole\" (TV)", description: "", price: "€4 | €24" },
+  { name: "Oltrepo' Pavese Brut D.O.C.G. Tda metodo classico abbreviato", description: "", price: "€4,50 | €27" },
+  { name: "Trento D.O.C. Brut Nature Pedrotti metodo classico (TN)", description: "", price: "€5 | €21" },
 ];
 
 export const viniBianchi: MenuItem[] = [
-  { name: "Sauvignon Collio Doc – Ronco Blanchis (GO)", description: "", price: "€3,50 | €21" },
-  { name: "Gewürz-Traminer Trentino Doc – \"Endrizza\" (TN)", description: "", price: "€3,50 | €21" },
+  { name: "Sauvignon Collio Doc Ronco Blanchis (GO)", description: "", price: "€3,50 | €21" },
+  { name: "Gewürz-Traminer Trentino Doc \"Endrizzi\" (TN)", description: "", price: "€3,50 | €21" },
 ];
 
 export const viniRossi: MenuItem[] = [
-  { name: "Cabernet Frantz V.G. – Bosco del Camer, Gorgo al Monticello (TV)", description: "", price: "€2,50 | €14" },
-  { name: "Falcone Merlot D.O.C. – Loredan Gasparini, Venegazzù (TV)", description: "", price: "€3,50 | €21" },
-  { name: "Senza Alibi Montepulciano d'Abruzzo Doc – Spallone (PE)", description: "", price: "€3,50 | €21" },
+  { name: "Cabernet Frantz V.to. IGT Bosco del Camer, Gorgo al M.no (TV)", description: "", price: "€2,50 | €14" },
+  { name: "Falconera Merlot D.O.C. M.llo Loredan Gasparin Venegazzù (TV)", description: "", price: "€3,50 | €21" },
+  { name: "Senza Alibi Montepulciano d'Abruzzo Doc Spoltore (PE)", description: "", price: "€3,50 | €21" },
 ];
