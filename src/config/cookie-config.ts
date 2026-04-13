@@ -36,7 +36,7 @@ export const cookieCategories: CookieCategoryConfig[] = [
         name: "carinostri_cookie_consent",
         provider: "Carinostri",
         purpose: "Salva le preferenze di consenso cookie dell'utente",
-        duration: "12 mesi",
+        duration: "6 mesi",
       },
     ],
   },
