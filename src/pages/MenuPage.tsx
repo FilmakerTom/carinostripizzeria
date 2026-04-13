@@ -174,7 +174,7 @@ const MenuPage = () => {
           <MenuCategory title="Con La Porchetta" subtitle="Le Nostre Pizze" items={pizzePorchetta} />
           <MenuCategory title="Con Il Tonno" subtitle="Le Nostre Pizze" items={pizzeTonno} />
           <MenuCategory title="Classiche" subtitle="LE NOSTRE PIZZE" items={pizzeTagliateClassiche} />
-          <MenuCategory title="Pizze Tagliate Piccole" subtitle="LE NOSTRE PIZZE" items={pizzeTagliatePiccole} />
+          <MenuCategory title="Pizze Tagliate" subtitle="LE NOSTRE PIZZE" items={pizzeTagliatePiccole} />
 
           {/* ── SANDWICHES ── */}
           <div id="sandwiches">
@@ -188,10 +188,10 @@ const MenuPage = () => {
 
           {/* ── BIBITE ── */}
           <div id="bibite">
-            <MenuCategory title="Birre alla Spina" subtitle="Bevande" items={birreSpinaFormati} />
+            <MenuCategory title="Misure Birre" subtitle="DAL BANCO" items={birreSpinaFormati} />
           </div>
-          <MenuCategory title="Novità" subtitle="Bevande" items={birreNovita} />
-          <MenuCategory title="Birre Speciali" subtitle="Dal Fusto" items={birreSpeciali} />
+          <MenuCategory title="Birre alla spina" subtitle="DAL BANCO" items={birreNovita} />
+          <MenuCategory title="Birre Speciali" subtitle="DAL BANCO" items={birreSpeciali} />
           <div className="flex items-center justify-center gap-6 mb-8">
             <span className="flex items-center gap-2 text-sm text-muted-foreground">
               <WineGlassIcon className="w-4 h-4 text-primary" /> Calice
@@ -200,9 +200,9 @@ const MenuPage = () => {
               <BottleIcon className="w-4 h-4 text-primary" /> Bottiglia
             </span>
           </div>
-          <MenuCategory title="Bollicine" subtitle="I Nostri Vini" items={bollicine} />
-          <MenuCategory title="Vini Bianchi Fermi" subtitle="I Nostri Vini" items={viniBianchi} />
-          <MenuCategory title="Rossi" subtitle="I Nostri Vini" items={viniRossi} />
+          <MenuCategory title="Bollicine" subtitle="I NOSTRI VINI" items={bollicine} />
+          <MenuCategory title="Vini Bianchi Fermi" subtitle="I NOSTRI VINI" items={viniBianchi} />
+          <MenuCategory title="Rossi" subtitle="I NOSTRI VINI" items={viniRossi} />
 
           {/* Info */}
           <div className="mt-16 pt-8 border-t border-border text-center">

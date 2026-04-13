@@ -80,8 +80,8 @@ export const pizzeDoc: MenuItem[] = [
 
 // ── LE PIZZE TAGLIATE ──
 export const pizzeTagliateClassiche: MenuItem[] = [
-  { name: "Marinara", description: "Salsa pomodoro, olio e.v.o., aglio, origano", price: "€6,50" },
-  { name: "Margherita", description: "Salsa di pomodoro, fiordilatte", price: "€6,50" },
+  { name: "Marinara", description: "Salsa pomodoro, olio e.v.o., aglio, origano", price: "€5,50" },
+  { name: "Margherita", description: "Salsa di pomodoro, fiordilatte", price: "€5,50" },
   { name: "Pugliese", description: "Salsa di pomodoro, fiordilatte, cipolla di Tropea", price: "€7,50" },
   { name: "Romana", description: "Salsa di pomodoro, fiordilatte, filetti di alici", price: "€8" },
   { name: "Diavola", description: "Salsa di pomodoro, fiordilatte, salame piccante affumicato", price: "€8" },
@@ -93,8 +93,8 @@ export const pizzeTagliateClassiche: MenuItem[] = [
 
 export const pizzeTagliatePiccole: MenuItem[] = [
   { name: "Margherita", description: "Salsa di pomodoro, fiordilatte", price: "€5" },
-  { name: "Paratosa", description: "Patate fritte, salsa di pomodoro", price: "€6" },
-  { name: "Viennese", description: "Würstel, salsa di pomodoro", price: "€6" },
+  { name: "Patatosa", description: "Patate fritte, salsa di pomodoro, fiordilatte", price: "€6" },
+  { name: "Viennese", description: "Würstel, salsa di pomodoro, fiordilatte", price: "€6" },
   { name: "Prosciutto Cotto", description: "Prosciutto cotto, salsa di pomodoro, fiordilatte", price: "€6" },
   { name: "Anna & Noemi", description: "Porchetta, salsa di pomodoro, fiordilatte", price: "€7" },
 ];
@@ -123,19 +123,19 @@ export const carenestreBianche: MenuItem[] = [
 export const sandwiches: MenuItem[] = [
   { name: "Normale", description: "Prosciutto cotto e mozzarella", price: "€7" },
   { name: "Buono", description: "Porchetta, carciofi, mozzarella", price: "€9" },
-  { name: "Classico", description: "Pollo, pancetta, mozzarella, frittata, lattuga, pomodoro fresco", price: "€10" },
+  { name: "Classico", description: "Pollo, pancetta arrotolata, mozzarella, frittata, lattuga, pomodoro fresco", price: "€10" },
   { name: "Sir George", description: "Prosciutto affumicato, Asiago, origano, frittata, lattuga, pomodoro fresco", price: "€10" },
-  { name: "Carinostri", description: "Porchetta, funghi champignon, bufala, frittata, lattuga, pomodoro fresco", price: "€11" },
+  { name: "Carinostri", description: "Porchetta, funghi champignon, bufala (dopo cottura), frittata, lattuga, pomodoro fresco", price: "€11" },
   { name: "Vegetariano", description: "Verdure al forno, mozzarella, frittata, lattuga, pomodoro fresco", price: "€11" },
   { name: "Gustoso", description: "Speck, peperoni, gorgonzola, mozzarella, frittata, lattuga, pomodoro fresco", price: "€11" },
   { name: "Nostro", description: "Porchetta, cipolla caramellata, pomodori secchi, mozzarella, frittata, lattuga, pomodoro fresco", price: "€11" },
-  { name: "Tonnato", description: "Porchetta, cipolla caramellata, pomodori secchi, mozzarella, cipolla viola, lattuga, pomodoro fresco", price: "€12" },
+  { name: "Tonnato", description: "Salsa tonnata, alici, mozzarella, cipolla viola, lattuga, pomodoro fresco", price: "€12" },
   { name: "Inglese", description: "Roast-beef cotto a bassa temperatura, mozzarella, frittata, lattuga, pomodoro fresco", price: "€12" },
 ];
 
 // ── BIRRE SPECIALI ──
 export const birreSpeciali: MenuItem[] = [
-  { name: "Congerlo Bruin", description: "Birra Bruna d'Abbazia. 33 cl, 5.1%", price: "€3" },
+  { name: "Tongerlo Bruin", description: "Birra Bruna d'Abbazia. 33 cl, 5.1%", price: "€3" },
   { name: "IPA Super 8", description: "Birra Doppia Pale Ale. 33 cl, 8%", price: "€5,50" },
 ];
 
