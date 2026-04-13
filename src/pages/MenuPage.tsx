@@ -24,7 +24,7 @@ import {
   pizzeTagliateClassiche, pizzeTagliatePiccole,
   carenestreRosse, carenestreBianche,
   sandwiches,
-  birreSpeciali, birreSpinaFormati, birreNovita,
+  birreSpeciali, birreSpinaFormati, birreNovita, bevande,
   bollicine, viniBianchi, viniRossi,
 } from "@/data/menuData";
 import type { MenuItem } from "@/data/menuData";
@@ -192,6 +192,7 @@ const MenuPage = () => {
           </div>
           <MenuCategory title="Birre alla spina" subtitle="DAL BANCO" items={birreNovita} />
           <MenuCategory title="Birre Speciali" subtitle="DAL BANCO" items={birreSpeciali} />
+          <MenuCategory title="Bevande" subtitle="DAL BANCO" items={bevande} />
           <div className="flex items-center justify-center gap-6 mb-8">
             <span className="flex items-center gap-2 text-sm text-muted-foreground">
               <WineGlassIcon className="w-4 h-4 text-primary" /> Calice
