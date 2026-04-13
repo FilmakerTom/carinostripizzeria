@@ -24,7 +24,7 @@ import {
   pizzeTagliateClassiche, pizzeTagliatePiccole,
   carenestreRosse, carenestreBianche,
   sandwiches,
-  birreSpeciali, birreSpinaFormati, birreNovita,
+  birreSpeciali, birreSpinaFormati, birreNovita, bevande,
   bollicine, viniBianchi, viniRossi,
 } from "@/data/menuData";
 import type { MenuItem } from "@/data/menuData";
