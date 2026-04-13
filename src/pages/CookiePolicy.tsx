@@ -14,11 +14,6 @@ const CookiePolicy = () => {
     <>
       <main className="min-h-screen bg-background pt-24 pb-16 px-4">
         <article className="max-w-3xl mx-auto prose prose-sm prose-neutral">
-          <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mb-8">
-            <p className="text-xs text-primary font-medium m-0">
-              ⚠️ Questo testo è un modello indicativo. Deve essere revisionato da un professionista legale prima della pubblicazione.
-            </p>
-          </div>
 
           <h1 className="text-2xl font-semibold text-foreground">Cookie Policy</h1>
           <p className="text-xs text-muted-foreground">Ultimo aggiornamento: 13 aprile 2026</p>
