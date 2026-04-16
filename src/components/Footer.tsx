@@ -16,7 +16,7 @@ const Footer = () => {
             <h3 className="text-background text-sm tracking-widest uppercase">Dove Siamo</h3>
             <p className="text-background/50 text-sm">
               Via Francesco Baracca, 64<br />
-              31036 Sala TV
+              31036 Sala d'Istrana - TV
             </p>
           </div>
           <div className="flex flex-col items-center gap-3">
