@@ -142,7 +142,7 @@ export const birreSpeciali: MenuItem[] = [
 // ── BEVANDE ──
 export const bevande: MenuItem[] = [
   { name: "Acqua 0,65 lt", description: "", price: "€3" },
-  { name: "Bibite 0,33 lt", description: "", price: "€3" },
+  { name: "Bibite in bottiglia 0,33 lt", description: "", price: "€3" },
 ];
 
 // ── BIRRE FORMATI ──
