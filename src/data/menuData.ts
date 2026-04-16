@@ -6,8 +6,8 @@ export interface MenuItem {
 
 // ── ANTIPASTI & FRITTI ──
 export const focaccia: MenuItem[] = [
-  { name: "Focaccia a Spicchi", description: "", price: "€3,50" },
-  { name: "Porchetta/altro affettato", description: "", price: "€4" },
+  { name: "Tradizionale", description: "", price: "€3,50" },
+  { name: "Porchetta Carinostri/altro affettato", description: "", price: "€4" },
   { name: "Varietà di Gusti", description: "", price: "€5" },
 ];
 
@@ -104,7 +104,7 @@ export const carenestreRosse: MenuItem[] = [
   { name: "Tirolese", description: "Speck tirolese, formaggio Dobbiaco, salsa di pomodoro, fiordilatte", price: "€11" },
   { name: "Sicilia", description: "Acciughe, capperi, olive leccino, salsa di pomodoro, fiordilatte", price: "€11" },
   { name: "Francese", description: "Olive leccino, prosciutto crudo 24 mesi, stracchino, salsa di pomodoro, fiordilatte", price: "€11" },
-  { name: "Chef Ramsay", description: "Lardo tipo colonnata, melanzane, scamorza affumicata, salsa di pomodoro, fiordilatte", price: "€11" },
+  { name: "Chef Ramsay", description: "Lardo di colonnata, melanzane, scamorza affumicata, salsa di pomodoro, fiordilatte", price: "€11" },
   { name: "Parmigiana", description: "Prosciutto crudo di Parma 24 mesi, melanzane, grana, salsa di pomodoro, fiordilatte", price: "€11" },
   { name: "Barcis", description: "Salsiccia, pomodorini, gorgonzola, salsa di pomodoro, fiordilatte", price: "€11" },
   { name: "Capri 2", description: "Prosciutto crudo, funghi champignon, carciofi, brie, salsa di pomodoro, fiordilatte", price: "€11" },
