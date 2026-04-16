@@ -35,7 +35,7 @@ const Hero = () => {
           }`}
           style={{ fontFamily: 'var(--font-body)' }}
         >
-          PIZZA ARTIGIANALE · FORNO ELETTRICO
+          PIZZA ARTIGIANALE · LA BONTÀ DELLA PASTA MADRE VIVA
         </p>
         <div
           className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 ease-out delay-500 ${
