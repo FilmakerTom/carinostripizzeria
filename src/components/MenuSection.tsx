@@ -1,9 +1,9 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const pizzas = [
-  { name: "Agretti Tonno e Peperoni", description: "Fiordilatte, insalata di agretti, tonno, peperoni affumicati, salamino piccante, origano", price: "€14" },
-  { name: "Cavolo Nero", description: "Cavolo nero, spaccatello, salamino piccante, mortadella del Grappa, pomodori secchi", price: "€14" },
-  { name: "Carbonara d'Asparagi", description: "Fiordilatte, asparagi verdi al forno, guanciale, carbonara, pecorino", price: "€15" },
+  { name: "Agretti Tonno e Peperoni", description: "Fiordilatte, insalata di agretti, tonno, peperoni affumicati, origano", price: "€14" },
+  { name: "Cavolo Nero", description: "Cavolo nero spadellato, salamino piccante, morlacco del Grappa, pomodori secchi", price: "€14" },
+  { name: "Carbonara d'Asparagi", description: "Fiordilatte, asparagi verdi al forno, guanciale, carbocrema, pecorino", price: "€15" },
 ];
 
 
