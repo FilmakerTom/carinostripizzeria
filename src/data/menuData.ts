@@ -131,6 +131,7 @@ export const sandwiches: MenuItem[] = [
   { name: "Nostro", description: "Porchetta, cipolla caramellata, pomodori secchi, mozzarella, frittata, lattuga, pomodoro fresco", price: "€11" },
   { name: "Tonnato", description: "Salsa tonnata, alici, mozzarella, cipolla viola, lattuga, pomodoro fresco", price: "€12" },
   { name: "Inglese", description: "Roast-beef cotto a bassa temperatura, mozzarella, frittata, lattuga, pomodoro fresco", price: "€12" },
+  { name: "Angus, Caprino e Carletti", description: "Pane multicereali, Angus marinato, spalmabile di caprina e carletti, pomodoro fresco", price: "€12" },
 ];
 
 // ── BIRRE SPECIALI ──
