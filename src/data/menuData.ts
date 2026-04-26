@@ -60,8 +60,8 @@ export const pizzeTonno: MenuItem[] = [
 
 // ── LE PIZZE DI STAGIONE ──
 export const pizzeStagione: MenuItem[] = [
-  { name: "Agretti Tonno e Peperoni", description: "Fiordilatte, insalata di agretti (Barbe di Frate), tonno Carinostri, peperoni sbucciati, origano", price: "€14" },
-  { name: "Cavolo Nero", description: "Cavolo nero spadellato, salamino piccante, Morlacco del Grappa, pomodori secchi", price: "€14" },
+  { name: "Speck Carciofi e Burrata", description: "Fiordilatte, carciofi a spiccchi, speck tirolese, burrata pugliese, polvere di perperone di Senise IGP", price: "€15" },
+  { name: "\n", description: "\n", price: "\n" },
   { name: "Carbonara d'Asparagi", description: "Fiordilatte, asparagi verdi al forno, guanciale, carbocrema, pecorino", price: "€15" },
 ];
 
