@@ -153,9 +153,9 @@ export const birreSpinaFormati: MenuItem[] = [
 ];
 
 export const birreNovita: MenuItem[] = [
-  { name: "Rothaus", description: "Bionda Chiara Pils 5,1% – Foresta Nera (GER)", price: "€4 | €6 | €22" },
-  { name: "Distelhäuser", description: "Bionda Keller 5,4% – Franconia (GER)", price: "€4 | €6 | €22" },
-  { name: "Italian Bock", description: "Bock Rossa 6,5% – Roma (ITA) – Progetti Open Hub", price: "€4 | €6 | €22" },
+  { name: "Rothaus", description: "Bionda Chiara Pils 5,1% – Foresta Nera (GER)", price: "" },
+  { name: "Distelhäuser", description: "Bionda Keller 5,4% – Franconia (GER)", price: "€" },
+  { name: "Italian Bock", description: "Bock Rossa 6,5% – Roma (ITA) – Progetti Open Hub", price: "" },
 ];
 
 // ── VINI ──
