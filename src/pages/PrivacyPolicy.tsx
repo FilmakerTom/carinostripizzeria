@@ -14,7 +14,7 @@ const PrivacyPolicy = () => {
         <article className="max-w-3xl mx-auto prose prose-sm prose-neutral">
 
           <h1 className="text-2xl font-semibold text-foreground">Informativa sulla Privacy</h1>
-          <p className="text-xs text-muted-foreground">Ultimo aggiornamento: 16 aprile 2026</p>
+          <p className="text-xs text-muted-foreground">Ultimo aggiornamento: 27 aprile 2026</p>
 
           <section className="mt-8">
             <h2 className="text-lg font-semibold text-foreground">1. Titolare del trattamento</h2>
@@ -22,7 +22,7 @@ const PrivacyPolicy = () => {
               Il Titolare del trattamento dei dati personali è:<br />
               <strong>Francesco Gastaldon</strong><br />
               Sede: via Francesco Baracca, 64<br />
-              P.IVA: [P.IVA]<br />
+              P.IVA: 04407810268<br />
               Email: carinostri@gmail.com<br />
               Telefono: +39 340 6264069
             </p>
