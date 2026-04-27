@@ -135,7 +135,7 @@ export const sandwiches: MenuItem[] = [
 
 // ── BIRRE SPECIALI ──
 export const birreSpeciali: MenuItem[] = [
-  { name: "Tongerlo Bruin", description: "Birra Bruna d'Abbazia, stile Belga. 33 cl, 6,5%", price: "€5" },
+  { name: "Tongerlo Brun", description: "Birra Bruna d'Abbazia, stile Belga. 33 cl, 6,5%", price: "€5" },
   { name: "IPA Super 8", description: "Birra Indian Pale Ale. 33 cl, 6%", price: "€5,50" },
 ];
 
@@ -153,9 +153,9 @@ export const birreSpinaFormati: MenuItem[] = [
 ];
 
 export const birreNovita: MenuItem[] = [
-  { name: "Bionda Chiara Pils", description: "5,1% – Foresta Nera (GER)", price: "" },
-  { name: "Bionda Keller", description: "5,4% – Franconia (GER)", price: "" },
-  { name: "Rock Rossa", description: "6,5% – Roma (ITA) – Progetti Open Hub", price: "" },
+  { name: "Rothaus", description: "Bionda Chiara Pils 5,1% – Foresta Nera (GER)", price: "€4 | €6 | €22" },
+  { name: "Distelhäuser", description: "Bionda Keller 5,4% – Franconia (GER)", price: "€4 | €6 | €22" },
+  { name: "Italian Bock", description: "Bock Rossa 6,5% – Roma (ITA) – Progetti Open Hub", price: "€4 | €6 | €22" },
 ];
 
 // ── VINI ──
