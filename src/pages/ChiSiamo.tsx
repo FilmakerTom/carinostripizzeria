@@ -56,16 +56,16 @@ const ChiSiamo = () => {
           <div className="grid md:grid-cols-3 gap-10">
             {[
               {
-                title: "Qualità",
-                text: "Usiamo prodotti freschi e di prima qualità per un gusto unico e piacevole",
+                title: "Curiosità",
+                text: "Amiamo scoprire ingredienti nuovi, sperimentare abbinamenti, imparare.",
               },
               {
-                title: "Tradizione",
-                text: "Portiamo avanti la cura e la lavorazione del lievito madre da decenni",
+                title: "Rispetto",
+                text: " Per il lavoro, per gli ingredienti, e soprattutto per le persone che scelgono di passare del tempo da noi.",
               },
               {
-                title: "Accoglienza",
-                text: "Ogni ospite è parte della famiglia. Vi accogliamo con calore e vi facciamo sentire a casa.",
+                title: "Equilibrio",
+                text: "L'equilibrio nell'impasto, nell'abbinamento dei sapori, nel rapporto con i clienti.",
               },
             ].map((v) => (
               <div key={v.title} className="text-center">
