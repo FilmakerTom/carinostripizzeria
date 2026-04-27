@@ -208,8 +208,8 @@ const MenuPage = () => {
           {/* Info */}
           <div className="mt-16 pt-8 border-t border-border text-center">
             <p className="text-muted-foreground text-xs leading-relaxed max-w-2xl mx-auto">
-              Tutte le informazioni circa la presenza di sostanze o di prodotti che provocherebbero allergie o intolleranze sono disponibili al personale di servizio.
-              In mancanza di prodotti freschi usiamo prodotti surgelati di qualità.
+              Le informazioni circa la presenza di sostanze o di prodotti che provocano allergie o intolleranze sono disponibili rivolgendosi al personale di servizio.
+              Si informa la clientela che, in caso di indisponibilità di prodotti freschi, vengono utilizzati prodotti surgelati di qualità.
             </p>
           </div>
         </div>
