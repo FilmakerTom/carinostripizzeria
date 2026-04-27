@@ -42,7 +42,7 @@ const About = () => {
           <div className="w-12 h-px bg-primary mb-8" />
           <p className="text-muted-foreground text-base leading-relaxed mb-5">
             <p>
-              Da Carinostri ci si siede, si mangia bene e si sta bene.
+              Da Carinostri ci si siede, si mangia bene e ci si sente accolti.
             </p>
             Siamo qui dal 2010 e facciamo questo lavoro con passione, attenzione e rispetto.
             Rispetto per gli ingredienti, per l'impasto, e soprattutto per chi viene a trovarci.
