@@ -41,9 +41,12 @@ const About = () => {
           </h2>
           <div className="w-12 h-px bg-primary mb-8" />
           <p className="text-muted-foreground text-base leading-relaxed mb-5">
-            Da Carinostri, ogni pizza racconta una storia di passione e
-            tradizione. Il nostro impasto viene preparato ogni mattina con
-            farine selezionate e lasciato lievitare per 48 ore.
+            Da Carinostri ci si siede, si mangia bene e si sta bene.
+            Siamo qui dal 2010 e facciamo questo lavoro con passione, attenzione e rispetto.
+            Rispetto per gli ingredienti, per l'impasto, e soprattutto per chi viene a trovarci.
+            
+            Il nostro lievito madre non è solo un metodo: è la radice di tutto quello che facciamo.
+            Portate la famiglia, portate gli amici. Noi pensiamo al resto.
           </p>
           <p className="text-muted-foreground text-base leading-relaxed">
             Cotto nel nostro forno a legna a 450°C, ogni morso è un viaggio
