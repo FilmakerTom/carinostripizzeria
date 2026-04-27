@@ -34,7 +34,7 @@ const Footer = () => {
               carinostri@gmail.com
             </p>
           </div>
-          <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col items-center gap-2">
             <h3 className="text-background text-sm tracking-widest uppercase">Social</h3>
             <div className="flex gap-4">
               <a href="https://www.facebook.com/share/1b2Kszp4Gi/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-background/50 hover:text-primary transition-colors">
@@ -42,9 +42,6 @@ const Footer = () => {
               </a>
               <a href="https://www.instagram.com/carinostri?igsh=cnE4bTl2amdweW11&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-background/50 hover:text-primary transition-colors">
                 <Instagram size={22} />
-              </a>
-              <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="text-background/50 hover:text-primary transition-colors">
-                <Youtube size={22} />
               </a>
             </div>
           </div>
