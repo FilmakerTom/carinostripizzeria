@@ -65,7 +65,7 @@ const ChiSiamo = () => {
               },
               {
                 title: "Equilibrio",
-                text: "L'equilibrio nell'impasto, nell'abbinamento dei sapori, nel rapporto con i clienti.",
+                text: "Nell'impasto, nell'abbinamento dei sapori, nel rapporto con i clienti.",
               },
             ].map((v) => (
               <div key={v.title} className="text-center">
