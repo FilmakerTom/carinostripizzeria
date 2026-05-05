@@ -114,6 +114,60 @@ const categories = [
   { id: "bibite", label: "Bibite" },
 ];
 
+const BeerCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => (
+  <div className="mb-16">
+    <p className="text-primary tracking-[0.3em] uppercase text-xs mb-2">{subtitle}</p>
+    <h3 className="text-3xl md:text-4xl font-normal text-foreground mb-2">{title}</h3>
+    <div className="w-10 h-px bg-primary mb-6" />
+    <div className="flex items-center gap-6 mb-6 flex-wrap">
+      <span className="flex items-center gap-2 text-sm text-muted-foreground">
+        <BeerSmallIcon className="w-4 h-4 text-primary" /> Piccolo
+      </span>
+      <span className="flex items-center gap-2 text-sm text-muted-foreground">
+        <BeerLargeIcon className="w-4 h-4 text-primary" /> Grande
+      </span>
+      <span className="flex items-center gap-2 text-sm text-muted-foreground">
+        <BeerJugIcon className="w-4 h-4 text-primary" /> Caraffa
+      </span>
+    </div>
+    {note && <p className="text-muted-foreground text-sm italic mb-6">{note}</p>}
+    <div className="space-y-0 divide-y divide-border">
+      {items.map((item, i) => {
+        const prices = item.price.split("|").map((p) => p.trim());
+        const beerIcons = [BeerSmallIcon, BeerLargeIcon, BeerJugIcon];
+        return (
+          <div key={`${item.name}-${i}`} className="flex items-start gap-4 py-5 group flex-wrap md:flex-nowrap">
+            {item.logo ? (
+              <img src={item.logo} alt={item.name} className="h-10 w-auto object-contain shrink-0" />
+            ) : (
+              <div className="h-10 w-10 shrink-0" aria-hidden="true" />
+            )}
+            <div className="flex-1 min-w-0 pr-4">
+              <h4 className="text-lg md:text-xl text-foreground group-hover:text-primary transition-colors">
+                {item.name}
+              </h4>
+              {item.description && (
+                <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
+              )}
+            </div>
+            <div className="flex items-center gap-4 shrink-0 flex-wrap">
+              {prices.map((price, idx) => {
+                const Icon = beerIcons[idx] ?? BeerSmallIcon;
+                return (
+                  <span key={idx} className="flex items-center gap-1.5">
+                    <Icon className="w-4 h-4 text-primary" />
+                    <span className="text-sm font-semibold text-primary">{price}</span>
+                  </span>
+                );
+              })}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+);
+
 const MenuPage = () => {
   const [activeCategory, setActiveCategory] = useState("pizze");
 
@@ -247,9 +301,8 @@ const MenuPage = () => {
 
           {/* ── BIBITE ── */}
           <div id="bibite">
-            <MenuCategory title="Birre alla spina" subtitle="DAL BANCO" items={birreNovita} />
+            <BeerCategory title="Birre alla Spina" subtitle="DAL BANCO" items={birreNovita} />
           </div>
-          <MenuCategory title="Misure Birre" subtitle="DAL BANCO" items={birreSpinaFormati} />
           <MenuCategory title="Birre Speciali" subtitle="DAL BANCO" items={birreSpeciali} />
           <MenuCategory title="Bevande" subtitle="DAL BANCO" items={bevande} />
           <div className="flex items-center justify-center gap-6 mb-8">
