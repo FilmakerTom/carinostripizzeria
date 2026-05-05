@@ -61,7 +61,7 @@ export const pizzeTonno: MenuItem[] = [
 
 // ── LE PIZZE DI STAGIONE ──
 export const pizzeStagione: MenuItem[] = [
-  { name: "Alla Crema d'Asparagi", description: "Fiordilatte, crema di asparagi verdi, cotto affumicato, bufala, senape in grani", price: "€15" },
+  { name: "Asparagi verdi, cotto affumicato e bufala", description: "Crema di asparagi verdi, prosciutto cotto affumicato, bufala campana, senape in grani", price: "€14" },
   { name: "Speck Carciofi e Burrata", description: "Fiordilatte, carciofi a spiccchi, speck tirolese, burrata pugliese, polvere di perperone di Senise IGP", price: "€15" },
   { name: "Carbonara d'Asparagi", description: "Fiordilatte, asparagi verdi al forno, guanciale, carbocrema, pecorino", price: "€15" },
 ];
@@ -132,7 +132,6 @@ export const sandwiches: MenuItem[] = [
   { name: "Nostro", description: "Porchetta, cipolla caramellata, pomodori secchi, mozzarella, frittata, lattuga, pomodoro fresco", price: "€11" },
   { name: "Tonnato", description: "Salsa tonnata, alici, mozzarella, cipolla viola, lattuga, pomodoro fresco", price: "€12" },
   { name: "Inglese", description: "Roast-beef cotto a bassa temperatura, mozzarella, frittata, lattuga, pomodoro fresco", price: "€12" },
-  { name: "Angus, Caprino e Carletti", description: "Pane multicereali, Angus marinato, spalmabile di caprina e carletti, pomodoro fresco", price: "€12" },
 ];
 
 // ── BIRRE SPECIALI ──
