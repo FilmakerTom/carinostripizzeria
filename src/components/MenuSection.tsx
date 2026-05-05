@@ -1,6 +1,7 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const pizzas = [
+  { name: "Asparagi verdi, cotto affumicato e bufala", description: "Crema di asparagi verdi, prosciutto cotto affumicato, bufala campana, senape in grani", price: "€14" },
   { name: "Speck Carciofi e Burrata", description: "Fiordilatte, speck tirolese, carciofi a spicchi, burrata, polvere di peperone di Senise", price: "€15" },
   { name: "Carbonara d'Asparagi", description: "Fiordilatte, asparagi verdi al forno, guanciale, carbocrema, pecorino", price: "€15" },
 ];
