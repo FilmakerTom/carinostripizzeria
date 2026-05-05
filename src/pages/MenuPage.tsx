@@ -16,6 +16,36 @@ const BottleIcon = ({ className = "" }: { className?: string }) => (
     <path d="M10 2h4" />
   </svg>
 );
+
+const BeerSmallIcon = ({ className = "" }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M8 7h7v13a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V7z" />
+    <path d="M15 10h2a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2" />
+    <path d="M10 11v6" />
+    <path d="M12.5 11v6" />
+  </svg>
+);
+
+const BeerLargeIcon = ({ className = "" }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M6 5h9v16a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V5z" />
+    <path d="M15 9h2.5a2.5 2.5 0 0 1 2.5 2.5v4a2.5 2.5 0 0 1-2.5 2.5H15" />
+    <path d="M8.5 9v9" />
+    <path d="M11 9v9" />
+    <path d="M13 9v9" />
+  </svg>
+);
+
+const BeerJugIcon = ({ className = "" }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M3 6h12v15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6z" />
+    <path d="M15 10h3a3 3 0 0 1 3 3v3a3 3 0 0 1-3 3h-3" />
+    <path d="M3 9h12" />
+    <path d="M6 12v6" />
+    <path d="M9 12v6" />
+    <path d="M12 12v6" />
+  </svg>
+);
 import Footer from "@/components/Footer";
 import pattern from "@/assets/pattern.svg";
 import {
@@ -24,7 +54,7 @@ import {
   pizzeTagliateClassiche, pizzeTagliatePiccole,
   carenestreRosse, carenestreBianche,
   sandwiches,
-  birreSpeciali, birreSpinaFormati, birreNovita, bevande,
+  birreSpeciali, birreNovita, bevande,
   bollicine, viniBianchi, viniRossi,
 } from "@/data/menuData";
 import type { MenuItem } from "@/data/menuData";
