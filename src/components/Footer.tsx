@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock, Facebook, Instagram, Youtube } from "lucide-react";
+import { MapPin, Phone, Clock, Facebook, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import { openCookiePreferencesGlobal } from "@/contexts/CookieConsentContext";
 import pittogramma from "@/assets/pittogramma.svg";
@@ -16,7 +16,7 @@ const Footer = () => {
             <h3 className="text-background text-sm tracking-widest uppercase">Dove Siamo</h3>
             <p className="text-background/50 text-sm">
               Via Francesco Baracca, 64<br />
-              31036 Sala d'Istrana - TV
+              31036 Sala d'Istrana (TV)
             </p>
           </div>
           <div className="flex flex-col items-center gap-3">
@@ -30,8 +30,8 @@ const Footer = () => {
             <Phone className="text-primary" size={24} />
             <h3 className="text-background text-sm tracking-widest uppercase">Contatti</h3>
             <p className="text-background/50 text-sm">
-              0422 547305<br />
-              carinostri@gmail.com
+              <a href="tel:0422547305" className="hover:text-primary transition-colors">0422 547305</a><br />
+              <a href="mailto:carinostri@gmail.com" className="hover:text-primary transition-colors">carinostri@gmail.com</a>
             </p>
           </div>
           <div className="flex flex-col items-center gap-2">

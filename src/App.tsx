@@ -12,7 +12,6 @@ import CookieButton from "@/components/CookieButton";
 import CookiePreferences from "@/components/CookiePreferences";
 import Index from "./pages/Index.tsx";
 import MenuPage from "./pages/MenuPage.tsx";
-import ComingSoon from "./pages/ComingSoon.tsx";
 import ChiSiamo from "./pages/ChiSiamo.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import CookiePolicy from "./pages/CookiePolicy.tsx";
@@ -36,7 +35,6 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/menu" element={<MenuPage />} />
-            <Route path="/la-nostra-storia" element={<ComingSoon />} />
             <Route path="/chi-siamo" element={<ChiSiamo />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/cookie-policy" element={<CookiePolicy />} />

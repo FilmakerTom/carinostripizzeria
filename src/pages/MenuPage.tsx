@@ -156,6 +156,14 @@ const MenuPage = () => {
       <section className="py-20 px-4 bg-background">
         <div className="max-w-4xl mx-auto">
 
+          {/* Allergen note - top */}
+          <div className="mb-12 p-5 bg-card border-l-4 border-primary rounded-sm">
+            <p className="text-foreground text-sm leading-relaxed">
+              Le informazioni circa la presenza di sostanze o di prodotti che provocano allergie o intolleranze sono disponibili rivolgendosi al personale di servizio.
+              Si informa la clientela che, in caso di indisponibilità di prodotti freschi, vengono utilizzati prodotti surgelati di qualità.
+            </p>
+          </div>
+
           {/* ── ANTIPASTI & APERITIVI ── */}
           <div id="antipasti">
             <MenuCategory title="Aperitivi" subtitle="Per Iniziare" items={aperitivi} />
@@ -163,6 +171,13 @@ const MenuPage = () => {
           <MenuCategory title="Tradizionale" subtitle="Antipasti & Fritti" items={focaccia} />
           <MenuCategory title="Taglieri di Affettati e Formaggi" subtitle="Antipasti & Fritti" items={taglieri} note="Servito con pane pizza caldo" />
           <MenuCategory title="Fritti" subtitle="Antipasti & Fritti" items={fritti} />
+
+          {/* Macro-category separator */}
+          <div className="my-16 flex items-center gap-4" aria-hidden="true">
+            <div className="flex-1 h-px bg-border" />
+            <div className="w-2 h-2 rotate-45 bg-primary" />
+            <div className="flex-1 h-px bg-border" />
+          </div>
 
           {/* ── PIZZE ── */}
           <div id="pizze">
@@ -176,6 +191,13 @@ const MenuPage = () => {
           <MenuCategory title="Classiche" subtitle="LE NOSTRE PIZZE" items={pizzeTagliateClassiche} />
           <MenuCategory title="Pizze Tagliate" subtitle="LE NOSTRE PIZZE" items={pizzeTagliatePiccole} />
 
+          {/* Macro-category separator */}
+          <div className="my-16 flex items-center gap-4" aria-hidden="true">
+            <div className="flex-1 h-px bg-border" />
+            <div className="w-2 h-2 rotate-45 bg-primary" />
+            <div className="flex-1 h-px bg-border" />
+          </div>
+
           {/* ── SANDWICHES ── */}
           <div id="sandwiches">
             <MenuCategory
@@ -184,6 +206,13 @@ const MenuPage = () => {
               items={sandwiches}
               note="Il nostro pane pizza farcito servito con patate fritte e salsa rosa"
             />
+          </div>
+
+          {/* Macro-category separator */}
+          <div className="my-16 flex items-center gap-4" aria-hidden="true">
+            <div className="flex-1 h-px bg-border" />
+            <div className="w-2 h-2 rotate-45 bg-primary" />
+            <div className="flex-1 h-px bg-border" />
           </div>
 
           {/* ── BIBITE ── */}
@@ -204,14 +233,6 @@ const MenuPage = () => {
           <MenuCategory title="Bollicine" subtitle="I NOSTRI VINI" items={bollicine} />
           <MenuCategory title="Vini Bianchi Fermi" subtitle="I NOSTRI VINI" items={viniBianchi} />
           <MenuCategory title="Rossi" subtitle="I NOSTRI VINI" items={viniRossi} />
-
-          {/* Info */}
-          <div className="mt-16 pt-8 border-t border-border text-center">
-            <p className="text-muted-foreground text-xs leading-relaxed max-w-2xl mx-auto">
-              Le informazioni circa la presenza di sostanze o di prodotti che provocano allergie o intolleranze sono disponibili rivolgendosi al personale di servizio.
-              Si informa la clientela che, in caso di indisponibilità di prodotti freschi, vengono utilizzati prodotti surgelati di qualità.
-            </p>
-          </div>
         </div>
       </section>
 
