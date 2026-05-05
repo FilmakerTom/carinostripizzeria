@@ -57,6 +57,17 @@ const Hero = () => {
           >
             <Link to="/chi-siamo">Chi Siamo</Link>
           </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-foreground/30 text-foreground hover:bg-foreground/10 text-sm px-8 py-6 tracking-widest uppercase"
+            asChild
+          >
+            <a href="tel:0422547305" aria-label="Chiamaci allo 0422 547305">
+              <span className="md:hidden">Chiamaci</span>
+              <span className="hidden md:inline">Chiamaci · 0422 547305</span>
+            </a>
+          </Button>
         </div>
       </div>
     </section>

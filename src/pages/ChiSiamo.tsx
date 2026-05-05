@@ -91,7 +91,7 @@ const ChiSiamo = () => {
             <div className="rounded-sm overflow-hidden aspect-video">
               <iframe
                 title="Carinostri - Posizione"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.5!2d12.1048!3d45.6483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477956c0a0a0a0a1%3A0x1234567890abcdef!2sVia+Francesco+Baracca%2C+64%2C+31036+Istrana+TV!5e0!3m2!1sit!2sit!4v1700000000000"
+                src="https://www.google.com/maps?q=Via+Francesco+Baracca+64,+31036+Sala+d'Istrana+TV&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -109,7 +109,7 @@ const ChiSiamo = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="text-primary shrink-0 mt-0.5" size={18} />
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Via Francesco Baracca, 64<br />31036 Sala TV
+                  Via Francesco Baracca, 64<br />31036 Sala d'Istrana (TV)
                 </p>
               </div>
 
