@@ -16,6 +16,36 @@ const BottleIcon = ({ className = "" }: { className?: string }) => (
     <path d="M10 2h4" />
   </svg>
 );
+
+const BeerSmallIcon = ({ className = "" }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M8 7h7v13a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V7z" />
+    <path d="M15 10h2a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2" />
+    <path d="M10 11v6" />
+    <path d="M12.5 11v6" />
+  </svg>
+);
+
+const BeerLargeIcon = ({ className = "" }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M6 5h9v16a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V5z" />
+    <path d="M15 9h2.5a2.5 2.5 0 0 1 2.5 2.5v4a2.5 2.5 0 0 1-2.5 2.5H15" />
+    <path d="M8.5 9v9" />
+    <path d="M11 9v9" />
+    <path d="M13 9v9" />
+  </svg>
+);
+
+const BeerJugIcon = ({ className = "" }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M3 6h12v15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6z" />
+    <path d="M15 10h3a3 3 0 0 1 3 3v3a3 3 0 0 1-3 3h-3" />
+    <path d="M3 9h12" />
+    <path d="M6 12v6" />
+    <path d="M9 12v6" />
+    <path d="M12 12v6" />
+  </svg>
+);
 import Footer from "@/components/Footer";
 import pattern from "@/assets/pattern.svg";
 import {
@@ -24,7 +54,7 @@ import {
   pizzeTagliateClassiche, pizzeTagliatePiccole,
   carenestreRosse, carenestreBianche,
   sandwiches,
-  birreSpeciali, birreSpinaFormati, birreNovita, bevande,
+  birreSpeciali, birreNovita, bevande,
   bollicine, viniBianchi, viniRossi,
 } from "@/data/menuData";
 import type { MenuItem } from "@/data/menuData";
@@ -83,6 +113,60 @@ const categories = [
   { id: "sandwiches", label: "Sandwiches" },
   { id: "bibite", label: "Bibite" },
 ];
+
+const BeerCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => (
+  <div className="mb-16">
+    <p className="text-primary tracking-[0.3em] uppercase text-xs mb-2">{subtitle}</p>
+    <h3 className="text-3xl md:text-4xl font-normal text-foreground mb-2">{title}</h3>
+    <div className="w-10 h-px bg-primary mb-6" />
+    <div className="flex items-center gap-6 mb-6 flex-wrap">
+      <span className="flex items-center gap-2 text-sm text-muted-foreground">
+        <BeerSmallIcon className="w-4 h-4 text-primary" /> Piccolo
+      </span>
+      <span className="flex items-center gap-2 text-sm text-muted-foreground">
+        <BeerLargeIcon className="w-4 h-4 text-primary" /> Grande
+      </span>
+      <span className="flex items-center gap-2 text-sm text-muted-foreground">
+        <BeerJugIcon className="w-4 h-4 text-primary" /> Caraffa
+      </span>
+    </div>
+    {note && <p className="text-muted-foreground text-sm italic mb-6">{note}</p>}
+    <div className="space-y-0 divide-y divide-border">
+      {items.map((item, i) => {
+        const prices = item.price.split("|").map((p) => p.trim());
+        const beerIcons = [BeerSmallIcon, BeerLargeIcon, BeerJugIcon];
+        return (
+          <div key={`${item.name}-${i}`} className="flex items-start gap-4 py-5 group flex-wrap md:flex-nowrap">
+            {item.logo ? (
+              <img src={item.logo} alt={item.name} className="h-10 w-auto object-contain shrink-0" />
+            ) : (
+              <div className="h-10 w-10 shrink-0" aria-hidden="true" />
+            )}
+            <div className="flex-1 min-w-0 pr-4">
+              <h4 className="text-lg md:text-xl text-foreground group-hover:text-primary transition-colors">
+                {item.name}
+              </h4>
+              {item.description && (
+                <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
+              )}
+            </div>
+            <div className="flex items-center gap-4 shrink-0 flex-wrap">
+              {prices.map((price, idx) => {
+                const Icon = beerIcons[idx] ?? BeerSmallIcon;
+                return (
+                  <span key={idx} className="flex items-center gap-1.5">
+                    <Icon className="w-4 h-4 text-primary" />
+                    <span className="text-sm font-semibold text-primary">{price}</span>
+                  </span>
+                );
+              })}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+);
 
 const MenuPage = () => {
   const [activeCategory, setActiveCategory] = useState("pizze");
@@ -217,9 +301,8 @@ const MenuPage = () => {
 
           {/* ── BIBITE ── */}
           <div id="bibite">
-            <MenuCategory title="Birre alla spina" subtitle="DAL BANCO" items={birreNovita} />
+            <BeerCategory title="Birre alla Spina" subtitle="DAL BANCO" items={birreNovita} />
           </div>
-          <MenuCategory title="Misure Birre" subtitle="DAL BANCO" items={birreSpinaFormati} />
           <MenuCategory title="Birre Speciali" subtitle="DAL BANCO" items={birreSpeciali} />
           <MenuCategory title="Bevande" subtitle="DAL BANCO" items={bevande} />
           <div className="flex items-center justify-center gap-6 mb-8">

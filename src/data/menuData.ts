@@ -2,6 +2,7 @@ export interface MenuItem {
   name: string;
   description: string;
   price: string;
+  logo?: string;
 }
 
 // ── ANTIPASTI & FRITTI ──
@@ -146,17 +147,10 @@ export const bevande: MenuItem[] = [
   { name: "Bibite in bottiglia 0,33 lt", description: "", price: "€3" },
 ];
 
-// ── BIRRE FORMATI ──
-export const birreSpinaFormati: MenuItem[] = [
-  { name: "Bicchiere 0,20 lt", description: "", price: "€4" },
-  { name: "Bicchiere 0,40 lt", description: "", price: "€6" },
-  { name: "Caraffa 1,80 lt", description: "", price: "€22" },
-];
-
 export const birreNovita: MenuItem[] = [
-  { name: "Rothaus", description: "Bionda Chiara Pils 5,1% – Foresta Nera (GER)", price: "" },
-  { name: "Distelhäuser", description: "Bionda Keller 5,4% – Franconia (GER)", price: "€" },
-  { name: "Italian Bock", description: "Bock Rossa 6,5% – Roma (ITA) – Progetti Open Hub", price: "" },
+  { name: "Rothaus", description: "Bionda Chiara Pils 5,1% – Foresta Nera (GER)", price: "€4,00 | €6,00 | €22,00", logo: "/logos/rothaus.png" },
+  { name: "Distelhäuser", description: "Bionda Keller 5,4% – Franconia (GER)", price: "€4,00 | €6,00 | €22,00", logo: "/logos/distelhauser.png" },
+  { name: "Italian Bock", description: "Bock Rossa 6,5% – Roma (ITA) – Progetti Open Hub", price: "€4,50 | €6,50 | €24,00", logo: "/logos/italian-bock.png" },
 ];
 
 // ── VINI ──
