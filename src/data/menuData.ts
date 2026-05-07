@@ -136,8 +136,8 @@ export const sandwiches: MenuItem[] = [
 
 // ── BIRRE SPECIALI ──
 export const birreSpeciali: MenuItem[] = [
-  { name: "Tongerlo Brun", description: "Birra Bruna d'Abbazia, stile Belga. 33 cl, 6,5%", price: "€5" },
-  { name: "IPA Super 8", description: "Birra Indian Pale Ale. 33 cl, 6%", price: "€5,50" },
+  { name: "Tongerlo Brun", description: "Birra Bruna d'Abbazia, stile Belga. 33 cl, 6,5%", price: "€5", logo: "/logos/tongerlo.png" },
+  { name: "IPA Super 8", description: "Birra Indian Pale Ale. 33 cl, 6%", price: "€5,50", logo: "/logos/super-8-ipa.png" },
 ];
 
 // ── BEVANDE ──
