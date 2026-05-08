@@ -44,7 +44,7 @@ export const aperitivi: MenuItem[] = [
 export const pizzePorchetta: MenuItem[] = [
   { name: "Carinostri", description: "Porchetta, salsa di pomodoro, fiordilatte", price: "€9" },
   { name: "Rivasecca", description: "Porchetta, fiordilatte, pomodoro fresco, cipolla viola, rucola", price: "€11" },
-  { name: "Bosciaola", description: "Porchetta, funghi misti, salsa di pomodoro, fiordilatte", price: "€11" },
+  { name: "Boscaiola", description: "Porchetta, funghi misti, salsa di pomodoro, fiordilatte", price: "€11" },
   { name: "Rustica", description: "Porchetta, patate al forno, funghi champignon, ricotta affumicata, salsa di pomodoro, fiordilatte", price: "€11" },
   { name: "Viola e Porchetta", description: "Porchetta, fiordilatte, peperoni pelati, cipolla viola caramellata in agrodolce", price: "€12" },
   { name: "Porchetta Tonnata", description: "Porchetta, salsa tonnata, pomodorini confit, rucola, frutto di cappero", price: "€13" },
@@ -81,8 +81,8 @@ export const pizzeDoc: MenuItem[] = [
 
 // ── LE PIZZE TAGLIATE ──
 export const pizzeTagliateClassiche: MenuItem[] = [
-  { name: "Marinara", description: "Salsa pomodoro, olio e.v.o., aglio, origano", price: "€5,5" },
-  { name: "Margherita", description: "Salsa di pomodoro, fiordilatte", price: "€5,5" },
+  { name: "Marinara", description: "Salsa pomodoro, olio e.v.o., aglio, origano", price: "€6,5" },
+  { name: "Margherita", description: "Salsa di pomodoro, fiordilatte", price: "€6,5" },
   { name: "Pugliese", description: "Salsa di pomodoro, fiordilatte, cipolla di Tropea", price: "€7,5" },
   { name: "Romana", description: "Salsa di pomodoro, fiordilatte, filetti di alici", price: "€8" },
   { name: "Diavola", description: "Salsa di pomodoro, fiordilatte, salame piccante affumicato", price: "€8" },
@@ -137,7 +137,7 @@ export const sandwiches: MenuItem[] = [
 // ── BIRRE SPECIALI ──
 export const birreSpeciali: MenuItem[] = [
   { name: "Tongerlo Brun", description: "Birra Bruna d'Abbazia, stile Belga. 33 cl, 6,5%", price: "€5", logo: "/logos/tongerlo.png" },
-  { name: "IPA Super 8", description: "Birra Indian Pale Ale. 33 cl, 6%", price: "€5,5", logo: "/logos/super-8-ipa.png" },
+  { name: "IPA Super 8", description: "Birra Indian Pale Ale. 33 cl, 6%", price: "€6,5", logo: "/logos/super-8-ipa.png" },
 ];
 
 // ── BEVANDE ──
