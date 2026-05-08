@@ -32,7 +32,7 @@ export const fritti: MenuItem[] = [
 // ── APERITIVI ──
 export const aperitivi: MenuItem[] = [
   { name: "Della Casa", description: "Analcolico a base di frutta", price: "€3" },
-  { name: "Cortesino", description: "Ginger Analcolico Artigianale", price: "€3,2" },
+  { name: "Cortesino", description: "Ginger Analcolico Artigianale", price: "€3,5" },
   { name: "Gli Spritz", description: "Aperol / Campari / Select / Cynar", price: "€3,5" },
   { name: "Hugo", description: "Vino Frizzante, Sambuco, Menta Fresca, Lime", price: "€3,5" },
   { name: "Americano", description: "Vermouth Rosso, Campari, Seltz", price: "€6" },
