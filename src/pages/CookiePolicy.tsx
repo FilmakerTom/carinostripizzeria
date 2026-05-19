@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { cookieCategories } from "@/config/cookie-config";
 import { openCookiePreferencesGlobal } from "@/contexts/CookieConsentContext";
 
@@ -12,6 +13,11 @@ import { openCookiePreferencesGlobal } from "@/contexts/CookieConsentContext";
 const CookiePolicy = () => {
   return (
     <>
+      <SEO
+        title="Cookie Policy · Carinostri Pizzeria"
+        description="Cookie Policy di Carinostri: tipologie di cookie utilizzati, finalità, durata e modalità per gestire o revocare il consenso."
+        path="/cookie-policy"
+      />
       <main className="min-h-screen bg-background pt-24 pb-16 px-4">
         <article className="max-w-3xl mx-auto prose prose-sm prose-neutral">
 
