@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import pattern from "@/assets/pattern.svg";
 import dough1 from "@/assets/dough-1.jpg";
 import pizza1 from "@/assets/pizza-1.png";
@@ -7,6 +8,11 @@ import { MapPin, Phone, Clock } from "lucide-react";
 const ChiSiamo = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Chi Siamo · Carinostri Pizzeria a Istrana"
+        description="Scopri Carinostri: la famiglia, i valori e la passione dietro la pizzeria con pasta madre viva a Sala d'Istrana (TV). Orari e contatti."
+        path="/chi-siamo"
+      />
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-foreground overflow-hidden">
         <img src={pattern} alt="" className="absolute top-0 left-0 w-72 opacity-[0.04] pointer-events-none" />
