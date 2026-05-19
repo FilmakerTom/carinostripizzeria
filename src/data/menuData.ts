@@ -61,7 +61,7 @@ export const pizzeTonno: MenuItem[] = [
 
 // ── LE PIZZE DI STAGIONE ──
 export const pizzeStagione: MenuItem[] = [
-  { name: "Asparagi verdi, cotto affumicato e bufala", description: "Crema di asparagi verdi, prosciutto cotto affumicato, bufala campana, senape in grani", price: "€14" },
+  { name: "Mortadella DOC", description: "Mortadella Bologna IGP, stracchino, pistacchio, pepe rosa, gratuggiata di limone", price: "€14" },
   { name: "Speck Carciofi e Burrata", description: "Fiordilatte, carciofi a spiccchi, speck tirolese, burrata pugliese, polvere di perperone di Senise IGP", price: "€15" },
   { name: "Carbonara d'Asparagi", description: "Fiordilatte, asparagi verdi al forno, guanciale, carbocrema, pecorino", price: "€15" },
 ];
