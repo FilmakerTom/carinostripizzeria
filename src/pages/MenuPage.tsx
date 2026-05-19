@@ -47,6 +47,7 @@ const BeerJugIcon = ({ className = "" }: { className?: string }) => (
   </svg>
 );
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import pattern from "@/assets/pattern.svg";
 import {
   focaccia, taglieri, fritti, aperitivi,
@@ -58,6 +59,18 @@ import {
   bollicine, viniBianchi, viniRossi,
 } from "@/data/menuData";
 import type { MenuItem } from "@/data/menuData";
+
+const menuJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  name: "Menù Carinostri",
+  hasMenuSection: [
+    { "@type": "MenuSection", name: "Antipasti" },
+    { "@type": "MenuSection", name: "Pizze" },
+    { "@type": "MenuSection", name: "Sandwiches" },
+    { "@type": "MenuSection", name: "Bibite, Birre e Vini" },
+  ],
+};
 
 interface MenuCategoryProps {
   title: string;
@@ -216,6 +229,12 @@ const MenuPage = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Menù · Carinostri Pizzeria Istrana"
+        description="Esplora il menù di Carinostri: pizze di stagione e D.O.C., antipasti, taglieri, sandwiches, birre alla spina e vini selezionati."
+        path="/menu"
+        jsonLd={menuJsonLd}
+      />
       {/* Hero banner */}
       <section className="relative pt-32 pb-20 bg-foreground overflow-hidden">
         <img src={pattern} alt="" className="absolute top-0 right-0 w-80 opacity-[0.04] pointer-events-none" />
@@ -225,7 +244,7 @@ const MenuPage = () => {
           </p>
           <h1 className="text-5xl md:text-6xl font-normal text-background">Menù</h1>
           <div className="w-12 h-px bg-primary mx-auto mt-5" />
-          <p className="text-sm mt-4 text-muted">Coperto: €2,50</p>
+          <p className="text-sm mt-4 text-background/80">Coperto: €2,50</p>
         </div>
       </section>
 
@@ -262,6 +281,7 @@ const MenuPage = () => {
 
           {/* ── ANTIPASTI & APERITIVI ── */}
           <div id="antipasti">
+            <h2 className="sr-only">Antipasti</h2>
             <MenuCategory title="Aperitivi" subtitle="Per Iniziare" items={aperitivi} />
           </div>
           <MenuCategory title="Tradizionale" subtitle="Antipasti & Fritti" items={focaccia} />
@@ -277,6 +297,7 @@ const MenuPage = () => {
 
           {/* ── PIZZE ── */}
           <div id="pizze">
+            <h2 className="sr-only">Pizze</h2>
             <MenuCategory title="Le Pizze di Stagione" subtitle="Stagionali" items={pizzeStagione} />
           </div>
           <MenuCategory title="Le Pizze D.O.C." subtitle="D'Eccellenza" items={pizzeDoc} />
@@ -296,6 +317,7 @@ const MenuPage = () => {
 
           {/* ── SANDWICHES ── */}
           <div id="sandwiches">
+            <h2 className="sr-only">Sandwiches</h2>
             <MenuCategory
               title="Sandwiches"
               subtitle="Pane Pizza Farcito"
@@ -313,6 +335,7 @@ const MenuPage = () => {
 
           {/* ── BIBITE ── */}
           <div id="bibite">
+            <h2 className="sr-only">Bibite, Birre e Vini</h2>
             <BeerCategory title="Birre alla Spina" subtitle="DAL BANCO" items={birreNovita} />
           </div>
           <BeerCategory title="Birre Speciali" subtitle="DAL BANCO" items={birreSpeciali} />

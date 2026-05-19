@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 /**
  * ⚠️ ATTENZIONE: Questi testi sono modelli indicativi e NON costituiscono consulenza legale.
@@ -10,6 +11,11 @@ import Footer from "@/components/Footer";
 const PrivacyPolicy = () => {
   return (
     <>
+      <SEO
+        title="Privacy Policy · Carinostri Pizzeria"
+        description="Informativa sulla privacy di Carinostri: titolare del trattamento, finalità, base giuridica, diritti dell'interessato e conservazione dei dati."
+        path="/privacy-policy"
+      />
       <main className="min-h-screen bg-background pt-24 pb-16 px-4">
         <article className="max-w-3xl mx-auto prose prose-sm prose-neutral">
 
