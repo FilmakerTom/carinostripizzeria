@@ -37,8 +37,8 @@ const Navbar = () => {
         <Link to="/">
           <img
             src={solid ? logo : logoNegative}
-            alt="Carinostri"
-            className="h-8 md:h-10 transition-all"
+            alt="Logo Carinostri Pizzeria"
+            className="h-8 md:h-10 w-auto transition-all"
           />
         </Link>
 

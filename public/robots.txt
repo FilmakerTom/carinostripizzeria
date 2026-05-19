@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://carinostripizzeria.lovable.app/sitemap.xml

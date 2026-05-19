@@ -24,19 +24,22 @@ const Hero = () => {
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
         <img
           src={logoNegative}
-          alt="Carinostri"
-          className={`h-28 md:h-40 mx-auto mb-8 transition-all duration-1000 ease-out ${
+          alt="Logo Carinostri Pizzeria Istrana"
+          width={400}
+          height={160}
+          fetchPriority="high"
+          className={`h-28 md:h-40 w-auto mx-auto mb-8 transition-all duration-1000 ease-out ${
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         />
-        <p
-          className={`text-primary-foreground/70 tracking-[0.25em] uppercase text-xs md:text-sm mb-10 transition-all duration-700 ease-out delay-300 ${
+        <h1
+          className={`text-primary-foreground/80 tracking-[0.25em] uppercase text-xs md:text-sm font-normal mb-10 transition-all duration-700 ease-out delay-300 ${
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
           style={{ fontFamily: 'var(--font-body)' }}
         >
-          PIZZA ARTIGIANALE · LA BONTÀ DELLA PASTA MADRE VIVA
-        </p>
+          Pizza Artigianale · La bontà della Pasta Madre Viva
+        </h1>
         <div
           className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 ease-out delay-500 ${
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"

@@ -1,0 +1,16 @@
+# Carinostri Pizzeria
+
+> Pizzeria artigianale a Sala d'Istrana (TV) specializzata in pizza con pasta madre viva, lievitazione lunga e ingredienti del territorio.
+
+Carinostri propone pizze tradizionali e stagionali, taglieri di affettati e formaggi, fritti, sandwiches farciti, birre artigianali alla spina e una selezione di vini italiani. Aperti mercoledì-domenica dalle 18:00 alle 23:00.
+
+## Pages
+
+- [Home](/): Presentazione della pizzeria e selezione di pizze di stagione.
+- [Menù](/menu): Carta completa di antipasti, pizze, sandwiches, birre, vini e bevande con prezzi.
+- [Chi Siamo](/chi-siamo): Filosofia, valori e contatti della pizzeria a Sala d'Istrana.
+
+## Optional
+
+- [Privacy Policy](/privacy-policy): Informativa sul trattamento dei dati personali.
+- [Cookie Policy](/cookie-policy): Informativa sui cookie utilizzati dal sito.
