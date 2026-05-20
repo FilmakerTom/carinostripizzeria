@@ -22,7 +22,15 @@ async function gscQuery(body: Record<string, unknown>, lovableKey: string, gscKe
       body: JSON.stringify(body),
     },
   );
-  const data = await res.json();
+  const text = await res.text();
+  let data: any = null;
+  try {
+    data = text ? JSON.parse(text) : null;
+  } catch {
+    throw new Error(
+      `GSC gateway returned non-JSON (status ${res.status}): ${text.slice(0, 200)}`,
+    );
+  }
   if (!res.ok) {
     throw new Error(`GSC ${res.status}: ${JSON.stringify(data)}`);
   }
