@@ -285,11 +285,20 @@ const MenuPage = () => {
           {/* ── ANTIPASTI & APERITIVI ── */}
           <div id="antipasti">
             <h2 className="sr-only">Antipasti</h2>
-            <MenuCategory title="Aperitivi" subtitle="Per Iniziare" items={aperitivi} />
+            <div id="aperitivi">
+              <MenuCategory title="Aperitivi" subtitle="Per Iniziare" items={aperitivi} />
+            </div>
           </div>
-          <MenuCategory title="Tradizionale" subtitle="Antipasti & Fritti" items={focaccia} />
-          <MenuCategory title="Taglieri di Affettati e Formaggi" subtitle="Antipasti & Fritti" items={taglieri} note="Servito con pane pizza caldo" />
-          <MenuCategory title="Fritti" subtitle="Antipasti & Fritti" items={fritti} />
+          <div id="tradizionale">
+            <MenuCategory title="Tradizionale" subtitle="Antipasti & Fritti" items={focaccia} />
+          </div>
+          <div id="taglieri">
+            <MenuCategory title="Taglieri di Affettati e Formaggi" subtitle="Antipasti & Fritti" items={taglieri} note="Servito con pane pizza caldo" />
+          </div>
+          <div id="fritti">
+            <MenuCategory title="Fritti" subtitle="Antipasti & Fritti" items={fritti} />
+          </div>
+
 
           {/* Macro-category separator */}
           <div className="my-16 flex items-center gap-4" aria-hidden="true">
@@ -301,14 +310,26 @@ const MenuPage = () => {
           {/* ── PIZZE ── */}
           <div id="pizze">
             <h2 className="sr-only">Pizze</h2>
-            <MenuCategory title="Le Pizze di Stagione" subtitle="Stagionali" items={pizzeStagione} />
+            <div id="pizze-stagionali">
+              <MenuCategory title="Le Pizze di Stagione" subtitle="Stagionali" items={pizzeStagione} />
+            </div>
           </div>
-          <MenuCategory title="Le Pizze D.O.C." subtitle="D'Eccellenza" items={pizzeDoc} />
-          <MenuCategory title="Le Carenostre" subtitle="LE CARENOSTRE" items={carenestreRosse} />
-          <MenuCategory title="Le Carenostre Bianche" subtitle="LE CARENOSTRE" items={carenestreBianche} />
-          <MenuCategory title="Con La Porchetta" subtitle="Le Nostre Pizze" items={pizzePorchetta} />
-          <MenuCategory title="Con Il Tonno" subtitle="Le Nostre Pizze" items={pizzeTonno} />
-          <div className="mb-16 border border-border rounded-sm overflow-hidden">
+          <div id="pizze-doc">
+            <MenuCategory title="Le Pizze D.O.C." subtitle="D'Eccellenza" items={pizzeDoc} />
+          </div>
+          <div id="carenostre">
+            <MenuCategory title="Le Carenostre" subtitle="LE CARENOSTRE" items={carenestreRosse} />
+            <MenuCategory title="Le Carenostre Bianche" subtitle="LE CARENOSTRE" items={carenestreBianche} />
+          </div>
+          <div id="porchetta">
+            <MenuCategory title="Con La Porchetta" subtitle="Le Nostre Pizze" items={pizzePorchetta} />
+          </div>
+          <div id="tonno">
+            <MenuCategory title="Con Il Tonno" subtitle="Le Nostre Pizze" items={pizzeTonno} />
+          </div>
+
+          <div id="classiche" className="mb-16 border border-border rounded-sm overflow-hidden">
+
             <button
               type="button"
               onClick={() => setClassicheOpen((v) => !v)}
@@ -350,7 +371,7 @@ const MenuPage = () => {
               </div>
             </div>
           </div>
-          <div className="mb-16 border border-border rounded-sm overflow-hidden">
+          <div id="tagliate" className="mb-16 border border-border rounded-sm overflow-hidden">
             <button
               type="button"
               onClick={() => setTagliateOpen((v) => !v)}
@@ -421,10 +442,16 @@ const MenuPage = () => {
           {/* ── BIBITE ── */}
           <div id="bibite">
             <h2 className="sr-only">Bibite, Birre e Vini</h2>
-            <BeerCategory title="Birre alla Spina" subtitle="DAL BANCO" items={birreNovita} />
+            <div id="birre-spina">
+              <BeerCategory title="Birre alla Spina" subtitle="DAL BANCO" items={birreNovita} />
+            </div>
           </div>
-          <BeerCategory title="Birre Speciali" subtitle="DAL BANCO" items={birreSpeciali} />
-          <MenuCategory title="Bevande" subtitle="DAL BANCO" items={bevande} />
+          <div id="birre-speciali">
+            <BeerCategory title="Birre Speciali" subtitle="DAL BANCO" items={birreSpeciali} />
+          </div>
+          <div id="bevande">
+            <MenuCategory title="Bevande" subtitle="DAL BANCO" items={bevande} />
+          </div>
           <div className="flex items-center justify-center gap-6 mb-8">
             <span className="flex items-center gap-2 text-sm text-muted-foreground">
               <WineGlassIcon className="w-4 h-4 text-primary" /> Calice
@@ -433,9 +460,16 @@ const MenuPage = () => {
               <BottleIcon className="w-4 h-4 text-primary" /> Bottiglia
             </span>
           </div>
-          <MenuCategory title="Bollicine" subtitle="I NOSTRI VINI" items={bollicine} />
-          <MenuCategory title="Vini Bianchi Fermi" subtitle="I NOSTRI VINI" items={viniBianchi} />
-          <MenuCategory title="Rossi" subtitle="I NOSTRI VINI" items={viniRossi} />
+          <div id="bollicine">
+            <MenuCategory title="Bollicine" subtitle="I NOSTRI VINI" items={bollicine} />
+          </div>
+          <div id="vini-bianchi">
+            <MenuCategory title="Vini Bianchi Fermi" subtitle="I NOSTRI VINI" items={viniBianchi} />
+          </div>
+          <div id="vini-rossi">
+            <MenuCategory title="Rossi" subtitle="I NOSTRI VINI" items={viniRossi} />
+          </div>
+
         </div>
       </section>
 
