@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
+
 
 const WineGlassIcon = ({ className = "" }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -121,12 +122,51 @@ const MenuCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => (
   </div>
 );
 
-const categories = [
-  { id: "antipasti", label: "Antipasti" },
-  { id: "pizze", label: "Pizze" },
+interface CategoryDef {
+  id: string;
+  label: string;
+  subsections?: { id: string; label: string }[];
+}
+
+const categories: CategoryDef[] = [
+  {
+    id: "antipasti",
+    label: "Antipasti",
+    subsections: [
+      { id: "aperitivi", label: "Aperitivi" },
+      { id: "tradizionale", label: "Tradizionale" },
+      { id: "taglieri", label: "Taglieri" },
+      { id: "fritti", label: "Fritti" },
+    ],
+  },
+  {
+    id: "pizze",
+    label: "Pizze",
+    subsections: [
+      { id: "pizze-stagionali", label: "Stagionali" },
+      { id: "pizze-doc", label: "D.O.C." },
+      { id: "carenostre", label: "Le Carenostre" },
+      { id: "porchetta", label: "Con la Porchetta" },
+      { id: "tonno", label: "Con il Tonno" },
+      { id: "classiche", label: "Classiche" },
+      { id: "tagliate", label: "Pizze Tagliate" },
+    ],
+  },
   { id: "sandwiches", label: "Sandwiches" },
-  { id: "bibite", label: "Bibite" },
+  {
+    id: "bibite",
+    label: "Bibite",
+    subsections: [
+      { id: "birre-spina", label: "Birre alla Spina" },
+      { id: "birre-speciali", label: "Birre Speciali" },
+      { id: "bevande", label: "Bevande" },
+      { id: "bollicine", label: "Bollicine" },
+      { id: "vini-bianchi", label: "Vini Bianchi" },
+      { id: "vini-rossi", label: "Rossi" },
+    ],
+  },
 ];
+
 
 const BeerCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => {
   const hasMultiFormat = items.some((i) => i.price?.includes("|"));
@@ -198,6 +238,23 @@ const MenuPage = () => {
   const [activeCategory, setActiveCategory] = useState("pizze");
   const [classicheOpen, setClassicheOpen] = useState(false);
   const [tagliateOpen, setTagliateOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const navRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const handleOutside = (e: MouseEvent | TouchEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setOpenDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", handleOutside);
+    document.addEventListener("touchstart", handleOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleOutside);
+      document.removeEventListener("touchstart", handleOutside);
+    };
+  }, []);
+
 
   useEffect(() => {
     const sectionIds = categories.map((c) => c.id);
@@ -252,23 +309,82 @@ const MenuPage = () => {
       </section>
 
       {/* Sticky category nav */}
-      <nav className="sticky top-16 z-40 bg-background/95 backdrop-blur-sm border-b border-border">
+      <nav
+        ref={navRef}
+        className="sticky top-16 z-40 bg-background/95 backdrop-blur-sm border-b border-border"
+      >
         <div className="max-w-4xl mx-auto flex justify-center gap-2 px-4 py-3">
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => scrollTo(cat.id)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                activeCategory === cat.id
-                  ? "bg-primary text-primary-foreground shadow-md"
-                  : "text-muted-foreground hover:text-foreground hover:bg-muted"
-              }`}
-            >
-              {cat.label}
-            </button>
-          ))}
+          {categories.map((cat) => {
+            const hasDropdown = !!cat.subsections && cat.subsections.length > 0;
+            const isOpen = openDropdown === cat.id;
+            const isActive = activeCategory === cat.id;
+            const handleCatClick = () => {
+              if (!hasDropdown) {
+                setOpenDropdown(null);
+                scrollTo(cat.id);
+                return;
+              }
+              if (isOpen) {
+                setOpenDropdown(null);
+                scrollTo(cat.id);
+              } else {
+                setOpenDropdown(cat.id);
+              }
+            };
+            return (
+              <div
+                key={cat.id}
+                className="relative"
+                onMouseEnter={() => hasDropdown && setOpenDropdown(cat.id)}
+                onMouseLeave={() => hasDropdown && setOpenDropdown((cur) => (cur === cat.id ? null : cur))}
+              >
+                <button
+                  onClick={handleCatClick}
+                  aria-expanded={hasDropdown ? isOpen : undefined}
+                  aria-haspopup={hasDropdown ? "menu" : undefined}
+                  className={`flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                    isActive
+                      ? "bg-primary text-primary-foreground shadow-md"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                  }`}
+                >
+                  {cat.label}
+                  {hasDropdown && (
+                    <ChevronDown
+                      className={`w-3.5 h-3.5 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                    />
+                  )}
+                </button>
+                {hasDropdown && (
+                  <div
+                    role="menu"
+                    className={`absolute left-1/2 -translate-x-1/2 top-full mt-2 min-w-[180px] bg-background border border-border rounded-md shadow-md py-1 transition-all duration-200 origin-top ${
+                      isOpen
+                        ? "opacity-100 translate-y-0 pointer-events-auto"
+                        : "opacity-0 -translate-y-1 pointer-events-none"
+                    }`}
+                  >
+                    {cat.subsections!.map((sub) => (
+                      <button
+                        key={sub.id}
+                        role="menuitem"
+                        onClick={() => {
+                          scrollTo(sub.id);
+                          setOpenDropdown(null);
+                        }}
+                        className="w-full text-left px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/40 transition-colors"
+                      >
+                        {sub.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </nav>
+
 
       {/* Menu content */}
       <section className="py-20 px-4 bg-background">
@@ -285,11 +401,20 @@ const MenuPage = () => {
           {/* ── ANTIPASTI & APERITIVI ── */}
           <div id="antipasti">
             <h2 className="sr-only">Antipasti</h2>
-            <MenuCategory title="Aperitivi" subtitle="Per Iniziare" items={aperitivi} />
+            <div id="aperitivi">
+              <MenuCategory title="Aperitivi" subtitle="Per Iniziare" items={aperitivi} />
+            </div>
           </div>
-          <MenuCategory title="Tradizionale" subtitle="Antipasti & Fritti" items={focaccia} />
-          <MenuCategory title="Taglieri di Affettati e Formaggi" subtitle="Antipasti & Fritti" items={taglieri} note="Servito con pane pizza caldo" />
-          <MenuCategory title="Fritti" subtitle="Antipasti & Fritti" items={fritti} />
+          <div id="tradizionale">
+            <MenuCategory title="Tradizionale" subtitle="Antipasti & Fritti" items={focaccia} />
+          </div>
+          <div id="taglieri">
+            <MenuCategory title="Taglieri di Affettati e Formaggi" subtitle="Antipasti & Fritti" items={taglieri} note="Servito con pane pizza caldo" />
+          </div>
+          <div id="fritti">
+            <MenuCategory title="Fritti" subtitle="Antipasti & Fritti" items={fritti} />
+          </div>
+
 
           {/* Macro-category separator */}
           <div className="my-16 flex items-center gap-4" aria-hidden="true">
@@ -301,14 +426,26 @@ const MenuPage = () => {
           {/* ── PIZZE ── */}
           <div id="pizze">
             <h2 className="sr-only">Pizze</h2>
-            <MenuCategory title="Le Pizze di Stagione" subtitle="Stagionali" items={pizzeStagione} />
+            <div id="pizze-stagionali">
+              <MenuCategory title="Le Pizze di Stagione" subtitle="Stagionali" items={pizzeStagione} />
+            </div>
           </div>
-          <MenuCategory title="Le Pizze D.O.C." subtitle="D'Eccellenza" items={pizzeDoc} />
-          <MenuCategory title="Le Carenostre" subtitle="LE CARENOSTRE" items={carenestreRosse} />
-          <MenuCategory title="Le Carenostre Bianche" subtitle="LE CARENOSTRE" items={carenestreBianche} />
-          <MenuCategory title="Con La Porchetta" subtitle="Le Nostre Pizze" items={pizzePorchetta} />
-          <MenuCategory title="Con Il Tonno" subtitle="Le Nostre Pizze" items={pizzeTonno} />
-          <div className="mb-16 border border-border rounded-sm overflow-hidden">
+          <div id="pizze-doc">
+            <MenuCategory title="Le Pizze D.O.C." subtitle="D'Eccellenza" items={pizzeDoc} />
+          </div>
+          <div id="carenostre">
+            <MenuCategory title="Le Carenostre" subtitle="LE CARENOSTRE" items={carenestreRosse} />
+            <MenuCategory title="Le Carenostre Bianche" subtitle="LE CARENOSTRE" items={carenestreBianche} />
+          </div>
+          <div id="porchetta">
+            <MenuCategory title="Con La Porchetta" subtitle="Le Nostre Pizze" items={pizzePorchetta} />
+          </div>
+          <div id="tonno">
+            <MenuCategory title="Con Il Tonno" subtitle="Le Nostre Pizze" items={pizzeTonno} />
+          </div>
+
+          <div id="classiche" className="mb-16 border border-border rounded-sm overflow-hidden">
+
             <button
               type="button"
               onClick={() => setClassicheOpen((v) => !v)}
@@ -350,7 +487,7 @@ const MenuPage = () => {
               </div>
             </div>
           </div>
-          <div className="mb-16 border border-border rounded-sm overflow-hidden">
+          <div id="tagliate" className="mb-16 border border-border rounded-sm overflow-hidden">
             <button
               type="button"
               onClick={() => setTagliateOpen((v) => !v)}
@@ -421,10 +558,16 @@ const MenuPage = () => {
           {/* ── BIBITE ── */}
           <div id="bibite">
             <h2 className="sr-only">Bibite, Birre e Vini</h2>
-            <BeerCategory title="Birre alla Spina" subtitle="DAL BANCO" items={birreNovita} />
+            <div id="birre-spina">
+              <BeerCategory title="Birre alla Spina" subtitle="DAL BANCO" items={birreNovita} />
+            </div>
           </div>
-          <BeerCategory title="Birre Speciali" subtitle="DAL BANCO" items={birreSpeciali} />
-          <MenuCategory title="Bevande" subtitle="DAL BANCO" items={bevande} />
+          <div id="birre-speciali">
+            <BeerCategory title="Birre Speciali" subtitle="DAL BANCO" items={birreSpeciali} />
+          </div>
+          <div id="bevande">
+            <MenuCategory title="Bevande" subtitle="DAL BANCO" items={bevande} />
+          </div>
           <div className="flex items-center justify-center gap-6 mb-8">
             <span className="flex items-center gap-2 text-sm text-muted-foreground">
               <WineGlassIcon className="w-4 h-4 text-primary" /> Calice
@@ -433,9 +576,16 @@ const MenuPage = () => {
               <BottleIcon className="w-4 h-4 text-primary" /> Bottiglia
             </span>
           </div>
-          <MenuCategory title="Bollicine" subtitle="I NOSTRI VINI" items={bollicine} />
-          <MenuCategory title="Vini Bianchi Fermi" subtitle="I NOSTRI VINI" items={viniBianchi} />
-          <MenuCategory title="Rossi" subtitle="I NOSTRI VINI" items={viniRossi} />
+          <div id="bollicine">
+            <MenuCategory title="Bollicine" subtitle="I NOSTRI VINI" items={bollicine} />
+          </div>
+          <div id="vini-bianchi">
+            <MenuCategory title="Vini Bianchi Fermi" subtitle="I NOSTRI VINI" items={viniBianchi} />
+          </div>
+          <div id="vini-rossi">
+            <MenuCategory title="Rossi" subtitle="I NOSTRI VINI" items={viniRossi} />
+          </div>
+
         </div>
       </section>
 
