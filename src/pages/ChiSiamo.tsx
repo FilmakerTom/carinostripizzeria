@@ -4,6 +4,7 @@ import pattern from "@/assets/pattern.svg";
 import dough1 from "@/assets/dough-1.jpg";
 import pizza1 from "@/assets/pizza-1.png";
 import { MapPin, Phone, Clock } from "lucide-react";
+import { ConditionalContent } from "@/components/ConditionalScript";
 
 const ChiSiamo = () => {
   return (
@@ -95,16 +96,18 @@ const ChiSiamo = () => {
           <div className="grid md:grid-cols-[2fr_1fr] gap-6 items-stretch">
             {/* Google Maps */}
             <div className="rounded-sm overflow-hidden aspect-video">
-              <iframe
-                title="Carinostri - Posizione"
-                src="https://www.google.com/maps?q=Via+Francesco+Baracca+64,+31036+Sala+d'Istrana+TV&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+              <ConditionalContent category="thirdParty" title="Mappa interattiva">
+                <iframe
+                  title="Carinostri - Posizione"
+                  src="https://www.google.com/maps?q=Via+Francesco+Baracca+64,+31036+Sala+d'Istrana+TV&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </ConditionalContent>
             </div>
 
             {/* Info card */}
