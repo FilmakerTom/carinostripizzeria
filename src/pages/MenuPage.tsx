@@ -197,6 +197,7 @@ const BeerCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => {
 const MenuPage = () => {
   const [activeCategory, setActiveCategory] = useState("pizze");
   const [classicheOpen, setClassicheOpen] = useState(false);
+  const [tagliateOpen, setTagliateOpen] = useState(false);
 
   useEffect(() => {
     const sectionIds = categories.map((c) => c.id);
