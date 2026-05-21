@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
+
 
 const WineGlassIcon = ({ className = "" }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -121,12 +122,51 @@ const MenuCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => (
   </div>
 );
 
-const categories = [
-  { id: "antipasti", label: "Antipasti" },
-  { id: "pizze", label: "Pizze" },
+interface CategoryDef {
+  id: string;
+  label: string;
+  subsections?: { id: string; label: string }[];
+}
+
+const categories: CategoryDef[] = [
+  {
+    id: "antipasti",
+    label: "Antipasti",
+    subsections: [
+      { id: "aperitivi", label: "Aperitivi" },
+      { id: "tradizionale", label: "Tradizionale" },
+      { id: "taglieri", label: "Taglieri" },
+      { id: "fritti", label: "Fritti" },
+    ],
+  },
+  {
+    id: "pizze",
+    label: "Pizze",
+    subsections: [
+      { id: "pizze-stagionali", label: "Stagionali" },
+      { id: "pizze-doc", label: "D.O.C." },
+      { id: "carenostre", label: "Le Carenostre" },
+      { id: "porchetta", label: "Con la Porchetta" },
+      { id: "tonno", label: "Con il Tonno" },
+      { id: "classiche", label: "Classiche" },
+      { id: "tagliate", label: "Pizze Tagliate" },
+    ],
+  },
   { id: "sandwiches", label: "Sandwiches" },
-  { id: "bibite", label: "Bibite" },
+  {
+    id: "bibite",
+    label: "Bibite",
+    subsections: [
+      { id: "birre-spina", label: "Birre alla Spina" },
+      { id: "birre-speciali", label: "Birre Speciali" },
+      { id: "bevande", label: "Bevande" },
+      { id: "bollicine", label: "Bollicine" },
+      { id: "vini-bianchi", label: "Vini Bianchi" },
+      { id: "vini-rossi", label: "Rossi" },
+    ],
+  },
 ];
+
 
 const BeerCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => {
   const hasMultiFormat = items.some((i) => i.price?.includes("|"));
