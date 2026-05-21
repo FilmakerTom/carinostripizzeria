@@ -4,6 +4,7 @@ import pattern from "@/assets/pattern.svg";
 import dough1 from "@/assets/dough-1.jpg";
 import pizza1 from "@/assets/pizza-1.png";
 import { MapPin, Phone, Clock } from "lucide-react";
+import { ConditionalContent } from "@/components/ConditionalScript";
 
 const ChiSiamo = () => {
   return (
