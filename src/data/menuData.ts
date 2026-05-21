@@ -37,7 +37,7 @@ export const aperitivi: MenuItem[] = [
   { name: "Hugo", description: "Vino Frizzante, Sambuco, Menta Fresca, Lime", price: "€3,5" },
   { name: "Americano", description: "Vermouth Rosso, Campari, Seltz", price: "€6" },
   { name: "Negroni", description: "Vermouth Rosso, Campari, Gin", price: "€7" },
-  { name: "Negroni \"Sbagliato\"", description: "Vermouth Rosso, Campari, Vino Frizzante", price: "€6,5" },
+  { name: "Negroni \"Sbagliato\"", description: "Vermouth Rosso, Campari, Vino Frizzante", price: "€5,5" },
 ];
 
 // ── LE PIZZE – CON LA PORCHETTA ──
@@ -81,8 +81,8 @@ export const pizzeDoc: MenuItem[] = [
 
 // ── LE PIZZE TAGLIATE ──
 export const pizzeTagliateClassiche: MenuItem[] = [
-  { name: "Marinara", description: "Salsa pomodoro, olio e.v.o., aglio, origano", price: "€6,5" },
-  { name: "Margherita", description: "Salsa di pomodoro, fiordilatte", price: "€6,5" },
+  { name: "Marinara", description: "Salsa pomodoro, olio e.v.o., aglio, origano", price: "€5,5" },
+  { name: "Margherita", description: "Salsa di pomodoro, fiordilatte", price: "€5,5" },
   { name: "Pugliese", description: "Salsa di pomodoro, fiordilatte, cipolla di Tropea", price: "€7,5" },
   { name: "Romana", description: "Salsa di pomodoro, fiordilatte, filetti di alici", price: "€8" },
   { name: "Diavola", description: "Salsa di pomodoro, fiordilatte, salame piccante affumicato", price: "€8" },
@@ -137,7 +137,7 @@ export const sandwiches: MenuItem[] = [
 // ── BIRRE SPECIALI ──
 export const birreSpeciali: MenuItem[] = [
   { name: "Tongerlo Brun", description: "Birra Bruna d'Abbazia, stile Belga. 33 cl, 6,5%", price: "€5", logo: "/logos/tongerlo.png" },
-  { name: "IPA Super 8", description: "Birra Indian Pale Ale. 33 cl, 6%", price: "€6,5", logo: "/logos/super-8-ipa.png" },
+  { name: "IPA Super 8", description: "Birra Indian Pale Ale. 33 cl, 6%", price: "€5,5", logo: "/logos/super-8-ipa.png" },
 ];
 
 // ── BEVANDE ──
