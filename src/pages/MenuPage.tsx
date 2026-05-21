@@ -350,7 +350,48 @@ const MenuPage = () => {
               </div>
             </div>
           </div>
-          <MenuCategory title="Pizze Tagliate" subtitle="LE NOSTRE PIZZE" items={pizzeTagliatePiccole} />
+          <div className="mb-16 border border-border rounded-sm overflow-hidden">
+            <button
+              type="button"
+              onClick={() => setTagliateOpen((v) => !v)}
+              aria-expanded={tagliateOpen}
+              className="w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer hover:bg-muted/30 transition-colors"
+            >
+              <div>
+                <p className="text-primary tracking-[0.3em] uppercase text-xs mb-2">LE NOSTRE PIZZE</p>
+                <h3 className="text-3xl md:text-4xl font-normal text-foreground mb-2">Pizze Tagliate</h3>
+                <div className="w-10 h-px bg-primary" />
+              </div>
+              <ChevronDown
+                className={`w-6 h-6 text-primary shrink-0 transition-transform duration-300 ${tagliateOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+            <div
+              className={`grid transition-all duration-500 ease-out ${tagliateOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+            >
+              <div className="overflow-hidden">
+                <div className="px-6 pb-6">
+                  <div className="space-y-0 divide-y divide-border">
+                    {pizzeTagliatePiccole.map((item, i) => (
+                      <div key={`${item.name}-${i}`} className="flex justify-between items-start py-5 group">
+                        <div className="flex-1 pr-4">
+                          <h4 className="text-lg md:text-xl text-foreground group-hover:text-primary transition-colors">
+                            {item.name}
+                          </h4>
+                          {item.description && (
+                            <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
+                          )}
+                        </div>
+                        {item.price && (
+                          <span className="text-lg text-primary font-semibold shrink-0">{item.price}</span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Macro-category separator */}
           <div className="my-16 flex items-center gap-4" aria-hidden="true">
