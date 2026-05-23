@@ -138,8 +138,7 @@ Deno.serve(async (req) => {
     );
   } catch (err) {
     console.error("seo-metrics error", err);
-    const msg = err instanceof Error ? err.message : "Unknown error";
-    return new Response(JSON.stringify({ error: msg }), {
+    return new Response(JSON.stringify({ error: "Internal server error" }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
