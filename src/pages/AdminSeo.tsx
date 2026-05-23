@@ -61,12 +61,21 @@ const AdminSeo = () => {
 
   useEffect(() => {
     let mounted = true;
-    supabase.auth.getSession().then(({ data: s }) => {
+    supabase.auth.getSession().then(async ({ data: s }) => {
       if (!s.session) {
         navigate("/admin/login", { replace: true });
         return;
       }
-      if (mounted) fetchMetrics();
+      const { data: isAdmin, error: roleErr } = await supabase.rpc("has_role", {
+        _user_id: s.session.user.id,
+        _role: "admin",
+      });
+      if (!mounted) return;
+      if (roleErr || !isAdmin) {
+        navigate("/", { replace: true });
+        return;
+      }
+      fetchMetrics();
     });
     const { data: sub } = supabase.auth.onAuthStateChange((_e, session) => {
       if (!session) navigate("/admin/login", { replace: true });
