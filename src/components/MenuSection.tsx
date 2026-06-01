@@ -25,7 +25,7 @@ const MenuSection = () => {
           <div className="w-12 h-px bg-primary mx-auto mt-5" />
         </div>
         <div ref={listRef} className="space-y-0 divide-y divide-border">
-          {pizzas.map((pizza, i) =>
+          {pizzeStagione.map((pizza, i) =>
           <div
             key={pizza.name}
             className={`flex justify-between items-start py-6 group transition-all duration-500 ease-out ${
