@@ -1,19 +1,19 @@
-## Accordion per la sezione "Classiche" nel Menu
+## Problema
 
-### Obiettivo
-Trasformare la sezione **Classiche** (`pizzeTagliateClassiche`) in `MenuPage.tsx` in un accordion collassabile inline, senza creare nuovi componenti.
+Nella precedente modifica ho aggiornato `src/data/menuData.ts` (usato dalla pagina Menù), ma `src/components/MenuSection.tsx` — il componente "Le Stagionali" mostrato in homepage — aveva una propria lista hardcoded con le vecchie pizze (Speck Carciofi e Burrata, Carbonara d'Asparagi). Per questo l'homepage non si è aggiornata.
 
-### Modifiche
-1. **Import**: aggiungere `ChevronDown` da `lucide-react`.
-2. **Stato**: aggiungere `const [classicheOpen, setClassicheOpen] = useState(false)` nel componente `MenuPage`.
-3. **Sostituzione sezione**: sostituire la riga `<MenuCategory title="Classiche" ... />` con un blocco HTML inline che include:
-   - Header cliccabile con titolo "Classiche", sottotitolo "LE NOSTRE PIZZE" e linea decorativa.
-   - Freccia `ChevronDown` a destra con rotazione `rotate-180` quando aperto.
-   - Transizione CSS su `max-height` e `opacity` per espansione fluida.
-   - Stili: `border border-border rounded-sm`, `hover:bg-muted/30`, `cursor-pointer`.
-   - Lista delle pizze replicata inline con lo stesso markup di `MenuCategory`.
+## Soluzione
 
-### Vincoli rispettati
-- Nessuna libreria esterna, solo React + Tailwind.
-- Nessun componente separato, tutto inline in `MenuPage.tsx`.
-- Solo la sezione "Classiche" viene modificata.
+Rimuovere la lista hardcoded in `MenuSection.tsx` e importare `pizzeStagione` da `@/data/menuData`. Così d'ora in poi qualsiasi modifica alle stagionali si rifletterà automaticamente sia nella pagina Menù che nell'homepage — un'unica fonte di verità.
+
+## Modifiche
+
+**`src/components/MenuSection.tsx`**
+- Eliminare l'array `pizzas` hardcoded
+- Importare `pizzeStagione` da `@/data/menuData`
+- Usare `pizzeStagione.map(...)` nel rendering (stessa struttura `name`/`description`/`price`)
+
+**Memory**
+- Aggiornare `mem://features/menu` per ricordare che la homepage importa le stagionali da `menuData.ts` (evita di ricreare duplicati hardcoded in futuro).
+
+Nessun'altra pagina o componente viene toccato.
