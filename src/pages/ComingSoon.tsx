@@ -15,7 +15,7 @@ const ComingSoon = () => {
           </p>
           <h1 className="text-5xl md:text-6xl font-normal text-background mb-6">La Nostra Storia</h1>
           <div className="w-12 h-px bg-primary mx-auto mb-8" />
-          <p className="text-background/60 max-w-md mx-auto mb-10 leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>
+          <p className="text-background/85 max-w-md mx-auto mb-10 leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>
             Stiamo lavorando a questa sezione.<br />Torna presto per scoprire la nostra storia!
           </p>
           <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
