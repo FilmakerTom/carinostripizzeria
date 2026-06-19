@@ -17,6 +17,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import CookiePolicy from "./pages/CookiePolicy.tsx";
 import AdminLogin from "./pages/AdminLogin.tsx";
 import AdminSeo from "./pages/AdminSeo.tsx";
+import AdminChangePassword from "./pages/AdminChangePassword.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -42,6 +43,7 @@ const App = () => (
             <Route path="/cookie-policy" element={<CookiePolicy />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/seo" element={<AdminSeo />} />
+            <Route path="/admin/change-password" element={<AdminChangePassword />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </CookieConsentProvider>

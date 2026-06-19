@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -14,7 +14,7 @@ import {
 import { toast } from "sonner";
 import { Helmet } from "react-helmet-async";
 import SEO from "@/components/SEO";
-import { RefreshCw, LogOut } from "lucide-react";
+import { RefreshCw, LogOut, KeyRound } from "lucide-react";
 
 interface Row {
   key: string;
@@ -114,6 +114,12 @@ const AdminSeo = () => {
               <Button variant="outline" size="sm" onClick={fetchMetrics} disabled={refreshing}>
                 <RefreshCw className={`h-4 w-4 mr-2 ${refreshing ? "animate-spin" : ""}`} />
                 Aggiorna
+              </Button>
+              <Button variant="outline" size="sm" asChild>
+                <Link to="/admin/change-password">
+                  <KeyRound className="h-4 w-4 mr-2" />
+                  Password
+                </Link>
               </Button>
               <Button variant="ghost" size="sm" onClick={handleLogout}>
                 <LogOut className="h-4 w-4 mr-2" />
