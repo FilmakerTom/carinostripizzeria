@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import logoNegative from "@/assets/logo-negative.png";
-import pizza1 from "@/assets/pizza-hero.jpg";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
@@ -15,11 +14,18 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div
-        className={`absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] ease-out ${
+        className={`absolute inset-0 transition-transform duration-[1.5s] ease-out ${
           loaded ? "scale-100" : "scale-110"
         }`}
-        style={{ backgroundImage: `url(${pizza1})` }}
-      />
+      >
+        <iframe
+          src="https://player.vimeo.com/video/1202835789?background=1&title=0&byline=0&portrait=0"
+          className="absolute inset-0 w-full h-full"
+          style={{ border: "none", pointerEvents: "none" }}
+          allow="autoplay; fullscreen"
+          title="Carinostri Pizzeria background"
+        />
+      </div>
       <div className="absolute inset-0 bg-foreground/70" />
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
         <img
