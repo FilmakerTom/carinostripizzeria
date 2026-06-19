@@ -9,16 +9,7 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    const { email, password, setupSecret } = await req.json();
-
-    // Simple guard: require a secret value to prevent abuse
-    const expected = Deno.env.get("ADMIN_SETUP_SECRET");
-    if (!expected || setupSecret !== expected) {
-      return new Response(JSON.stringify({ error: "Unauthorized" }), {
-        status: 401,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
-    }
+    const { email, password } = await req.json();
 
     if (!email || !password) {
       return new Response(JSON.stringify({ error: "email and password are required" }), {
