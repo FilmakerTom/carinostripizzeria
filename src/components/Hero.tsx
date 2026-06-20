@@ -14,17 +14,18 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div
-        className={`absolute inset-0 transition-transform duration-[1.5s] ease-out ${
+        className={`absolute inset-0 transition-transform duration-[1.5s] ease-out overflow-hidden ${
           loaded ? "scale-100" : "scale-110"
         }`}
       >
-        <iframe
-          src="https://player.vimeo.com/video/1202835789?background=1&title=0&byline=0&portrait=0"
-          className="absolute inset-0 w-full h-full"
-          style={{ border: "none", pointerEvents: "none" }}
-          allow="autoplay; fullscreen"
-          title="Carinostri Pizzeria background"
-        />
+        <div className="video-background-wrapper">
+          <iframe
+            src="https://player.vimeo.com/video/1202835789?background=1&title=0&byline=0&portrait=0"
+            style={{ width: "100%", height: "100%", border: "none", pointerEvents: "none" }}
+            allow="autoplay; fullscreen"
+            title="Carinostri Pizzeria background"
+          />
+        </div>
       </div>
       <div className="absolute inset-0 bg-foreground/70" />
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
