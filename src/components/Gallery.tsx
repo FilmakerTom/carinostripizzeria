@@ -25,14 +25,11 @@ import galleryNew4 from "@/assets/gallery-new-img-86.jpg.asset.json";
 const gallery = [
   { src: pizza1, alt: "Pizza margherita dal forno a legna" },
   { src: pizza2, alt: "Pizza con salame e radicchio" },
-  
+  { src: gallery5, alt: "Insegna Carinostri Hosteria" },
   { src: galleryNew1.url, alt: "Bruschetta con prosciutto crudo, stracciatella e basilico" },
   { src: galleryNew2.url, alt: "Focaccia con mortadella e pomodorini" },
-  
   { src: galleryNew4.url, alt: "Olio extravergine di oliva Carinostri" },
-  
   { src: gallery4, alt: "Decorazioni floreali del locale" },
-  { src: gallery5, alt: "Insegna Carinostri Hosteria" },
   { src: gallery6, alt: "Vino Cabernet Franc Bosco del Corner" },
   { src: gallery7, alt: "Lavagna con ricetta pasta madre" },
   { src: gallery8, alt: "Pane artigianale appena sfornato" },
