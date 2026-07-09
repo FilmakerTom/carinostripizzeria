@@ -124,7 +124,7 @@ const ChiSiamo = () => {
 
               <div className="flex items-start gap-3">
                 <Clock className="text-primary shrink-0 mt-0.5" size={18} />
-                <p className="text-muted-foreground text-sm">Mer–Dom: 18:00 – 23:00</p>
+                <p className="text-muted-foreground text-sm">Mar–Dom: 18:00 – 23:00</p>
               </div>
 
               <div className="flex items-start gap-3">

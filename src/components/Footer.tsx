@@ -23,7 +23,7 @@ const Footer = () => {
             <Clock className="text-primary" size={24} />
             <h3 className="text-background text-sm tracking-widest uppercase">Orari</h3>
             <p className="text-background/80 text-sm">
-              Mer–Dom: 18:00 – 23:00
+              Mar–Dom: 18:00 – 23:00
             </p>
           </div>
           <div className="flex flex-col items-center gap-3">
