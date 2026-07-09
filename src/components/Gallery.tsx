@@ -16,11 +16,21 @@ import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
 import gallery7 from "@/assets/gallery-7.jpg";
 import gallery8 from "@/assets/gallery-8.jpg";
+import galleryNew1 from "@/assets/gallery-new-img-98.jpg.asset.json";
+import galleryNew2 from "@/assets/gallery-new-img-107.jpg.asset.json";
+import galleryNew3 from "@/assets/gallery-new-img-83.jpg.asset.json";
+import galleryNew4 from "@/assets/gallery-new-img-86.jpg.asset.json";
+import galleryNew5 from "@/assets/gallery-new-img-116.jpg.asset.json";
 
 const gallery = [
   { src: pizza1, alt: "Pizza margherita dal forno a legna" },
   { src: pizza2, alt: "Pizza con salame e radicchio" },
   { src: foodDetail, alt: "Bruschetta con prosciutto e pomodorini" },
+  { src: galleryNew1.url, alt: "Bruschetta con prosciutto crudo, stracciatella e basilico" },
+  { src: galleryNew2.url, alt: "Focaccia con mortadella e pomodorini" },
+  { src: galleryNew3.url, alt: "Pane artigianale con cipolla rossa in agrodolce" },
+  { src: galleryNew4.url, alt: "Olio extravergine di oliva Carinostri" },
+  { src: galleryNew5.url, alt: "Ortensie sui tavoli del locale" },
   { src: gallery4, alt: "Decorazioni floreali del locale" },
   { src: gallery5, alt: "Insegna Carinostri Hosteria" },
   { src: gallery6, alt: "Vino Cabernet Franc Bosco del Corner" },
