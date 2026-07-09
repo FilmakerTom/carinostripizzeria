@@ -10,7 +10,7 @@ import {
 
 import pizza1 from "@/assets/gallery-1.jpg";
 import pizza2 from "@/assets/gallery-2.jpg";
-import foodDetail from "@/assets/gallery-3.jpg";
+
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
@@ -25,7 +25,7 @@ import galleryNew4 from "@/assets/gallery-new-img-86.jpg.asset.json";
 const gallery = [
   { src: pizza1, alt: "Pizza margherita dal forno a legna" },
   { src: pizza2, alt: "Pizza con salame e radicchio" },
-  { src: foodDetail, alt: "Bruschetta con prosciutto e pomodorini" },
+  
   { src: galleryNew1.url, alt: "Bruschetta con prosciutto crudo, stracciatella e basilico" },
   { src: galleryNew2.url, alt: "Focaccia con mortadella e pomodorini" },
   { src: galleryNew3.url, alt: "Pane artigianale con cipolla rossa in agrodolce" },
