@@ -18,7 +18,7 @@ import gallery7 from "@/assets/gallery-7.jpg";
 import gallery8 from "@/assets/gallery-8.jpg";
 import galleryNew1 from "@/assets/gallery-new-img-98.jpg.asset.json";
 import galleryNew2 from "@/assets/gallery-new-img-107.jpg.asset.json";
-import galleryNew3 from "@/assets/gallery-new-img-83.jpg.asset.json";
+
 import galleryNew4 from "@/assets/gallery-new-img-86.jpg.asset.json";
 
 
@@ -28,7 +28,7 @@ const gallery = [
   
   { src: galleryNew1.url, alt: "Bruschetta con prosciutto crudo, stracciatella e basilico" },
   { src: galleryNew2.url, alt: "Focaccia con mortadella e pomodorini" },
-  { src: galleryNew3.url, alt: "Pane artigianale con cipolla rossa in agrodolce" },
+  
   { src: galleryNew4.url, alt: "Olio extravergine di oliva Carinostri" },
   
   { src: gallery4, alt: "Decorazioni floreali del locale" },
