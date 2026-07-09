@@ -17,7 +17,7 @@ import gallery6 from "@/assets/gallery-6.jpg";
 import gallery7 from "@/assets/gallery-7.jpg";
 import gallery8 from "@/assets/gallery-8.jpg";
 import galleryNew1 from "@/assets/gallery-new-img-98.jpg.asset.json";
-import galleryNew2 from "@/assets/gallery-new-img-107.jpg.asset.json";
+
 
 import galleryNew4 from "@/assets/gallery-new-img-86.jpg.asset.json";
 
@@ -27,7 +27,7 @@ const gallery = [
   { src: pizza2, alt: "Pizza con salame e radicchio" },
   { src: gallery5, alt: "Insegna Carinostri Hosteria" },
   { src: galleryNew1.url, alt: "Bruschetta con prosciutto crudo, stracciatella e basilico" },
-  { src: galleryNew2.url, alt: "Focaccia con mortadella e pomodorini" },
+  
   { src: galleryNew4.url, alt: "Olio extravergine di oliva Carinostri" },
   { src: gallery4, alt: "Decorazioni floreali del locale" },
   { src: gallery6, alt: "Vino Cabernet Franc Bosco del Corner" },
