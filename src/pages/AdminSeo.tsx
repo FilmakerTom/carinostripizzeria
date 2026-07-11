@@ -93,7 +93,7 @@ const AdminSeo = () => {
 
   return (
     <>
-      <SEO title="Dashboard SEO · Carinostri" description="Metriche Search Console." path="/admin/seo" />
+      <SEO title="Dashboard SEO · Carinostri" description="Dashboard riservata per il monitoraggio delle performance SEO del sito Carinostri Pizzeria: click, impression, CTR e posizioni medie da Google Search Console." path="/admin/seo" />
       <Helmet>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>

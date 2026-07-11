@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import dough1 from "@/assets/dough-1.jpg";
 import dough2 from "@/assets/dough-2.jpg";
 import foodDetail from "@/assets/food-detail.jpg";
@@ -7,6 +8,11 @@ import pattern from "@/assets/pattern.svg";
 const LaNostraStoria = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="La Nostra Storia · Carinostri Pizzeria"
+        description="Dal 2010 a Sala d'Istrana (TV): la storia di Carinostri, tra forno a legna, pasta madre viva, lievitazione lunga e ingredienti selezionati del territorio."
+        path="/la-nostra-storia"
+      />
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-foreground overflow-hidden">
         <img src={pattern} alt="" className="absolute bottom-0 left-0 w-64 opacity-[0.04] pointer-events-none" />

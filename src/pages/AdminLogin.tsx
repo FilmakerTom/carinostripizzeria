@@ -34,7 +34,7 @@ const AdminLogin = () => {
 
   return (
     <>
-      <SEO title="Admin · Carinostri" description="Area riservata." path="/admin/login" />
+      <SEO title="Admin · Carinostri" description="Accesso riservato all'area di amministrazione del sito Carinostri Pizzeria per la gestione dei contenuti e delle metriche SEO." path="/admin/login" />
       <Helmet>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
