@@ -400,6 +400,9 @@ const MenuPage = () => {
             </p>
           </div>
 
+          {/* ── IN ARRIVO ── */}
+          <IncomingSection item={inArrivo} />
+
           {/* ── ANTIPASTI & APERITIVI ── */}
           <div id="antipasti">
             <h2 className="sr-only">Antipasti</h2>
