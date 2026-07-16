@@ -5,6 +5,19 @@ export interface MenuItem {
   logo?: string;
 }
 
+export interface IncomingItem {
+  name: string;
+  description: string;
+  tagline?: string;
+}
+
+// ── IN ARRIVO ──
+export const inArrivo: IncomingItem = {
+  name: "Le Spicchiate",
+  tagline: "Un nuovo modo per gustare la pizza",
+  description: "Spicchi di pane pizza farciti in modi diversi e con gusti particolari, per scoprire una nuova delizia del nostro lievito madre. Chiedi al personale di sala per saperne di più.",
+};
+
 // ── ANTIPASTI & FRITTI ──
 export const focaccia: MenuItem[] = [
   { name: "Salsa pomodoro, aglio e origano", description: "", price: "€3,5" },
