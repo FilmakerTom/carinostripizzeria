@@ -66,7 +66,7 @@ const IncomingSection = ({ item }: IncomingSectionProps) => {
             </h3>
             {item.tagline && (
               <p
-                className="mt-1 text-lg text-primary"
+                className="mt-1 text-xl text-primary md:text-2xl"
                 style={{ fontFamily: "var(--font-script)" }}
               >
                 {item.tagline}
