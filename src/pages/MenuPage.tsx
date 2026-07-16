@@ -290,7 +290,7 @@ const MenuPage = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <SEO
         title="Menù · Carinostri Pizzeria Istrana"
         description="Esplora il menù di Carinostri: pizze di stagione e D.O.C., antipasti, taglieri, sandwiches, birre alla spina e vini selezionati."
@@ -315,7 +315,7 @@ const MenuPage = () => {
         ref={navRef}
         className="sticky top-16 z-40 bg-background/95 backdrop-blur-sm border-b border-border"
       >
-        <div className="max-w-4xl mx-auto flex justify-center gap-2 px-4 py-3">
+        <div className="max-w-4xl mx-auto flex md:justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-3 overflow-x-auto scrollbar-hide [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {categories.map((cat) => {
             const hasDropdown = !!cat.subsections && cat.subsections.length > 0;
             const isOpen = openDropdown === cat.id;
@@ -336,7 +336,7 @@ const MenuPage = () => {
             return (
               <div
                 key={cat.id}
-                className="relative"
+                className="relative shrink-0"
                 onMouseEnter={() => hasDropdown && setOpenDropdown(cat.id)}
                 onMouseLeave={() => hasDropdown && setOpenDropdown((cur) => (cur === cat.id ? null : cur))}
               >
@@ -344,7 +344,7 @@ const MenuPage = () => {
                   onClick={handleCatClick}
                   aria-expanded={hasDropdown ? isOpen : undefined}
                   aria-haspopup={hasDropdown ? "menu" : undefined}
-                  className={`flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                  className={`flex items-center gap-1.5 px-3.5 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap transition-all duration-200 ${
                     isActive
                       ? "bg-primary text-primary-foreground shadow-md"
                       : "text-muted-foreground hover:text-foreground hover:bg-muted"
@@ -360,25 +360,27 @@ const MenuPage = () => {
                 {hasDropdown && (
                   <div
                     role="menu"
-                    className={`absolute left-1/2 -translate-x-1/2 top-full mt-2 min-w-[180px] bg-background border border-border rounded-md shadow-md py-1 transition-all duration-200 origin-top ${
+                    className={`absolute left-1/2 -translate-x-1/2 top-full pt-2 w-[200px] max-w-[calc(100vw-2rem)] transition-all duration-200 origin-top ${
                       isOpen
                         ? "opacity-100 translate-y-0 pointer-events-auto"
                         : "opacity-0 -translate-y-1 pointer-events-none"
                     }`}
                   >
-                    {cat.subsections!.map((sub) => (
-                      <button
-                        key={sub.id}
-                        role="menuitem"
-                        onClick={() => {
-                          scrollTo(sub.id);
-                          setOpenDropdown(null);
-                        }}
-                        className="w-full text-left px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/40 transition-colors"
-                      >
-                        {sub.label}
-                      </button>
-                    ))}
+                    <div className="bg-background border border-border rounded-md shadow-md py-1">
+                      {cat.subsections!.map((sub) => (
+                        <button
+                          key={sub.id}
+                          role="menuitem"
+                          onClick={() => {
+                            scrollTo(sub.id);
+                            setOpenDropdown(null);
+                          }}
+                          className="w-full text-left px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/40 transition-colors"
+                        >
+                          {sub.label}
+                        </button>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
