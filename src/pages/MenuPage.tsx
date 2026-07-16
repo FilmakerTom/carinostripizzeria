@@ -50,6 +50,7 @@ const BeerJugIcon = ({ className = "" }: { className?: string }) => (
 );
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import IncomingSection from "@/components/IncomingSection";
 import pattern from "@/assets/pattern.svg";
 import {
   focaccia, taglieri, fritti, aperitivi,
@@ -59,6 +60,7 @@ import {
   sandwiches,
   birreSpeciali, birreNovita, bevande,
   bollicine, viniBianchi, viniRossi,
+  inArrivo,
 } from "@/data/menuData";
 import type { MenuItem } from "@/data/menuData";
 
@@ -397,6 +399,9 @@ const MenuPage = () => {
               Si informa la clientela che, in caso di indisponibilità di prodotti freschi, vengono utilizzati prodotti surgelati di qualità.
             </p>
           </div>
+
+          {/* ── IN ARRIVO ── */}
+          <IncomingSection item={inArrivo} />
 
           {/* ── ANTIPASTI & APERITIVI ── */}
           <div id="antipasti">
