@@ -62,7 +62,7 @@ export const pizzeTonno: MenuItem[] = [
 // ── LE PIZZE DI STAGIONE ──
 export const pizzeStagione: MenuItem[] = [
   { name: "Mortadella DOC", description: "Fiordilatte, mortadella Bologna IGP, stracchino, pistacchio, pepe rosa, gratuggiata di limone", price: "€14" },
-  { name: "Piselli Pancetta e Peperoni", description: "Crema di piselli, pancetta, peperoni confit, Bufala Campana DOP", price: "€14" },
+  { name: "Caponata all'inglese", description: "Caponata di verdure, roast-beef all'inglese, misticanza, scaglie di grana padano", price: "€14" },
   { name: "Primavera Estate", description: "Prosciutto Crudo 24 mesi, pomodorini, basilico, olio e.v.o., burrata pugliese, rucola", price: "€15" },
 ];
 
