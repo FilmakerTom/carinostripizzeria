@@ -410,20 +410,27 @@ const MenuPage = () => {
           </div>
 
           {/* ── NOVITÀ ── */}
-          <div id="novita">
+          <div id="novita" className="border border-border/60 rounded-md p-8 md:p-10 mb-16">
             <h2 className="sr-only">Novità</h2>
+            <div className="flex items-center justify-between mb-8">
+              <p className="text-primary tracking-[0.3em] uppercase text-xs">Novità</p>
+              <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs tracking-[0.3em] uppercase animate-pulse">
+                NOVITÀ
+              </span>
+            </div>
             <div id="le-quadrate">
               <MenuCategory
                 title="Le Quadrate"
-                subtitle="Novità"
+                subtitle=""
                 items={leQuadrate}
                 note="Un impasto semplice, croccante e gustoso"
               />
             </div>
+            <hr className="border-border/40 my-8" />
             <div id="insalatone">
               <MenuCategory
                 title="Insalatone & Piatti Freddi"
-                subtitle="Novità"
+                subtitle=""
                 items={insalatone}
               />
             </div>
