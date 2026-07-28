@@ -50,7 +50,6 @@ const BeerJugIcon = ({ className = "" }: { className?: string }) => (
 );
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import IncomingSection from "@/components/IncomingSection";
 import pattern from "@/assets/pattern.svg";
 import {
   focaccia, taglieri, fritti, aperitivi,
@@ -60,7 +59,7 @@ import {
   sandwiches,
   birreSpeciali, birreNovita, bevande,
   bollicine, viniBianchi, viniRossi,
-  inArrivo,
+  leQuadrate, insalatone,
 } from "@/data/menuData";
 import type { MenuItem } from "@/data/menuData";
 
@@ -131,6 +130,14 @@ interface CategoryDef {
 }
 
 const categories: CategoryDef[] = [
+  {
+    id: "novita",
+    label: "Novità",
+    subsections: [
+      { id: "le-quadrate", label: "Le Quadrate" },
+      { id: "insalatone", label: "Insalatone & Piatti Freddi" },
+    ],
+  },
   {
     id: "antipasti",
     label: "Antipasti",
@@ -402,8 +409,33 @@ const MenuPage = () => {
             </p>
           </div>
 
-          {/* ── IN ARRIVO ── */}
-          <IncomingSection item={inArrivo} />
+          {/* ── NOVITÀ ── */}
+          <div id="novita">
+            <h2 className="sr-only">Novità</h2>
+            <div id="le-quadrate">
+              <MenuCategory
+                title="Le Quadrate"
+                subtitle="Novità"
+                items={leQuadrate}
+                note="Un impasto semplice, croccante e gustoso"
+              />
+            </div>
+            <div id="insalatone">
+              <MenuCategory
+                title="Insalatone & Piatti Freddi"
+                subtitle="Novità"
+                items={insalatone}
+              />
+            </div>
+          </div>
+
+          {/* Macro-category separator */}
+          <div className="my-16 flex items-center gap-4" aria-hidden="true">
+            <div className="flex-1 h-px bg-border" />
+            <div className="w-2 h-2 rotate-45 bg-primary" />
+            <div className="flex-1 h-px bg-border" />
+          </div>
+
 
           {/* ── ANTIPASTI & APERITIVI ── */}
           <div id="antipasti">
