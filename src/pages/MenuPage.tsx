@@ -247,6 +247,7 @@ const MenuPage = () => {
   const [activeCategory, setActiveCategory] = useState("pizze");
   const [classicheOpen, setClassicheOpen] = useState(false);
   const [tagliateOpen, setTagliateOpen] = useState(false);
+  const [antipastiOpen, setAntipastiOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const navRef = useRef<HTMLElement | null>(null);
 
@@ -445,20 +446,64 @@ const MenuPage = () => {
 
 
           {/* ── ANTIPASTI & APERITIVI ── */}
-          <div id="antipasti">
+          <div id="antipasti" className="mb-16 border border-border rounded-sm overflow-hidden">
             <h2 className="sr-only">Antipasti</h2>
-            <div id="aperitivi">
-              <MenuCategory title="Aperitivi" subtitle="Per Iniziare" items={aperitivi} />
+            <button
+              type="button"
+              onClick={() => setAntipastiOpen((v) => !v)}
+              aria-expanded={antipastiOpen}
+              className="w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer hover:bg-muted/30 transition-colors"
+            >
+              <div>
+                <p className="text-primary tracking-[0.3em] uppercase text-xs mb-2">PER INIZIARE & ANTIPASTI</p>
+                <h3 className="text-3xl md:text-4xl font-normal text-foreground mb-2">Antipasti</h3>
+                <div className="w-10 h-px bg-primary" />
+              </div>
+              <ChevronDown
+                className={`w-6 h-6 text-primary shrink-0 transition-transform duration-300 ${antipastiOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+            <div
+              className={`grid transition-all duration-500 ease-out ${antipastiOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+            >
+              <div className="overflow-hidden">
+                <div className="px-6 pb-6 pt-2">
+                  {[
+                    { id: "aperitivi", subtitle: "PER INIZIARE", title: "Aperitivi", items: aperitivi, note: undefined as string | undefined },
+                    { id: "tradizionale", subtitle: "ANTIPASTI & FRITTI", title: "Focaccia Tradizionale", items: focaccia, note: undefined },
+                    { id: "taglieri", subtitle: "ANTIPASTI & FRITTI", title: "Taglieri di Affettati e Formaggi", items: taglieri, note: "Servito con pane pizza caldo" },
+                    { id: "fritti", subtitle: "ANTIPASTI & FRITTI", title: "Fritti", items: fritti, note: undefined },
+                  ].map((sec, idx) => (
+                    <div key={sec.id}>
+                      {idx > 0 && <hr className="border-border/40 my-8" />}
+                      <div id={sec.id}>
+                        <p className="text-primary tracking-[0.3em] uppercase text-xs mb-2">{sec.subtitle}</p>
+                        <h3 className="text-2xl md:text-3xl font-normal text-foreground mb-2">{sec.title}</h3>
+                        <div className="w-10 h-px bg-primary mb-6" />
+                        {sec.note && <p className="text-muted-foreground text-sm italic mb-6">{sec.note}</p>}
+                        <div className="space-y-0 divide-y divide-border">
+                          {sec.items.map((item, i) => (
+                            <div key={`${item.name}-${i}`} className="flex justify-between items-start py-5 group">
+                              <div className="flex-1 pr-4">
+                                <h4 className="text-lg md:text-xl text-foreground group-hover:text-primary transition-colors">
+                                  {item.name}
+                                </h4>
+                                {item.description && (
+                                  <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
+                                )}
+                              </div>
+                              {item.price && (
+                                <span className="text-lg text-primary font-semibold shrink-0">{item.price}</span>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
-          <div id="tradizionale">
-            <MenuCategory title="Focaccia Tradizionale" subtitle="Antipasti & Fritti" items={focaccia} />
-          </div>
-          <div id="taglieri">
-            <MenuCategory title="Taglieri di Affettati e Formaggi" subtitle="Antipasti & Fritti" items={taglieri} note="Servito con pane pizza caldo" />
-          </div>
-          <div id="fritti">
-            <MenuCategory title="Fritti" subtitle="Antipasti & Fritti" items={fritti} />
           </div>
 
 
