@@ -452,7 +452,7 @@ const MenuPage = () => {
             </div>
           </div>
           <div id="tradizionale">
-            <MenuCategory title="Tradizionale" subtitle="Antipasti & Fritti" items={focaccia} />
+            <MenuCategory title="Focaccia Tradizionale" subtitle="Antipasti & Fritti" items={focaccia} />
           </div>
           <div id="taglieri">
             <MenuCategory title="Taglieri di Affettati e Formaggi" subtitle="Antipasti & Fritti" items={taglieri} note="Servito con pane pizza caldo" />
