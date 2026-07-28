@@ -447,7 +447,7 @@ const MenuPage = () => {
 
           {/* ── ANTIPASTI & APERITIVI ── */}
           <div id="antipasti" className="mb-16 border border-border rounded-sm overflow-hidden">
-            <h2 className="sr-only">Antipasti</h2>
+            <h2 className="sr-only">Benvenuto Carinostri</h2>
             <button
               type="button"
               onClick={() => setAntipastiOpen((v) => !v)}
@@ -455,8 +455,8 @@ const MenuPage = () => {
               className="w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer hover:bg-muted/30 transition-colors"
             >
               <div>
-                <p className="text-primary tracking-[0.3em] uppercase text-xs mb-2">PER INIZIARE & ANTIPASTI</p>
-                <h3 className="text-3xl md:text-4xl font-normal text-foreground mb-2">Antipasti</h3>
+                <p className="text-primary tracking-[0.3em] uppercase text-xs mb-2">PER INIZIARE</p>
+                <h3 className="text-3xl md:text-4xl font-normal text-foreground mb-2">Benvenuto Carinostri</h3>
                 <div className="w-10 h-px bg-primary" />
               </div>
               <ChevronDown
