@@ -80,9 +80,9 @@ export const pizzeTonno: MenuItem[] = [
 
 // ── LE PIZZE DI STAGIONE ──
 export const pizzeStagione: MenuItem[] = [
-  { name: "Mortadella DOC", description: "Fiordilatte, mortadella Bologna IGP, stracchino, pistacchio, pepe rosa, gratuggiata di limone", price: "€14" },
-  { name: "Caponata all'inglese", description: "Caponata di verdure, roast-beef all'inglese, misticanza, scaglie di grana padano", price: "€14" },
-  { name: "Primavera Estate", description: "Prosciutto Crudo 24 mesi, pomodorini, basilico, olio e.v.o., burrata pugliese, rucola", price: "€15" },
+  { name: "Confit Stracchino e Friarielli", description: "Pomodorini confit, friarielli, stracchino, origano, polvere di peperoni, insalatina", price: "€13" },
+  { name: "Crudo Pesce e Burrata", description: "Prosciutto crudo 24 mesi, pesche spicchi, burrata pugliese, rucola (disponibile variante con i pomodorini e basilico al posto posto delle pesche)", price: "€13" },
+  { name: "Baccalà Mantecato", description: "Baccalà mantecato, chips di mais, pomodori secchi, olive leccino e misticanza", price: "€14" },
 ];
 
 // ── LE PIZZE D.O.C. ──
