@@ -131,6 +131,14 @@ interface CategoryDef {
 
 const categories: CategoryDef[] = [
   {
+    id: "novita",
+    label: "Novità",
+    subsections: [
+      { id: "le-quadrate", label: "Le Quadrate" },
+      { id: "insalatone", label: "Insalatone & Piatti Freddi" },
+    ],
+  },
+  {
     id: "antipasti",
     label: "Antipasti",
     subsections: [
