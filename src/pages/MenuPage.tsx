@@ -247,6 +247,7 @@ const MenuPage = () => {
   const [activeCategory, setActiveCategory] = useState("pizze");
   const [classicheOpen, setClassicheOpen] = useState(false);
   const [tagliateOpen, setTagliateOpen] = useState(false);
+  const [antipastiOpen, setAntipastiOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const navRef = useRef<HTMLElement | null>(null);
 
