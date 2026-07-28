@@ -5,18 +5,24 @@ export interface MenuItem {
   logo?: string;
 }
 
-export interface IncomingItem {
-  name: string;
-  description: string;
-  tagline?: string;
-}
+// ── NOVITÀ – LE QUADRATE ──
+export const leQuadrate: MenuItem[] = [
+  { name: "Margherita", description: "Salsa di pomodoro, fiordilatte, origano", price: "€5,00" },
+  { name: "Anna & Noemi", description: "Porchetta, pomodori secchi, salsa di pomodoro, fiordilatte, origano", price: "€7,00" },
+  { name: "Salsiccia & Peperoni", description: "Salsiccia, peperoni pelati, salsa di pomodoro, fiordilatte, origano", price: "€7,00" },
+  { name: "Prosciutto Cotto", description: "Prosciutto cotto, salsa di pomodoro, fiordilatte, origano", price: "€7,00" },
+  { name: "Zola & Cipolla", description: "Gorgonzola, cipolla viola, fiordilatte, origano", price: "€7,00" },
+  { name: "Vegetariana", description: "Verdure miste al forno, parmigiano, origano", price: "€8,00" },
+];
 
-// ── IN ARRIVO ──
-export const inArrivo: IncomingItem = {
-  name: "Le Spicchiate",
-  tagline: "Un nuovo modo per gustare la pizza",
-  description: "Spicchi di pane pizza farciti in modi diversi e con gusti particolari, per scoprire una nuova delizia del nostro lievito madre. Chiedi al personale di sala per saperne di più.",
-};
+// ── NOVITÀ – INSALATONE & PIATTI FREDDI ──
+export const insalatone: MenuItem[] = [
+  { name: "Gustosa", description: "Tonno, olive leccino, fiordilatte, insalata, pomodoro fresco, carote", price: "€12,00" },
+  { name: "Saporita", description: "Cubetti di porchetta, cipolla viola, frutto di cappero, insalata, pomodoro fresco, carote", price: "€12,00" },
+  { name: "\"Caesar Salade\"", description: "Versione Carinostri — Pollo a filetti, crostini di pane, Salsa Caesar Carinostri, Grana Padano, insalata, pomodoro fresco, carote", price: "€14,00" },
+  { name: "Roast Beef all'Inglese", description: "Con misticanza e semi di senape", price: "€16,00" },
+  { name: "Tartare di Manzo", description: "Olio e limone — con olive, pomodorini, peperoni sbucciati, basilico e misticanza", price: "€18,00" },
+];
 
 // ── ANTIPASTI & FRITTI ──
 export const focaccia: MenuItem[] = [
