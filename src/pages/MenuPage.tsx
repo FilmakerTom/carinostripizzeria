@@ -50,7 +50,6 @@ const BeerJugIcon = ({ className = "" }: { className?: string }) => (
 );
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import IncomingSection from "@/components/IncomingSection";
 import pattern from "@/assets/pattern.svg";
 import {
   focaccia, taglieri, fritti, aperitivi,
@@ -60,7 +59,7 @@ import {
   sandwiches,
   birreSpeciali, birreNovita, bevande,
   bollicine, viniBianchi, viniRossi,
-  inArrivo,
+  leQuadrate, insalatone,
 } from "@/data/menuData";
 import type { MenuItem } from "@/data/menuData";
 
