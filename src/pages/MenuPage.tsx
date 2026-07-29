@@ -303,7 +303,7 @@ const MenuPage = () => {
 
       {/* Sticky category nav */}
       <nav
-        className="sticky top-16 z-40 bg-background/95 backdrop-blur-sm border-b border-border"
+        className="fixed top-16 z-40 bg-background/95 backdrop-blur-sm border-b border-border"
       >
         <div className="max-w-4xl mx-auto flex md:justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-3 overflow-x-auto scrollbar-hide [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {categories.map((cat) => {
@@ -324,6 +324,7 @@ const MenuPage = () => {
           })}
         </div>
       </nav>
+      <div className="h-16" aria-hidden="true" />
 
 
       {/* Menu content */}
