@@ -1,27 +1,13 @@
-Aggiungere una sezione "IN ARRIVO" nel menù, posizionata subito sotto l'avvertenza allergeni e sopra la sezione "Per Iniziare" (Aperitivi).
+Piano di intervento: correzione colore testo voci menu mobile aperto sopra hero
 
-## Obiettivo
-Creare un riquadro graficamente distintivo e molto visibile per promuovere "Le Spicchiate", una novità in arrivo. Il box deve essere riconoscibile, coerente con l'identità del sito, ma diverso dal box delle allergie.
+1. File da modificare: `src/components/Navbar.tsx`.
+2. Intervento: nel menu mobile espanso (dopo il bottone hamburger), rendere il colore del testo delle voci "non attive" dipendente dallo stato `solid`:
+   - Se `solid === true` (navbar su sfondo chiaro/scuroled): mantenere `text-foreground/70 hover:text-primary`.
+   - Se `solid === false` (navbar trasparente sopra la hero, tema scuro): usare `text-primary-foreground/80 hover:text-primary-foreground` (testo bianco/crema).
+3. Il link attivo mantiene `text-primary` (terracotta) in entrambi i contesti, perché rimane leggibile.
+4. Non modificare il menu desktop, che già reagisce correttamente a `solid`.
+5. Verifica finale: build/vite per assicurare assenza di errori di compilazione.
 
-## Posizione nel flusso
-In `src/pages/MenuPage.tsx`, inserire il nuovo componente dopo il blocco avvertenza allergeni e prima del div `#antipasti` con la categoria Aperitivi.
-
-## Struttura e contenuti
-1. **Intestazione**: label "IN ARRIVO" in uppercase con tracking ampio, come i sottotitoli del menù.
-2. **Titolo piatto**: "Le Spicchiate" in GFS Didot, grande e in evidenza.
-3. **Descrizione**: testo del piatto fornito dall'utente, in Raleway, con un accento sul "lievito madre" e su "chiedendo al personale di sala".
-4. **Elemento decorativo**: un bordo o una fascia laterale in terracotta, un'icona stilizzata di una fetta/pizza o un badge "Novità" per far spiccare la sezione.
-5. **Trattamento visivo**: box con sfondo leggermente più caldo rispetto al fondo pagina, bordino spesso o doppio bordo in terracotta, ombra sottile, e un angolo/ribbon "In Arrivo" in charcoal o terracotta per catturare l'occhio.
-
-## Dati
-Aggiungere il piatto in `src/data/menuData.ts` in una nuova costante esportata, ad esempio `inArrivo`, così da poter essere riutilizzata e facilmente aggiornata.
-
-## Componente
-Creare `src/components/IncomingSection.tsx` con un layout apposito, customizzato e non identico a `MenuCategory`. Utilizzare i design token già presenti (colori HSL, font, spacing) e mantenere il responsive design.
-
-## Verifica
-Dopo l'implementazione verificare che:
-- il box sia visibile subito sotto l'avvertenza allergeni;
-- il testo e la descrizione corrispondano esattamente a quanto richiesto;
-- il layout sia responsive e rispetti i token del design system;
-- la build passi senza errori.
+Note:
+- I token Tailwind (`text-primary-foreground`) sono già definiti nel tema e rappresentano il bianco/crema del brand, mantenendo coerenza con il resto della UI.
+- Non si cambia lo sfondo del menu mobile: si agisce solo sul colore del testo, come richiesto.

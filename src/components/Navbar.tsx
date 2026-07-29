@@ -89,7 +89,9 @@ const Navbar = () => {
                 className={`text-sm tracking-[0.15em] uppercase py-2 transition-colors flex items-center gap-2 ${
                   location.pathname === link.to
                     ? "text-primary"
-                    : "text-foreground/70 hover:text-primary"
+                    : solid
+                    ? "text-foreground/70 hover:text-primary"
+                    : "text-primary-foreground/80 hover:text-primary-foreground"
                 } ${link.soon ? "opacity-70" : ""}`}
                 style={{ fontFamily: "var(--font-body)" }}
               >
