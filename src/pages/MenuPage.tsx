@@ -290,7 +290,9 @@ const WineCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => (
   </div>
 );
 
+const MenuPage = () => {
   const [activeCategory, setActiveCategory] = useState("pizze");
+
   const [classicheOpen, setClassicheOpen] = useState(false);
   const [tagliateOpen, setTagliateOpen] = useState(false);
   const [antipastiOpen, setAntipastiOpen] = useState(false);
