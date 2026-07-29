@@ -248,23 +248,6 @@ const MenuPage = () => {
   const [classicheOpen, setClassicheOpen] = useState(false);
   const [tagliateOpen, setTagliateOpen] = useState(false);
   const [antipastiOpen, setAntipastiOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const navRef = useRef<HTMLElement | null>(null);
-
-  useEffect(() => {
-    const handleOutside = (e: MouseEvent | TouchEvent) => {
-      if (navRef.current && !navRef.current.contains(e.target as Node)) {
-        setOpenDropdown(null);
-      }
-    };
-    document.addEventListener("mousedown", handleOutside);
-    document.addEventListener("touchstart", handleOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleOutside);
-      document.removeEventListener("touchstart", handleOutside);
-    };
-  }, []);
-
 
   useEffect(() => {
     const sectionIds = categories.map((c) => c.id);
