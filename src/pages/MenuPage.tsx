@@ -324,6 +324,7 @@ const MenuPage = () => {
           })}
         </div>
       </nav>
+      <div className="h-16" aria-hidden="true" />
 
 
       {/* Menu content */}
