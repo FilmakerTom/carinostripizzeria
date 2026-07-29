@@ -243,7 +243,53 @@ const BeerCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => {
   );
 };
 
-const MenuPage = () => {
+const WineCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => (
+  <div className="mb-16">
+    <p className="text-primary tracking-[0.3em] uppercase text-xs mb-2">{subtitle}</p>
+    <h3 className="text-3xl md:text-4xl font-normal text-foreground mb-2">{title}</h3>
+    <div className="w-10 h-px bg-primary mb-6" />
+    <div className="flex items-center gap-6 mb-6 flex-wrap">
+      <span className="flex items-center gap-2 text-sm text-muted-foreground">
+        <WineGlassIcon className="w-4 h-4 text-primary" /> Calice
+      </span>
+      <span className="flex items-center gap-2 text-sm text-muted-foreground">
+        <BottleIcon className="w-4 h-4 text-primary" /> Bottiglia
+      </span>
+    </div>
+    {note && <p className="text-muted-foreground text-sm italic mb-6">{note}</p>}
+    <div className="space-y-0 divide-y divide-border">
+      {items.map((item, i) => (
+        <div key={`${item.name}-${i}`} className="flex justify-between items-start py-5 group">
+          <div className="flex-1 pr-4">
+            <h4 className="text-lg md:text-xl text-foreground group-hover:text-primary transition-colors">
+              {item.name}
+            </h4>
+            {item.description && (
+              <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
+            )}
+          </div>
+          {item.price && (
+            item.price.includes("|") ? (
+              <div className="flex items-center gap-4 shrink-0">
+                <span className="flex items-center gap-1.5">
+                  <WineGlassIcon className="w-4 h-4 text-primary" />
+                  <span className="text-sm font-semibold text-primary">{item.price.split("|")[0].trim()}</span>
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <BottleIcon className="w-4 h-4 text-primary" />
+                  <span className="text-sm font-semibold text-primary">{item.price.split("|")[1].trim()}</span>
+                </span>
+              </div>
+            ) : (
+              <span className="text-lg text-primary font-semibold shrink-0">{item.price}</span>
+            )
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
   const [activeCategory, setActiveCategory] = useState("pizze");
   const [classicheOpen, setClassicheOpen] = useState(false);
   const [tagliateOpen, setTagliateOpen] = useState(false);
@@ -587,17 +633,10 @@ const MenuPage = () => {
           <div id="bevande">
             <MenuCategory title="Bevande" subtitle="DAL BANCO" items={bevande} />
           </div>
-          <div className="flex items-center justify-center gap-6 mb-8">
-            <span className="flex items-center gap-2 text-sm text-muted-foreground">
-              <WineGlassIcon className="w-4 h-4 text-primary" /> Calice
-            </span>
-            <span className="flex items-center gap-2 text-sm text-muted-foreground">
-              <BottleIcon className="w-4 h-4 text-primary" /> Bottiglia
-            </span>
-          </div>
           <div id="bollicine">
-            <MenuCategory title="Bollicine" subtitle="I NOSTRI VINI" items={bollicine} />
+            <WineCategory title="Bollicine" subtitle="I NOSTRI VINI" items={bollicine} />
           </div>
+
           <div id="vini-bianchi">
             <MenuCategory title="Vini Bianchi Fermi" subtitle="I NOSTRI VINI" items={viniBianchi} />
           </div>
