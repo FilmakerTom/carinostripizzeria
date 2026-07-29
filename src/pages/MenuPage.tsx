@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 
 
@@ -248,23 +248,6 @@ const MenuPage = () => {
   const [classicheOpen, setClassicheOpen] = useState(false);
   const [tagliateOpen, setTagliateOpen] = useState(false);
   const [antipastiOpen, setAntipastiOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const navRef = useRef<HTMLElement | null>(null);
-
-  useEffect(() => {
-    const handleOutside = (e: MouseEvent | TouchEvent) => {
-      if (navRef.current && !navRef.current.contains(e.target as Node)) {
-        setOpenDropdown(null);
-      }
-    };
-    document.addEventListener("mousedown", handleOutside);
-    document.addEventListener("touchstart", handleOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleOutside);
-      document.removeEventListener("touchstart", handleOutside);
-    };
-  }, []);
-
 
   useEffect(() => {
     const sectionIds = categories.map((c) => c.id);
@@ -320,78 +303,23 @@ const MenuPage = () => {
 
       {/* Sticky category nav */}
       <nav
-        ref={navRef}
         className="sticky top-16 z-40 bg-background/95 backdrop-blur-sm border-b border-border"
       >
         <div className="max-w-4xl mx-auto flex md:justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-3 overflow-x-auto scrollbar-hide [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {categories.map((cat) => {
-            const hasDropdown = !!cat.subsections && cat.subsections.length > 0;
-            const isOpen = openDropdown === cat.id;
             const isActive = activeCategory === cat.id;
-            const handleCatClick = () => {
-              if (!hasDropdown) {
-                setOpenDropdown(null);
-                scrollTo(cat.id);
-                return;
-              }
-              if (isOpen) {
-                setOpenDropdown(null);
-                scrollTo(cat.id);
-              } else {
-                setOpenDropdown(cat.id);
-              }
-            };
             return (
-              <div
+              <button
                 key={cat.id}
-                className="relative shrink-0"
-                onMouseEnter={() => hasDropdown && setOpenDropdown(cat.id)}
-                onMouseLeave={() => hasDropdown && setOpenDropdown((cur) => (cur === cat.id ? null : cur))}
+                onClick={() => scrollTo(cat.id)}
+                className={`shrink-0 flex items-center gap-1.5 px-3.5 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap transition-all duration-200 ${
+                  isActive
+                    ? "bg-primary text-primary-foreground shadow-md"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                }`}
               >
-                <button
-                  onClick={handleCatClick}
-                  aria-expanded={hasDropdown ? isOpen : undefined}
-                  aria-haspopup={hasDropdown ? "menu" : undefined}
-                  className={`flex items-center gap-1.5 px-3.5 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap transition-all duration-200 ${
-                    isActive
-                      ? "bg-primary text-primary-foreground shadow-md"
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                  }`}
-                >
-                  {cat.label}
-                  {hasDropdown && (
-                    <ChevronDown
-                      className={`w-3.5 h-3.5 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
-                    />
-                  )}
-                </button>
-                {hasDropdown && (
-                  <div
-                    role="menu"
-                    className={`absolute left-1/2 -translate-x-1/2 top-full pt-2 w-[200px] max-w-[calc(100vw-2rem)] transition-all duration-200 origin-top ${
-                      isOpen
-                        ? "opacity-100 translate-y-0 pointer-events-auto"
-                        : "opacity-0 -translate-y-1 pointer-events-none"
-                    }`}
-                  >
-                    <div className="bg-background border border-border rounded-md shadow-md py-1">
-                      {cat.subsections!.map((sub) => (
-                        <button
-                          key={sub.id}
-                          role="menuitem"
-                          onClick={() => {
-                            scrollTo(sub.id);
-                            setOpenDropdown(null);
-                          }}
-                          className="w-full text-left px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/40 transition-colors"
-                        >
-                          {sub.label}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
+                {cat.label}
+              </button>
             );
           })}
         </div>
