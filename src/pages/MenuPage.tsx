@@ -132,14 +132,6 @@ interface CategoryDef {
 
 const categories: CategoryDef[] = [
   {
-    id: "novita",
-    label: "Novità",
-    subsections: [
-      { id: "le-quadrate", label: "Le Quadrate" },
-      { id: "insalatone", label: "Insalatone & Piatti Freddi" },
-    ],
-  },
-  {
     id: "antipasti",
     label: "Antipasti",
     subsections: [
@@ -153,29 +145,44 @@ const categories: CategoryDef[] = [
     id: "pizze",
     label: "Pizze",
     subsections: [
-      { id: "pizze-stagionali", label: "Stagionali" },
+      { id: "pizze-stagionali", label: "Spicchiate" },
       { id: "pizze-doc", label: "D.O.C." },
-      { id: "carenostre", label: "Le Carenostre" },
       { id: "porchetta", label: "Con la Porchetta" },
       { id: "tonno", label: "Con il Tonno" },
-      { id: "classiche", label: "Classiche" },
-      { id: "tagliate", label: "Pizze Tagliate" },
+      { id: "carenostre", label: "Le Carenostre" },
     ],
   },
   { id: "sandwiches", label: "Sandwiches" },
   {
+    id: "novita",
+    label: "Novità",
+    subsections: [
+      { id: "le-quadrate", label: "Le Quadrate" },
+      { id: "insalatone", label: "Insalatone & Piatti Freddi" },
+    ],
+  },
+  { id: "cucina", label: "Cucina" },
+  {
     id: "bibite",
-    label: "Bibite",
+    label: "Banco",
     subsections: [
       { id: "birre-spina", label: "Birre alla Spina" },
       { id: "birre-speciali", label: "Birre Speciali" },
       { id: "bevande", label: "Bevande" },
+    ],
+  },
+  {
+    id: "vini",
+    label: "Vini",
+    subsections: [
       { id: "bollicine", label: "Bollicine" },
       { id: "vini-bianchi", label: "Vini Bianchi" },
       { id: "vini-rossi", label: "Rossi" },
     ],
   },
+  { id: "dolci", label: "Dolci & Caffè" },
 ];
+
 
 
 const BeerCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => {
