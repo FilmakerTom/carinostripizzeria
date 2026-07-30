@@ -613,10 +613,10 @@ const MenuPage = () => {
             </div>
           </div>
           <div id="vini-bianchi">
-            <MenuCategory title="Vini Bianchi Fermi" subtitle="I NOSTRI VINI" items={viniBianchi} />
+            <WineCategory title="Vini Bianchi Fermi" subtitle="I NOSTRI VINI" items={viniBianchi} />
           </div>
           <div id="vini-rossi">
-            <MenuCategory title="Rossi" subtitle="I NOSTRI VINI" items={viniRossi} />
+            <WineCategory title="Rossi" subtitle="I NOSTRI VINI" items={viniRossi} />
           </div>
 
           {/* Macro-category separator */}
