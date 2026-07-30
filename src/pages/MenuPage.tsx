@@ -629,17 +629,17 @@ const MenuPage = () => {
           {/* ── DOLCI, GELATO, AMARI E CAFFÈ ── */}
           <div id="dolci">
             <h2 className="sr-only">Dolci, Gelato, Amari e Caffè</h2>
-            <MenuCategory title="Dolci" subtitle="DOLCI, GELATO, AMARI E CAFFÈ" items={dolci} />
+            <MenuCategory title="Dolci" subtitle="PER FINIRE" items={dolci} />
             <div id="gelato">
               <MenuCategory
                 title="Gelato Artigianale"
-                subtitle="DOLCI, GELATO, AMARI E CAFFÈ"
+                subtitle="PER FINIRE"
                 items={gelato}
                 note="Gusti della settimana: Limone, Ananas & Lampone, Anguria & Limone, Frutti di Bosco, Vaniglia, Nocciola, Pistacchio"
               />
             </div>
             <div id="dopo-cena">
-              <MenuCategory title="Dopo Cena" subtitle="SORBETTI, AMARI E CAFFÈ" items={dopoCena} />
+              <MenuCategory title="Sorbetti, Amari e Caffè" subtitle="PER FINIRE" items={dopoCena} />
             </div>
           </div>
 
