@@ -54,12 +54,13 @@ import pattern from "@/assets/pattern.svg";
 import {
   focaccia, taglieri, fritti, aperitivi,
   pizzePorchetta, pizzeTonno, pizzeStagione, pizzeDoc,
-  pizzeTagliateClassiche, pizzeTagliatePiccole,
+  pizzeTagliateClassiche,
   carenestreRosse, carenestreBianche,
   sandwiches,
   birreSpeciali, birreNovita, bevande,
   bollicine, viniBianchi, viniRossi,
   leQuadrate, insalatone,
+  dolci, gelato, dopoCena,
 } from "@/data/menuData";
 import type { MenuItem } from "@/data/menuData";
 
@@ -72,6 +73,7 @@ const menuJsonLd = {
     { "@type": "MenuSection", name: "Pizze" },
     { "@type": "MenuSection", name: "Sandwiches" },
     { "@type": "MenuSection", name: "Bibite, Birre e Vini" },
+    { "@type": "MenuSection", name: "Dolci, Gelato, Amari e Caffè" },
   ],
 };
 
@@ -131,14 +133,6 @@ interface CategoryDef {
 
 const categories: CategoryDef[] = [
   {
-    id: "novita",
-    label: "Novità",
-    subsections: [
-      { id: "le-quadrate", label: "Le Quadrate" },
-      { id: "insalatone", label: "Insalatone & Piatti Freddi" },
-    ],
-  },
-  {
     id: "antipasti",
     label: "Antipasti",
     subsections: [
@@ -152,29 +146,43 @@ const categories: CategoryDef[] = [
     id: "pizze",
     label: "Pizze",
     subsections: [
-      { id: "pizze-stagionali", label: "Stagionali" },
+      { id: "pizze-stagionali", label: "Spicchiate" },
       { id: "pizze-doc", label: "D.O.C." },
-      { id: "carenostre", label: "Le Carenostre" },
       { id: "porchetta", label: "Con la Porchetta" },
       { id: "tonno", label: "Con il Tonno" },
-      { id: "classiche", label: "Classiche" },
-      { id: "tagliate", label: "Pizze Tagliate" },
+      { id: "carenostre", label: "Le Carenostre" },
     ],
   },
   { id: "sandwiches", label: "Sandwiches" },
   {
+    id: "novita",
+    label: "Novità",
+    subsections: [
+      { id: "le-quadrate", label: "Le Quadrate" },
+      { id: "insalatone", label: "Insalatone & Piatti Freddi" },
+    ],
+  },
+  {
     id: "bibite",
-    label: "Bibite",
+    label: "Banco",
     subsections: [
       { id: "birre-spina", label: "Birre alla Spina" },
       { id: "birre-speciali", label: "Birre Speciali" },
       { id: "bevande", label: "Bevande" },
+    ],
+  },
+  {
+    id: "vini",
+    label: "Vini",
+    subsections: [
       { id: "bollicine", label: "Bollicine" },
       { id: "vini-bianchi", label: "Vini Bianchi" },
       { id: "vini-rossi", label: "Rossi" },
     ],
   },
+  { id: "dolci", label: "Dolci & Caffè" },
 ];
+
 
 
 const BeerCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => {
@@ -291,10 +299,9 @@ const WineCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => (
 );
 
 const MenuPage = () => {
-  const [activeCategory, setActiveCategory] = useState("pizze");
+  const [activeCategory, setActiveCategory] = useState("antipasti");
 
   const [classicheOpen, setClassicheOpen] = useState(false);
-  const [tagliateOpen, setTagliateOpen] = useState(false);
   const [antipastiOpen, setAntipastiOpen] = useState(false);
 
   useEffect(() => {
@@ -386,41 +393,6 @@ const MenuPage = () => {
             </p>
           </div>
 
-          {/* ── NOVITÀ ── */}
-          <div id="novita" className="border border-border/60 rounded-md p-8 md:p-10 mb-16">
-            <h2 className="sr-only">Novità</h2>
-            <div className="flex items-center justify-between mb-8">
-              <p className="text-primary tracking-[0.3em] uppercase text-xs">Novità</p>
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs tracking-[0.3em] uppercase animate-pulse">
-                NOVITÀ
-              </span>
-            </div>
-            <div id="le-quadrate">
-              <MenuCategory
-                title="Le Quadrate"
-                subtitle=""
-                items={leQuadrate}
-                note="Un impasto semplice, croccante e gustoso"
-              />
-            </div>
-            <hr className="border-border/40 my-8" />
-            <div id="insalatone">
-              <MenuCategory
-                title="Insalatone & Piatti Freddi"
-                subtitle=""
-                items={insalatone}
-              />
-            </div>
-          </div>
-
-          {/* Macro-category separator */}
-          <div className="my-16 flex items-center gap-4" aria-hidden="true">
-            <div className="flex-1 h-px bg-border" />
-            <div className="w-2 h-2 rotate-45 bg-primary" />
-            <div className="flex-1 h-px bg-border" />
-          </div>
-
-
           {/* ── ANTIPASTI & APERITIVI ── */}
           <div id="antipasti" className="mb-16 border border-border rounded-sm overflow-hidden">
             <h2 className="sr-only">Benvenuto Carinostri</h2>
@@ -482,7 +454,6 @@ const MenuPage = () => {
             </div>
           </div>
 
-
           {/* Macro-category separator */}
           <div className="my-16 flex items-center gap-4" aria-hidden="true">
             <div className="flex-1 h-px bg-border" />
@@ -500,19 +471,18 @@ const MenuPage = () => {
           <div id="pizze-doc">
             <MenuCategory title="Le Pizze D.O.C." subtitle="D'Eccellenza" items={pizzeDoc} />
           </div>
-          <div id="carenostre">
-            <MenuCategory title="Le Carenostre" subtitle="LE CARENOSTRE" items={carenestreRosse} />
-            <MenuCategory title="Le Carenostre Bianche" subtitle="LE CARENOSTRE" items={carenestreBianche} />
-          </div>
           <div id="porchetta">
             <MenuCategory title="Con La Porchetta" subtitle="Le Nostre Pizze" items={pizzePorchetta} />
           </div>
           <div id="tonno">
             <MenuCategory title="Con Il Tonno" subtitle="Le Nostre Pizze" items={pizzeTonno} />
           </div>
+          <div id="carenostre">
+            <MenuCategory title="Le Carenostre" subtitle="LE CARENOSTRE" items={carenestreRosse} />
+            <MenuCategory title="Le Carenostre Bianche" subtitle="LE CARENOSTRE" items={carenestreBianche} />
+          </div>
 
           <div id="classiche" className="mb-16 border border-border rounded-sm overflow-hidden">
-
             <button
               type="button"
               onClick={() => setClassicheOpen((v) => !v)}
@@ -535,48 +505,6 @@ const MenuPage = () => {
                 <div className="px-6 pb-6">
                   <div className="space-y-0 divide-y divide-border">
                     {pizzeTagliateClassiche.map((item, i) => (
-                      <div key={`${item.name}-${i}`} className="flex justify-between items-start py-5 group">
-                        <div className="flex-1 pr-4">
-                          <h4 className="text-lg md:text-xl text-foreground group-hover:text-primary transition-colors">
-                            {item.name}
-                          </h4>
-                          {item.description && (
-                            <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
-                          )}
-                        </div>
-                        {item.price && (
-                          <span className="text-lg text-primary font-semibold shrink-0">{item.price}</span>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="tagliate" className="mb-16 border border-border rounded-sm overflow-hidden">
-            <button
-              type="button"
-              onClick={() => setTagliateOpen((v) => !v)}
-              aria-expanded={tagliateOpen}
-              className="w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer hover:bg-muted/30 transition-colors"
-            >
-              <div>
-                <p className="text-primary tracking-[0.3em] uppercase text-xs mb-2">LE NOSTRE PIZZE</p>
-                <h3 className="text-3xl md:text-4xl font-normal text-foreground mb-2">Pizze Tagliate</h3>
-                <div className="w-10 h-px bg-primary" />
-              </div>
-              <ChevronDown
-                className={`w-6 h-6 text-primary shrink-0 transition-transform duration-300 ${tagliateOpen ? "rotate-180" : ""}`}
-              />
-            </button>
-            <div
-              className={`grid transition-all duration-500 ease-out ${tagliateOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
-            >
-              <div className="overflow-hidden">
-                <div className="px-6 pb-6">
-                  <div className="space-y-0 divide-y divide-border">
-                    {pizzeTagliatePiccole.map((item, i) => (
                       <div key={`${item.name}-${i}`} className="flex justify-between items-start py-5 group">
                         <div className="flex-1 pr-4">
                           <h4 className="text-lg md:text-xl text-foreground group-hover:text-primary transition-colors">
@@ -622,9 +550,43 @@ const MenuPage = () => {
             <div className="flex-1 h-px bg-border" />
           </div>
 
-          {/* ── BIBITE ── */}
+          {/* ── NOVITÀ ── */}
+          <div id="novita" className="border border-border/60 rounded-md p-8 md:p-10 mb-16">
+            <h2 className="sr-only">Novità</h2>
+            <div className="flex items-center justify-between mb-8">
+              <p className="text-primary tracking-[0.3em] uppercase text-xs">Novità</p>
+              <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs tracking-[0.3em] uppercase animate-pulse">
+                NOVITÀ
+              </span>
+            </div>
+            <div id="le-quadrate">
+              <MenuCategory
+                title="Le Quadrate"
+                subtitle=""
+                items={leQuadrate}
+                note="Un impasto semplice, croccante e gustoso"
+              />
+            </div>
+            <hr className="border-border/40 my-8" />
+            <div id="insalatone">
+              <MenuCategory
+                title="Insalatone & Piatti Freddi"
+                subtitle=""
+                items={insalatone}
+              />
+            </div>
+          </div>
+
+          {/* Macro-category separator */}
+          <div className="my-16 flex items-center gap-4" aria-hidden="true">
+            <div className="flex-1 h-px bg-border" />
+            <div className="w-2 h-2 rotate-45 bg-primary" />
+            <div className="flex-1 h-px bg-border" />
+          </div>
+
+          {/* ── BANCO ── */}
           <div id="bibite">
-            <h2 className="sr-only">Bibite, Birre e Vini</h2>
+            <h2 className="sr-only">Dal Banco</h2>
             <div id="birre-spina">
               <BeerCategory title="Birre alla Spina" subtitle="DAL BANCO" items={birreNovita} />
             </div>
@@ -635,16 +597,52 @@ const MenuPage = () => {
           <div id="bevande">
             <MenuCategory title="Bevande" subtitle="DAL BANCO" items={bevande} />
           </div>
-          <div id="bollicine">
-            <WineCategory title="Bollicine" subtitle="I NOSTRI VINI" items={bollicine} />
+
+          {/* Macro-category separator */}
+          <div className="my-16 flex items-center gap-4" aria-hidden="true">
+            <div className="flex-1 h-px bg-border" />
+            <div className="w-2 h-2 rotate-45 bg-primary" />
+            <div className="flex-1 h-px bg-border" />
           </div>
 
+          {/* ── VINI ── */}
+          <div id="vini">
+            <h2 className="sr-only">I Nostri Vini</h2>
+            <div id="bollicine">
+              <WineCategory title="Bollicine" subtitle="I NOSTRI VINI" items={bollicine} />
+            </div>
+          </div>
           <div id="vini-bianchi">
             <MenuCategory title="Vini Bianchi Fermi" subtitle="I NOSTRI VINI" items={viniBianchi} />
           </div>
           <div id="vini-rossi">
             <MenuCategory title="Rossi" subtitle="I NOSTRI VINI" items={viniRossi} />
           </div>
+
+          {/* Macro-category separator */}
+          <div className="my-16 flex items-center gap-4" aria-hidden="true">
+            <div className="flex-1 h-px bg-border" />
+            <div className="w-2 h-2 rotate-45 bg-primary" />
+            <div className="flex-1 h-px bg-border" />
+          </div>
+
+          {/* ── DOLCI, GELATO, AMARI E CAFFÈ ── */}
+          <div id="dolci">
+            <h2 className="sr-only">Dolci, Gelato, Amari e Caffè</h2>
+            <MenuCategory title="Dolci" subtitle="DOLCI, GELATO, AMARI E CAFFÈ" items={dolci} />
+            <div id="gelato">
+              <MenuCategory
+                title="Gelato Artigianale"
+                subtitle="DOLCI, GELATO, AMARI E CAFFÈ"
+                items={gelato}
+                note="Gusti della settimana: Limone, Ananas & Lampone, Anguria & Limone, Frutti di Bosco, Vaniglia, Nocciola, Pistacchio"
+              />
+            </div>
+            <div id="dopo-cena">
+              <MenuCategory title="Dopo Cena" subtitle="SORBETTI, AMARI E CAFFÈ" items={dopoCena} />
+            </div>
+          </div>
+
 
         </div>
       </section>
