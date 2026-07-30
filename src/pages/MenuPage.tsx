@@ -54,12 +54,13 @@ import pattern from "@/assets/pattern.svg";
 import {
   focaccia, taglieri, fritti, aperitivi,
   pizzePorchetta, pizzeTonno, pizzeStagione, pizzeDoc,
-  pizzeTagliateClassiche, pizzeTagliatePiccole,
+  pizzeTagliateClassiche,
   carenestreRosse, carenestreBianche,
   sandwiches,
   birreSpeciali, birreNovita, bevande,
   bollicine, viniBianchi, viniRossi,
   leQuadrate, insalatone,
+  dolci, gelato, dopoCena,
 } from "@/data/menuData";
 import type { MenuItem } from "@/data/menuData";
 
