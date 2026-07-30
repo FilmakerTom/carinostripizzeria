@@ -73,6 +73,7 @@ const menuJsonLd = {
     { "@type": "MenuSection", name: "Pizze" },
     { "@type": "MenuSection", name: "Sandwiches" },
     { "@type": "MenuSection", name: "Bibite, Birre e Vini" },
+    { "@type": "MenuSection", name: "Dolci, Gelato, Amari e Caffè" },
   ],
 };
 
@@ -161,7 +162,6 @@ const categories: CategoryDef[] = [
       { id: "insalatone", label: "Insalatone & Piatti Freddi" },
     ],
   },
-  { id: "cucina", label: "Cucina" },
   {
     id: "bibite",
     label: "Banco",
@@ -299,10 +299,9 @@ const WineCategory = ({ title, subtitle, items, note }: MenuCategoryProps) => (
 );
 
 const MenuPage = () => {
-  const [activeCategory, setActiveCategory] = useState("pizze");
+  const [activeCategory, setActiveCategory] = useState("antipasti");
 
   const [classicheOpen, setClassicheOpen] = useState(false);
-  const [tagliateOpen, setTagliateOpen] = useState(false);
   const [antipastiOpen, setAntipastiOpen] = useState(false);
 
   useEffect(() => {
