@@ -191,3 +191,23 @@ export const viniRossi: MenuItem[] = [
   { name: "Falconera Merlot D.O.C. M.llo Loredan Gasparin Venegazzù (TV)", description: "", price: "€3,50 | €21" },
   { name: "Senza Alibi Montepulciano d'Abruzzo Doc Spoltore (PE)", description: "", price: "€3,50 | €21" },
 ];
+
+// ── DOLCI, GELATO, AMARI E CAFFÈ ──
+export const dolci: MenuItem[] = [
+  { name: "Tiramisù", description: "", price: "€5" },
+  { name: "Crema catalana", description: "", price: "€5" },
+  { name: "Tortino al cioccolato", description: "Con cuore morbido e gelato alla nocciola", price: "€7" },
+];
+
+export const gelato: MenuItem[] = [
+  { name: "Gelato 1 porzione", description: "", price: "€2" },
+  { name: "Gelato porzione doppia", description: "", price: "€3,5" },
+];
+
+export const dopoCena: MenuItem[] = [
+  { name: "Sorbetto", description: "Limone primo fiore, Mandarino, Mango", price: "€4" },
+  { name: "Liquori artigianali amalfitani", description: "Limoncello, Finocchietto, Liquirizia, Cioccolato", price: "€4,5" },
+  { name: "Campo Amaro", description: "", price: "€5" },
+  { name: "Varietà di amari & distillati", description: "", price: "da €5" },
+  { name: "Caffè \"Sartoriale\"", description: "Miscela forte, Miscela leggera, Miscela deca", price: "€2" },
+];
