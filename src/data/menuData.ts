@@ -111,13 +111,7 @@ export const pizzeTagliateClassiche: MenuItem[] = [
   { name: "Formaggi", description: "Salsa di pomodoro, fiordilatte, gorgonzola, scamorza affumicata, Asiago", price: "€10" },
 ];
 
-export const pizzeTagliatePiccole: MenuItem[] = [
-  { name: "Margherita", description: "Salsa di pomodoro, fiordilatte", price: "€5" },
-  { name: "Patatosa", description: "Patate fritte, salsa di pomodoro, fiordilatte", price: "€6" },
-  { name: "Viennese", description: "Würstel, salsa di pomodoro, fiordilatte", price: "€6" },
-  { name: "Prosciutto Cotto", description: "Prosciutto cotto, salsa di pomodoro, fiordilatte", price: "€6" },
-  { name: "Anna & Noemi", description: "Porchetta, salsa di pomodoro, fiordilatte", price: "€7" },
-];
+
 
 // ── LE CARENESTRE ──
 export const carenestreRosse: MenuItem[] = [
