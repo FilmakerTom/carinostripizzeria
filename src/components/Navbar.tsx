@@ -8,6 +8,7 @@ const navLinks: { label: string; to: string; soon?: boolean }[] = [
   { label: "Home", to: "/" },
   { label: "Menù", to: "/menu" },
   { label: "Chi Siamo", to: "/chi-siamo" },
+  { label: "La Nostra Storia", to: "/la-nostra-storia" },
 ];
 
 const Navbar = () => {

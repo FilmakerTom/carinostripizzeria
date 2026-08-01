@@ -13,6 +13,7 @@ import CookiePreferences from "@/components/CookiePreferences";
 import Index from "./pages/Index.tsx";
 import MenuPage from "./pages/MenuPage.tsx";
 import ChiSiamo from "./pages/ChiSiamo.tsx";
+import LaNostraStoria from "./pages/LaNostraStoria.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import CookiePolicy from "./pages/CookiePolicy.tsx";
 import AdminLogin from "./pages/AdminLogin.tsx";
