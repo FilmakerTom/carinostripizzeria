@@ -1,6 +1,8 @@
-import { Sparkles, Wheat, HeartHandshake, Scale, Clock, Heart, Home, CalendarDays } from "lucide-react";
+import { Sparkles, Wheat, HeartHandshake, Scale, Clock, Heart, Home, CalendarDays, ImageIcon, UtensilsCrossed, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import dough1 from "@/assets/dough-1.jpg";
 import pattern from "@/assets/pattern.svg";
@@ -30,11 +32,32 @@ const Reveal = ({
 
 const SectionTitle = ({ icon: Icon, children }: { icon: React.ElementType; children: React.ReactNode }) => (
   <div className="flex items-center gap-3 mb-5">
-    <span className="flex items-center justify-center w-10 h-10 rounded-full border border-primary/40 text-primary shrink-0">
+    <span className="flex items-center justify-center w-9 h-9 md:w-10 md:h-10 rounded-full border border-primary/40 text-primary shrink-0">
       <Icon size={18} strokeWidth={1.5} />
     </span>
-    <h2 className="text-2xl md:text-3xl font-normal text-foreground leading-tight">{children}</h2>
+    <h2 className="text-xl sm:text-2xl md:text-3xl font-normal text-foreground leading-tight">{children}</h2>
   </div>
+);
+
+const PhotoPlaceholder = ({ label }: { label: string }) => (
+  <div className="relative aspect-[16/9] overflow-hidden rounded-sm border border-dashed border-primary/30 bg-muted flex flex-col items-center justify-center gap-2">
+    <img src={pattern} alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-[0.05] pointer-events-none" />
+    <ImageIcon size={28} strokeWidth={1.25} className="text-primary/60" aria-hidden="true" />
+    <p className="text-muted-foreground text-xs tracking-[0.25em] uppercase">Foto in arrivo</p>
+    <p className="text-muted-foreground/80 text-xs px-6 text-center">{label}</p>
+  </div>
+);
+
+const PullQuote = ({ children }: { children: React.ReactNode }) => (
+  <Reveal>
+    <blockquote className="relative text-center py-2">
+      <div className="w-10 h-px bg-primary mx-auto mb-6" />
+      <p className="font-[var(--font-display)] text-2xl sm:text-3xl md:text-4xl leading-snug text-foreground px-2">
+        “{children}”
+      </p>
+      <div className="w-10 h-px bg-primary mx-auto mt-6" />
+    </blockquote>
+  </Reveal>
 );
 
 const valori = [
@@ -65,6 +88,24 @@ const valori = [
   },
 ];
 
+const tappe = [
+  {
+    anno: "2010",
+    titolo: "L'apertura e l'incontro con il lievito madre",
+    text: "Nasce Carinostri a Sala d'Istrana. Il lievito madre diventa da subito la radice di ogni impasto.",
+  },
+  {
+    anno: "Negli anni",
+    titolo: "Crescita, studio, sperimentazione",
+    text: "Nuovi ingredienti, nuovi abbinamenti, tanta pratica: siamo cresciuti senza cambiare bussola.",
+  },
+  {
+    anno: "Oggi",
+    titolo: "Stessa passione, stessa cura",
+    text: "Le persone al centro, i tempi rispettati, la stessa attenzione del primo giorno.",
+  },
+];
+
 const LaNostraStoria = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
@@ -76,16 +117,16 @@ const LaNostraStoria = () => {
 
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-foreground overflow-hidden">
-        <img src={pattern} alt="" className="absolute bottom-0 left-0 w-64 opacity-[0.04] pointer-events-none" />
-        <div className="relative z-10 text-center px-4">
-          <p className="text-primary tracking-[0.3em] uppercase text-xs mb-3">Dal 2010</p>
+        <img src={pattern} alt="" aria-hidden="true" className="absolute bottom-0 left-0 w-64 opacity-[0.04] pointer-events-none" />
+        <div className="relative z-10 text-center px-5">
+          <p className="text-primary-foreground/90 tracking-[0.3em] uppercase text-xs mb-3">Dal 2010</p>
           <h1 className="text-4xl md:text-6xl font-normal text-background">La Nostra Storia</h1>
           <div className="w-12 h-px bg-primary mx-auto mt-5" />
         </div>
       </section>
 
-      <section className="py-16 md:py-24 px-5 bg-background">
-        <div className="max-w-3xl mx-auto space-y-16 md:space-y-20">
+      <section className="py-14 md:py-24 px-5 bg-background">
+        <div className="max-w-3xl mx-auto space-y-14 md:space-y-20">
           {/* Come tutto è cominciato */}
           <Reveal>
             <SectionTitle icon={CalendarDays}>Come tutto è cominciato</SectionTitle>
@@ -102,7 +143,12 @@ const LaNostraStoria = () => {
 
           <Reveal delay={100}>
             <div className="aspect-[16/9] overflow-hidden rounded-sm">
-              <img src={dough1} alt="Il lievito madre di Carinostri" className="w-full h-full object-cover" loading="lazy" />
+              <img
+                src={dough1}
+                alt="Impasto a lievito madre lavorato a mano nella pizzeria Carinostri a Sala d'Istrana"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
           </Reveal>
 
@@ -124,6 +170,12 @@ const LaNostraStoria = () => {
             </p>
           </Reveal>
 
+          <PullQuote>O lo tratti bene, o non funziona.</PullQuote>
+
+          <Reveal delay={100}>
+            <PhotoPlaceholder label="Il rinfresco quotidiano del lievito madre" />
+          </Reveal>
+
           {/* Valori */}
           <div>
             <Reveal>
@@ -136,8 +188,12 @@ const LaNostraStoria = () => {
             <div className="grid sm:grid-cols-2 gap-5">
               {valori.map((v, i) => (
                 <Reveal key={v.title} delay={i * 90} className={i === valori.length - 1 ? "sm:col-span-2" : ""}>
-                  <div className="h-full border border-border rounded-md p-6 bg-card">
-                    <v.icon size={22} strokeWidth={1.5} className="text-primary mb-3" />
+                  <div className="group h-full border border-border rounded-md p-6 bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-primary/40">
+                    <v.icon
+                      size={22}
+                      strokeWidth={1.5}
+                      className="text-primary mb-3 transition-transform duration-300 group-hover:scale-110 group-hover:text-accent"
+                    />
                     <h3 className="text-xl font-normal text-card-foreground mb-2">{v.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">{v.text}</p>
                   </div>
@@ -164,7 +220,13 @@ const LaNostraStoria = () => {
             </p>
           </Reveal>
 
-          {/* Dal 2010 */}
+          <Reveal delay={100}>
+            <PhotoPlaceholder label="La sala della pizzeria Carinostri durante il servizio" />
+          </Reveal>
+
+          <PullQuote>Le cose fatte con cura e con pazienza hanno un sapore diverso.</PullQuote>
+
+          {/* Dal 2010 + timeline */}
           <Reveal>
             <SectionTitle icon={CalendarDays}>Dal 2010, con la stessa testa</SectionTitle>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -179,7 +241,53 @@ const LaNostraStoria = () => {
               E speriamo si sentano, ogni volta che qualcuno entra da Carinostri.
             </p>
           </Reveal>
+
+          <ol className="relative border-l border-border ml-3 space-y-8">
+            {tappe.map((t, i) => (
+              <Reveal key={t.anno} delay={i * 120}>
+                <li className="relative pl-6 sm:pl-8">
+                  <span className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-primary ring-4 ring-background" />
+                  <p className="text-primary tracking-[0.2em] uppercase text-xs mb-1">{t.anno}</p>
+                  <h3 className="text-lg sm:text-xl font-normal text-foreground mb-1">{t.titolo}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{t.text}</p>
+                </li>
+              </Reveal>
+            ))}
+          </ol>
+
+          <Reveal delay={100}>
+            <PhotoPlaceholder label="L'insegna di Carinostri e l'ingresso della pizzeria" />
+          </Reveal>
         </div>
+      </section>
+
+      {/* CTA finale */}
+      <section className="relative bg-card py-16 md:py-20 px-5 overflow-hidden">
+        <img src={pattern} alt="" aria-hidden="true" className="absolute top-0 right-0 w-56 opacity-[0.06] pointer-events-none" />
+        <Reveal className="relative z-10 max-w-2xl mx-auto text-center">
+          <p className="text-primary tracking-[0.3em] uppercase text-xs mb-3">Vi aspettiamo</p>
+          <h2 className="text-3xl md:text-4xl font-normal text-card-foreground mb-4">
+            Il resto si racconta a tavola
+          </h2>
+          <div className="w-12 h-px bg-primary mx-auto mb-6" />
+          <p className="text-muted-foreground leading-relaxed mb-8">
+            Date un'occhiata al nostro menù oppure passate a trovarci: siamo a Sala d'Istrana, dal martedì alla domenica.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Button asChild size="lg">
+              <Link to="/menu">
+                <UtensilsCrossed size={18} aria-hidden="true" />
+                Guarda il Menù
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <Link to="/chi-siamo">
+                <MapPin size={18} aria-hidden="true" />
+                Vieni a Trovarci
+              </Link>
+            </Button>
+          </div>
+        </Reveal>
       </section>
 
       <Footer />
