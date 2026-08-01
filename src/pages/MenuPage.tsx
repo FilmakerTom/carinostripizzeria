@@ -561,7 +561,7 @@ const MenuPage = () => {
             </div>
             <div id="le-quadrate">
               <MenuCategory
-                title="Le Quadrate"
+                title="Pizze - Le Quadrate"
                 subtitle=""
                 items={leQuadrate}
                 note="Un impasto semplice, croccante e gustoso"
