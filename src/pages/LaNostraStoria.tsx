@@ -222,7 +222,14 @@ const LaNostraStoria = () => {
           </Reveal>
 
           <Reveal delay={100}>
-            <PhotoPlaceholder label="La sala della pizzeria Carinostri durante il servizio" />
+            <div className="aspect-[16/9] overflow-hidden rounded-sm">
+              <img
+                src={salaCarinostri.url}
+                alt="La sala della pizzeria Carinostri durante il servizio"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
           </Reveal>
 
           <PullQuote>Le cose fatte con cura e con pazienza hanno un sapore diverso.</PullQuote>
