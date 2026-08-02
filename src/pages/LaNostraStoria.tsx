@@ -7,6 +7,7 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import dough1 from "@/assets/dough-1.jpg";
 import salaCarinostri from "@/assets/sala-carinostri.jpg.asset.json";
 import rinfrescoLievito from "@/assets/rinfresco-lievito.jpg.asset.json";
+import insegnaCarinostri from "@/assets/insegna-carinostri.jpg.asset.json";
 import pattern from "@/assets/pattern.svg";
 
 const Reveal = ({
@@ -272,7 +273,14 @@ const LaNostraStoria = () => {
           </ol>
 
           <Reveal delay={100}>
-            <PhotoPlaceholder label="L'insegna di Carinostri e l'ingresso della pizzeria" />
+            <div className="aspect-[16/9] overflow-hidden rounded-sm">
+              <img
+                src={insegnaCarinostri.url}
+                alt="L'insegna e l'ingresso della pizzeria Carinostri a Sala d'Istrana"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
           </Reveal>
         </div>
       </section>
