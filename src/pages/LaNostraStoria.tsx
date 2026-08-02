@@ -273,7 +273,14 @@ const LaNostraStoria = () => {
           </ol>
 
           <Reveal delay={100}>
-            <PhotoPlaceholder label="L'insegna di Carinostri e l'ingresso della pizzeria" />
+            <div className="aspect-[16/9] overflow-hidden rounded-sm">
+              <img
+                src={insegnaCarinostri.url}
+                alt="L'insegna e l'ingresso della pizzeria Carinostri a Sala d'Istrana"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
           </Reveal>
         </div>
       </section>
