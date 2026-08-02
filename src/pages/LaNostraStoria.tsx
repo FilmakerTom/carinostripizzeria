@@ -175,7 +175,14 @@ const LaNostraStoria = () => {
           <PullQuote>O lo tratti bene, o non funziona.</PullQuote>
 
           <Reveal delay={100}>
-            <PhotoPlaceholder label="Il rinfresco quotidiano del lievito madre" />
+            <div className="aspect-[16/9] overflow-hidden rounded-sm">
+              <img
+                src={rinfrescoLievito.url}
+                alt="Il rinfresco quotidiano del lievito madre nella pizzeria Carinostri"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
           </Reveal>
 
           {/* Valori */}
