@@ -5,6 +5,7 @@ import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import dough1 from "@/assets/dough-1.jpg";
+import salaCarinostri from "@/assets/sala-carinostri.jpg.asset.json";
 import pattern from "@/assets/pattern.svg";
 
 const Reveal = ({
@@ -221,7 +222,14 @@ const LaNostraStoria = () => {
           </Reveal>
 
           <Reveal delay={100}>
-            <PhotoPlaceholder label="La sala della pizzeria Carinostri durante il servizio" />
+            <div className="aspect-[16/9] overflow-hidden rounded-sm">
+              <img
+                src={salaCarinostri.url}
+                alt="La sala della pizzeria Carinostri durante il servizio"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
           </Reveal>
 
           <PullQuote>Le cose fatte con cura e con pazienza hanno un sapore diverso.</PullQuote>
