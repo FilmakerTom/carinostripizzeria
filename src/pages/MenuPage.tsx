@@ -164,6 +164,16 @@ const categories: CategoryDef[] = [
     ],
   },
   {
+  {
+    id: "cucina",
+    label: "Cucina",
+    subsections: [
+      { id: "cucina-carne", label: "Carne" },
+      { id: "cucina-pesce", label: "Pesce" },
+      { id: "cucina-contorni", label: "Contorni" },
+    ],
+  },
+  {
     id: "bibite",
     label: "Banco",
     subsections: [
