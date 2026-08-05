@@ -7,21 +7,21 @@ export interface MenuItem {
 
 // ── NOVITÀ – LE QUADRATE ──
 export const leQuadrate: MenuItem[] = [
-  { name: "Margherita", description: "Salsa di pomodoro, fiordilatte, origano", price: "€5,00" },
-  { name: "Anna & Noemi", description: "Porchetta, pomodori secchi, salsa di pomodoro, fiordilatte, origano", price: "€7,00" },
-  { name: "Salsiccia & Peperoni", description: "Salsiccia, peperoni pelati, salsa di pomodoro, fiordilatte, origano", price: "€7,00" },
-  { name: "Prosciutto Cotto", description: "Prosciutto cotto, salsa di pomodoro, fiordilatte, origano", price: "€7,00" },
-  { name: "Zola & Cipolla", description: "Gorgonzola, cipolla viola, fiordilatte, origano", price: "€7,00" },
-  { name: "Vegetariana", description: "Verdure miste al forno, parmigiano, origano", price: "€8,00" },
+  { name: "Margherita", description: "Salsa di pomodoro, fiordilatte, origano", price: "€5" },
+  { name: "Anna & Noemi", description: "Porchetta, pomodori secchi, salsa di pomodoro, fiordilatte, origano", price: "€7" },
+  { name: "Salsiccia & Peperoni", description: "Salsiccia, peperoni pelati, salsa di pomodoro, fiordilatte, origano", price: "€7" },
+  { name: "Prosciutto Cotto", description: "Prosciutto cotto, salsa di pomodoro, fiordilatte, origano", price: "€7" },
+  { name: "Zola & Cipolla", description: "Gorgonzola, cipolla viola, fiordilatte, origano", price: "€7" },
+  { name: "Vegetariana", description: "Verdure miste al forno, parmigiano, origano", price: "€8" },
 ];
 
 // ── NOVITÀ – INSALATONE & PIATTI FREDDI ──
 export const insalatone: MenuItem[] = [
-  { name: "Gustosa", description: "Tonno, olive leccino, fiordilatte, insalata, pomodoro fresco, carote", price: "€12,00" },
-  { name: "Saporita", description: "Cubetti di porchetta, cipolla viola, frutto di cappero, insalata, pomodoro fresco, carote", price: "€12,00" },
-  { name: "\"Caesar Salade\"", description: "Versione Carinostri — Pollo a filetti, crostini di pane, Salsa Caesar Carinostri, Grana Padano, insalata, pomodoro fresco, carote", price: "€14,00" },
-  { name: "Roast Beef all'Inglese", description: "Con misticanza e semi di senape", price: "€16,00" },
-  { name: "Tartare di Manzo", description: "Olio e limone — con olive, pomodorini, peperoni sbucciati, basilico e misticanza", price: "€18,00" },
+  { name: "Gustosa", description: "Tonno, olive leccino, fiordilatte, insalata, pomodoro fresco, carote", price: "€12" },
+  { name: "Saporita", description: "Cubetti di porchetta, cipolla viola, frutto di cappero, insalata, pomodoro fresco, carote", price: "€12" },
+  { name: "\"Caesar Salade\"", description: "Versione Carinostri — Pollo a filetti, crostini di pane, Salsa Caesar Carinostri, Grana Padano, insalata, pomodoro fresco, carote", price: "€14" },
+  { name: "Roast Beef all'Inglese", description: "Con misticanza e semi di senape", price: "€16" },
+  { name: "Tartare di Manzo", description: "Olio e limone — con olive, pomodorini, peperoni sbucciati, basilico e misticanza", price: "€18" },
 ];
 
 // ── ANTIPASTI & FRITTI ──
@@ -160,30 +160,30 @@ export const bevande: MenuItem[] = [
 ];
 
 export const birreNovita: MenuItem[] = [
-  { name: "Rothaus", description: "Bionda Chiara Pils 5,1% – Foresta Nera (GER)", price: "€4,00 | €6,00 | €22,00", logo: "/logos/rothaus.png" },
-  { name: "Distelhäuser", description: "Bionda Keller 5,4% – Franconia (GER)", price: "€4,00 | €6,00 | €22,00", logo: "/logos/distelhauser.png" },
-  { name: "Italian Bock", description: "Bock Rossa 6,5% – Roma (ITA) – Progetti Open Hub", price: "€4,50 | €6,50 | €24,00", logo: "/logos/italian-bock.png" },
+  { name: "Rothaus", description: "Bionda Chiara Pils 5,1% – Foresta Nera (GER)", price: "€4 | €6 | €22", logo: "/logos/rothaus.png" },
+  { name: "Distelhäuser", description: "Bionda Keller 5,4% – Franconia (GER)", price: "€4 | €6 | €22", logo: "/logos/distelhauser.png" },
+  { name: "Italian Bock", description: "Bock Rossa 6,5% – Roma (ITA) – Progetti Open Hub", price: "€4 | €6 | €22", logo: "/logos/italian-bock.png" },
 ];
 
 // ── VINI ──
 export const bollicine: MenuItem[] = [
-  { name: "Col Fondo Frizzante sui Lieviti Az. Agr. \"Le Valpere\" (TV)", description: "", price: "€2,50 | €14" },
-  { name: "Frizzante Col Torront \"Le Bertole\" Valdobbiadene (TV)", description: "", price: "€3,00 | €16" },
-  { name: "Valdobbiadene D.O.C.G. Brut \"Le Bertole\" (TV)", description: "", price: "€3,50 | €21" },
-  { name: "Valdobbiadene D.O.C.G. Extra Brut Franco Mill. \"Le Bertole\" (TV)", description: "", price: "€4,00 | €24" },
-  { name: "Oltrepo' Pavese Brut D.O.C.G. Tda metodo classico abbreviato", description: "", price: "€4,50 | €27" },
+  { name: "Col Fondo Frizzante sui Lieviti Az. Agr. \"Le Valpere\" (TV)", description: "", price: "€2,5 | €14" },
+  { name: "Frizzante Col Torront \"Le Bertole\" Valdobbiadene (TV)", description: "", price: "€3 | €16" },
+  { name: "Valdobbiadene D.O.C.G. Brut \"Le Bertole\" (TV)", description: "", price: "€3,5 | €21" },
+  { name: "Valdobbiadene D.O.C.G. Extra Brut Franco Mill. \"Le Bertole\" (TV)", description: "", price: "€4 | €24" },
+  { name: "Oltrepo' Pavese Brut D.O.C.G. Tda metodo classico abbreviato", description: "", price: "€4,5 | €27" },
   { name: "Trento D.O.C. Brut Nature Pedrotti metodo classico (TN)", description: "", price: "€5 | €21" },
 ];
 
 export const viniBianchi: MenuItem[] = [
-  { name: "Sauvignon Collio Doc Ronco Blanchis (GO)", description: "", price: "€3,50 | €21" },
-  { name: "Gewürz-Traminer Trentino Doc \"Endrizzi\" (TN)", description: "", price: "€3,50 | €21" },
+  { name: "Sauvignon Collio Doc Ronco Blanchis (GO)", description: "", price: "€3,5 | €21" },
+  { name: "Gewürz-Traminer Trentino Doc \"Endrizzi\" (TN)", description: "", price: "€3,5 | €21" },
 ];
 
 export const viniRossi: MenuItem[] = [
-  { name: "Cabernet Frantz V.to. IGT Bosco del Camer, Gorgo al M.no (TV)", description: "", price: "€2,50 | €14" },
-  { name: "Falconera Merlot D.O.C. M.llo Loredan Gasparin Venegazzù (TV)", description: "", price: "€3,50 | €21" },
-  { name: "Senza Alibi Montepulciano d'Abruzzo Doc Spoltore (PE)", description: "", price: "€3,50 | €21" },
+  { name: "Cabernet Frantz V.to. IGT Bosco del Camer, Gorgo al M.no (TV)", description: "", price: "€2,5 | €14" },
+  { name: "Falconera Merlot D.O.C. M.llo Loredan Gasparin Venegazzù (TV)", description: "", price: "€3,5 | €21" },
+  { name: "Senza Alibi Montepulciano d'Abruzzo Doc Spoltore (PE)", description: "", price: "€3,5 | €21" },
 ];
 
 // ── DOLCI, GELATO, AMARI E CAFFÈ ──
