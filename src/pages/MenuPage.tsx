@@ -60,6 +60,7 @@ import {
   birreSpeciali, birreNovita, bevande,
   bollicine, viniBianchi, viniRossi,
   leQuadrate, insalatone,
+  cucinaCarne, cucinaPesce, cucinaContorni,
   dolci, gelato, dopoCena,
 } from "@/data/menuData";
 import type { MenuItem } from "@/data/menuData";
