@@ -208,17 +208,17 @@ export const dopoCena: MenuItem[] = [
 
 // ── CUCINA – CARNE ──
 export const cucinaCarne: MenuItem[] = [
-  { name: "Costata di Manzo 600g", description: "Su richiesta servita come la Tagliata", price: "€5,5 all'etto" },
-  { name: "Cotoletta di Petto di Pollo", description: "Con patate fritte", price: "€12" },
+  { name: "Costata di Manzo 600g", description: "su richiesta servita come la Tagliata", price: "€5,5 all'etto" },
+  { name: "Cotoletta di Petto di Pollo", description: "con patate fritte", price: "€12" },
   { name: "Hamburger di Manzo", description: "Fassona Piemontese gr. 200, con patate fritte", price: "€14" },
 ];
 
 // ── CUCINA – PESCE ──
 export const cucinaPesce: MenuItem[] = [
-  { name: "Insalata di Piovra", description: "Patate e misticanza", price: "€14" },
+  { name: "Insalata di Piovra", description: "con patate e misticanza", price: "€14" },
   { name: "Insalata di Mare, Pomodorini e Misticanza", description: "Calamaretti, mazzancolle, cozze, seppioline, piovra, sedano, zucchine e peperoni", price: "€15" },
   { name: "Frittura Mista di Pesce", description: "Mazzancolle, calamari, merluzzo, totani, sarde, con carote e zucchine fritte — solo con farina di riso", price: "€18" },
-  { name: "Filetto di Branzino al Forno", description: "Con pomodorini, olive leccino e timo", price: "€18" },
+  { name: "Filetto di Branzino al Forno", description: "con pomodorini, olive leccino e timo", price: "€18" },
 ];
 
 // ── CUCINA – CONTORNI ──
