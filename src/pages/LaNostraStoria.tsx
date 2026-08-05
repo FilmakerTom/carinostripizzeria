@@ -77,7 +77,7 @@ const valori = [
   {
     icon: HeartHandshake,
     title: "Rispetto",
-    text: "Per il lavoro, per gli ingredienti, e soprattutto per le persone che scelgono di passare del tempo da noi. Il cliente non è un numero — è qualcuno che si fida di noi per qualche ora della sua serata.",
+    text: "Per il lavoro, per gli ingredienti, e soprattutto per le persone che scelgono di passare del tempo da noi. Il cliente non è un numero — è qualcuno che si fida di noi per qualche ora.",
   },
   {
     icon: Scale,
@@ -95,12 +95,12 @@ const tappe = [
   {
     anno: "2010",
     titolo: "L'apertura e l'incontro con il lievito madre",
-    text: "Nasce Carinostri a Sala d'Istrana. Il lievito madre diventa da subito la radice di ogni impasto.",
+    text: "Nasce Carinostri a Sala d'Istrana. Il lievito madre diventala radice di ogni impasto.",
   },
   {
     anno: "Negli anni",
     titolo: "Crescita, studio, sperimentazione",
-    text: "Nuovi ingredienti, nuovi abbinamenti, tanta pratica: siamo cresciuti senza cambiare bussola.",
+    text: "Nuovi ingredienti, nuovi abbinamenti, tanta pratica: siamo cresciuti senza cambiare abbiettivo.",
   },
   {
     anno: "Oggi",
@@ -134,7 +134,7 @@ const LaNostraStoria = () => {
           <Reveal>
             <SectionTitle icon={CalendarDays}>Come tutto è cominciato</SectionTitle>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Carinostri nasce nel 2010, ma la vera svolta è arrivata prima ancora di aprire — il giorno in cui abbiamo
+              Carinostri nasce nel 2010, ma la vera svolta è arrivata il giorno in cui abbiamo
               incontrato il lievito madre.
             </p>
             <p className="text-muted-foreground leading-relaxed">
@@ -159,7 +159,7 @@ const LaNostraStoria = () => {
           <Reveal>
             <SectionTitle icon={Wheat}>Il lievito madre: la nostra radice</SectionTitle>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Se c'è una cosa che racconta Carinostri meglio di qualsiasi altra, è il lievito madre.
+              Se c'è una cosa che racconta Carinostri meglio di qualsiasi altra, è il nostro lievito madre.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Non è solo un ingrediente. È il punto di partenza di ogni pizza che esce dal nostro forno, è la disciplina
@@ -225,8 +225,7 @@ const LaNostraStoria = () => {
               un'atmosfera calda e senza fronzoli. Questo siamo.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Non pretendiamo di essere perfetti — errori capitano, come in ogni lavoro fatto dagli esseri umani. Ma
-              l'impegno a fare bene, quello non è mai mancato, dal primo giorno fino a oggi.
+              {"\n"}
             </p>
           </Reveal>
 
@@ -248,7 +247,7 @@ const LaNostraStoria = () => {
             <SectionTitle icon={CalendarDays}>Dal 2010, con la stessa testa</SectionTitle>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Più di dieci anni fa abbiamo iniziato questo percorso, e la cosa che ci sorprende di più, guardandoci
-              indietro, è che la bussola non è mai cambiata.
+              indietro, è che la direzione non è mai cambiata.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Stessa passione, stessa curiosità, stesso rispetto per il lavoro. Siamo cresciuti, abbiamo imparato,
