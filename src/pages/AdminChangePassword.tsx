@@ -62,7 +62,7 @@ const AdminChangePassword = () => {
     <>
       <SEO
         title="Cambia password · Admin"
-        description="Aggiorna la password dell'account amministratore."
+        description="Area riservata Carinostri: aggiorna in sicurezza la password del tuo account amministratore del sito."
         path="/admin/change-password"
       />
       <Helmet>
