@@ -164,7 +164,6 @@ const categories: CategoryDef[] = [
     ],
   },
   {
-  {
     id: "cucina",
     label: "Cucina",
     subsections: [
