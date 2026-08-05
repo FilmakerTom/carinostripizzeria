@@ -126,7 +126,7 @@ export const carenestreRosse: MenuItem[] = [
 ];
 
 export const carenestreBianche: MenuItem[] = [
-  { name: "Di Magro", description: "Fiordilatte, bietolina al vapore, ricotta fresca dopo cottura, pinoli", price: "€11" },
+  { name: "Mortadella", description: "Fiordilatte, Mortadella IGP Bologna, stracchino, granella di pistacchio, pepe rosa e scorza di limone grattuggiata", price: "€13" },
   { name: "Salsiccia & Friarielli", description: "Fiordilatte, pomodorini confit, salsiccia, friarielli", price: "€12" },
   { name: "Miss Stella", description: "Fiordilatte, zucchine, scalogno, scamorza affumicata, salamino piccante", price: "€12" },
   { name: "Oro Verde", description: "Mozzarella di bufala DOP, zucchine, pomodorini, pesto di pistacchi, basilico", price: "€12" },
