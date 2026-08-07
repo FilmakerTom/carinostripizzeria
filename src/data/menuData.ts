@@ -81,7 +81,7 @@ export const pizzeTonno: MenuItem[] = [
 // ── LE PIZZE DI STAGIONE ──
 export const pizzeStagione: MenuItem[] = [
   { name: "Confit Stracchino e Friarielli", description: "Pomodorini confit, friarielli, stracchino, origano, polvere di peperoni, insalatina", price: "€13" },
-  { name: "Crudo Pesce e Burrata", description: "Prosciutto crudo 24 mesi, pesche spicchi, burrata pugliese, rucola (disponibile variante con i pomodorini e basilico al posto posto delle pesche)", price: "€13" },
+  { name: "Crudo Pesche e Burrata", description: "Prosciutto crudo 24 mesi, pesche spicchi, burrata pugliese, rucola (disponibile variante con i pomodorini e basilico al posto posto delle pesche)", price: "€13" },
   { name: "Baccalà Mantecato", description: "Baccalà mantecato, chips di mais, pomodori secchi, olive leccino e misticanza", price: "€14" },
 ];
 
