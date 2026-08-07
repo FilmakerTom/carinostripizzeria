@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import dough1 from "@/assets/dough-1.jpg";
 import salaCarinostri from "@/assets/sala-carinostri.jpg.asset.json";
-import rinfrescoLievito from "@/assets/rinfresco-lievito.jpg.asset.json";
+import rinfrescoLievito from "@/assets/mattarello-impasto.jpg.asset.json";
 import insegnaCarinostri from "@/assets/insegna-carinostri.jpg.asset.json";
 import pattern from "@/assets/pattern.svg";
 
@@ -179,7 +179,7 @@ const LaNostraStoria = () => {
             <div className="aspect-[16/9] overflow-hidden rounded-sm">
               <img
                 src={rinfrescoLievito.url}
-                alt="Il rinfresco quotidiano del lievito madre nella pizzeria Carinostri"
+                alt="Mattarello che stende l'impasto a lievito madre nella pizzeria Carinostri"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
