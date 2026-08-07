@@ -179,7 +179,7 @@ const LaNostraStoria = () => {
             <div className="aspect-[16/9] overflow-hidden rounded-sm">
               <img
                 src={rinfrescoLievito.url}
-                alt="Il rinfresco quotidiano del lievito madre nella pizzeria Carinostri"
+                alt="Mattarello che stende l'impasto a lievito madre nella pizzeria Carinostri"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
