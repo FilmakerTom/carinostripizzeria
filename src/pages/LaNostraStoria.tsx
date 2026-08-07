@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import dough1 from "@/assets/dough-1.jpg";
 import salaCarinostri from "@/assets/sala-carinostri.jpg.asset.json";
-import rinfrescoLievito from "@/assets/rinfresco-lievito.jpg.asset.json";
+import rinfrescoLievito from "@/assets/mattarello-impasto.jpg.asset.json";
 import insegnaCarinostri from "@/assets/insegna-carinostri.jpg.asset.json";
 import pattern from "@/assets/pattern.svg";
 
