@@ -80,9 +80,9 @@ export const pizzeTonno: MenuItem[] = [
 
 // ── LE PIZZE DI STAGIONE ──
 export const pizzeStagione: MenuItem[] = [
-  { name: "Confit Stracchino e Friarielli", description: "Pomodorini confit, friarielli, stracchino, origano, polvere di peperoni, insalatina", price: "€13" },
-  { name: "Crudo Pesche e Burrata", description: "Prosciutto crudo 24 mesi, pesche spicchi, burrata pugliese, rucola (disponibile variante con i pomodorini e basilico al posto posto delle pesche)", price: "€13" },
-  { name: "Baccalà Mantecato", description: "Baccalà mantecato, chips di mais, pomodori secchi, olive leccino e misticanza", price: "€14" },
+  { name: "Finferli", description: "Finferli trifolati, pancetta arrotolata, Asiago e timo", price: "€13" },
+  { name: "Chiodini", description: "Chiodini trifolati, fiordilatte, sopressa e Morlacco", price: "€13" },
+  { name: "Porcini", description: "Porcini spadellati, fiordilatte, Grana Padano, pomodorini confit e rucola", price: "€14" },
 ];
 
 // ── LE PIZZE D.O.C. ──
