@@ -1,13 +1,14 @@
-Piano di intervento: correzione colore testo voci menu mobile aperto sopra hero
+# Aggiornamento pizze stagionali — A Tutto Funghi
 
-1. File da modificare: `src/components/Navbar.tsx`.
-2. Intervento: nel menu mobile espanso (dopo il bottone hamburger), rendere il colore del testo delle voci "non attive" dipendente dallo stato `solid`:
-   - Se `solid === true` (navbar su sfondo chiaro/scuroled): mantenere `text-foreground/70 hover:text-primary`.
-   - Se `solid === false` (navbar trasparente sopra la hero, tema scuro): usare `text-primary-foreground/80 hover:text-primary-foreground` (testo bianco/crema).
-3. Il link attivo mantiene `text-primary` (terracotta) in entrambi i contesti, perché rimane leggibile.
-4. Non modificare il menu desktop, che già reagisce correttamente a `solid`.
-5. Verifica finale: build/vite per assicurare assenza di errori di compilazione.
+## Modifiche
+- Sostituire le tre pizze stagionali attuali con **Finferli**, **Chiodini** e **Porcini**, riportando ingredienti e prezzi dalla foto.
+- Rinominare il blocco stagionale della pagina Menù in **A Tutto Funghi**, mantenendo l'indicazione **Stagionali**.
+- Lasciare la homepage collegata agli stessi dati, così mostrerà automaticamente le tre nuove pizze.
 
-Note:
-- I token Tailwind (`text-primary-foreground`) sono già definiti nel tema e rappresentano il bianco/crema del brand, mantenendo coerenza con il resto della UI.
-- Non si cambia lo sfondo del menu mobile: si agisce solo sul colore del testo, come richiesto.
+## Contenuti
+- **Finferli** — Finferli trifolati, pancetta arrotolata, Asiago e timo — €13
+- **Chiodini** — Chiodini trifolati, fiordilatte, sopressa e Morlacco — €13
+- **Porcini** — Porcini spadellati, fiordilatte, Grana Padano, pomodorini confit e rucola — €14
+
+## Verifica
+- Controllare pagina Menù e homepage su desktop e mobile.
