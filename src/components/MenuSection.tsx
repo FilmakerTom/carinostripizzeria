@@ -24,27 +24,14 @@ const MenuSection = () => {
           </h2>
           <div className="w-12 h-px bg-primary mx-auto mt-5" />
         </div>
-        <div ref={listRef} className="space-y-0 divide-y divide-border">
+        <div ref={listRef} className="space-y-4">
           {pizzeStagione.map((pizza, i) =>
-          <div
+          <SeasonalPizzaCard
             key={pizza.name}
-            className={`flex justify-between items-start py-6 group transition-all duration-500 ease-out ${
-            listVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`
-            }
-            style={{ transitionDelay: listVisible ? `${i * 80}ms` : "0ms" }}>
-            
-              <div className="flex-1 pr-4">
-                <h3 className="text-xl md:text-2xl text-foreground group-hover:text-primary transition-colors">
-                  {pizza.name}
-                </h3>
-                <p className="text-muted-foreground mt-1 text-sm">
-                  {pizza.description}
-                </p>
-              </div>
-              <span className="text-xl text-primary font-semibold shrink-0">
-                {pizza.price}
-              </span>
-            </div>
+            item={pizza}
+            className={`transition-all duration-500 ease-out ${
+            listVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+            style={{ transitionDelay: listVisible ? `${i * 80}ms` : "0ms" }} />
           )}
         </div>
       </div>
