@@ -475,7 +475,7 @@ const MenuPage = () => {
           <div id="pizze">
             <h2 className="sr-only">Pizze</h2>
             <div id="pizze-stagionali">
-              <MenuCategory title="A Tutto Funghi" subtitle="Stagionali" items={pizzeStagione} />
+              <MenuCategory title="La Zucca" subtitle="Stagionali" items={pizzeStagione} />
             </div>
           </div>
           <div id="pizze-doc">
