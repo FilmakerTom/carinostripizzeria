@@ -80,9 +80,9 @@ export const pizzeTonno: MenuItem[] = [
 
 // ── LE PIZZE DI STAGIONE ──
 export const pizzeStagione: MenuItem[] = [
-  { name: "Finferli", description: "Finferli trifolati, pancetta arrotolata, Asiago e timo", price: "€13" },
-  { name: "Chiodini", description: "Chiodini trifolati, fiordilatte, sopressa e Morlacco", price: "€13" },
-  { name: "Porcini", description: "Porcini spadellati, fiordilatte, Grana Padano, pomodorini confit e rucola", price: "€14" },
+  { name: "Zucca Pomodorini e Zola", description: "Crema di zucca, fiordilatte, gorgonzola, pomodorini e noci", price: "€13" },
+  { name: "Zucca e N'duja", description: "Crema di zucca, bufala campana DOP, nduja Calabra IGP, basilico", price: "€13" },
+  { name: "Zucca Asiago Friarielli e Salsiccia", description: "Crema di zucca, Asiago, friarielli, salsiccia e timo", price: "€14" },
 ];
 
 // ── LE PIZZE D.O.C. ──
