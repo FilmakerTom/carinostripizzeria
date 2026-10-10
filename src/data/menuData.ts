@@ -8,6 +8,7 @@ export interface MenuItem {
   price: string;
   logo?: string;
   image?: string;
+  imagePosition?: string;
 }
 
 // ── NOVITÀ – LE QUADRATE ──
@@ -85,9 +86,9 @@ export const pizzeTonno: MenuItem[] = [
 
 // ── LE PIZZE DI STAGIONE ──
 export const pizzeStagione: MenuItem[] = [
-  { name: "Zucca Pomodorini e Zola", description: "Crema di zucca, fiordilatte, gorgonzola, pomodorini e noci", price: "€13", image: stag08.url },
-  { name: "Zucca e N'duja", description: "Crema di zucca, bufala campana DOP, nduja Calabra IGP, basilico", price: "€13", image: stag05.url },
-  { name: "Zucca Asiago Friarielli e Salsiccia", description: "Crema di zucca, Asiago, friarielli, salsiccia e timo", price: "€14", image: stag11.url },
+  { name: "Zucca Pomodorini e Zola", description: "Crema di zucca, fiordilatte, gorgonzola, pomodorini e noci", price: "€13", image: stag08.url, imagePosition: "center 62%" },
+  { name: "Zucca e N'duja", description: "Crema di zucca, bufala campana DOP, nduja Calabra IGP, basilico", price: "€13", image: stag05.url, imagePosition: "center 58%" },
+  { name: "Zucca Asiago Friarielli e Salsiccia", description: "Crema di zucca, Asiago, friarielli, salsiccia e timo", price: "€14", image: stag11.url, imagePosition: "center 55%" },
 ];
 
 // ── LE PIZZE D.O.C. ──
