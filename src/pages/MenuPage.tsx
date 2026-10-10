@@ -1,3 +1,4 @@
+import SeasonalPizzaCard from "@/components/SeasonalPizzaCard";
 import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 

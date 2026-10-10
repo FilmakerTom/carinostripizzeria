@@ -1,3 +1,4 @@
+import SeasonalPizzaCard from "@/components/SeasonalPizzaCard";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { pizzeStagione } from "@/data/menuData";
 
