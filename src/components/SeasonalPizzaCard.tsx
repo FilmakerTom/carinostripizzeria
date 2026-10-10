@@ -8,7 +8,7 @@ interface Props {
 
 const SeasonalPizzaCard = ({ item, className = "", style }: Props) => (
   <div
-    className={`relative overflow-hidden rounded-sm group min-h-[180px] md:min-h-[220px] flex items-end ${className}`}
+    className={`relative overflow-hidden rounded-2xl bg-foreground shadow-lg ring-1 ring-border/40 group min-h-[200px] md:min-h-[240px] flex items-end ${className}`}
     style={style}
   >
     {item.image && (
@@ -16,16 +16,17 @@ const SeasonalPizzaCard = ({ item, className = "", style }: Props) => (
         src={item.image}
         alt={item.name}
         loading="lazy"
-        className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+        style={{ objectPosition: item.imagePosition ?? "center" }}
+        className="absolute inset-0 w-full h-full object-cover opacity-75 transition-all group-hover:opacity-90 duration-700 group-hover:scale-105"
       />
     )}
-    <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/60 to-foreground/30" />
-    <div className="relative z-10 w-full flex justify-between items-end gap-4 p-6">
+    <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/35 to-transparent" />
+    <div className="relative z-10 w-full flex justify-between items-end gap-4 p-6 md:p-8">
       <div className="flex-1">
-        <h4 className="text-xl md:text-2xl text-background">{item.name}</h4>
-        {item.description && <p className="text-background/85 mt-1 text-sm">{item.description}</p>}
+        <h4 className="text-2xl md:text-3xl font-normal tracking-wide text-background">{item.name}</h4>
+        {item.description && <p className="text-background/80 mt-2 text-sm italic">{item.description}</p>}
       </div>
-      <span className="text-xl text-primary font-semibold shrink-0 bg-background/90 px-3 py-1 rounded-sm">
+      <span className="text-xl text-primary font-semibold shrink-0 bg-background/90 backdrop-blur-sm px-4 py-1.5 rounded-full shadow-md">
         {item.price}
       </span>
     </div>
