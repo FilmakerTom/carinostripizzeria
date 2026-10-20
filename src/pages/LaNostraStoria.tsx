@@ -294,7 +294,7 @@ const LaNostraStoria = () => {
           </h2>
           <div className="w-12 h-px bg-primary mx-auto mb-6" />
           <p className="text-muted-foreground leading-relaxed mb-8">
-            Date un'occhiata al nostro menù oppure passate a trovarci: siamo a Sala d'Istrana, dal martedì alla domenica.
+            Date un'occhiata al nostro menù oppure passate a trovarci: siamo a Sala d'Istrana, dal mercoledì alla domenica.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button asChild size="lg">
