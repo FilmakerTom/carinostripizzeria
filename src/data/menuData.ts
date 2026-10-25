@@ -27,15 +27,9 @@ export const insalatone: MenuItem[] = [
   { name: "Saporita", description: "Cubetti di porchetta, cipolla viola, frutto di cappero, insalata, pomodoro fresco, carote", price: "€12" },
   { name: "\"Caesar Salade\"", description: "Versione Carinostri — Pollo a filetti, crostini di pane, Salsa Caesar Carinostri, Grana Padano, insalata, pomodoro fresco, carote", price: "€14" },
   { name: "Roast Beef all'Inglese", description: "Con misticanza e semi di senape", price: "€16" },
-  { name: "Tartare di Manzo", description: "Olio e limone — con olive, pomodorini, peperoni sbucciati, basilico e misticanza", price: "€18" },
 ];
 
 // ── ANTIPASTI & FRITTI ──
-export const focaccia: MenuItem[] = [
-  { name: "Salsa pomodoro, aglio e origano", description: "", price: "€3,5" },
-  { name: "Porchetta Carinostri/altro affettato", description: "", price: "€4" },
-  { name: "Varietà di Gusti", description: "", price: "€5" },
-];
 
 export const taglieri: MenuItem[] = [
   { name: "Porchetta Carinostri", description: "", price: "€7,5" },
@@ -168,7 +162,7 @@ export const bevande: MenuItem[] = [
 export const birreNovita: MenuItem[] = [
   { name: "Rothaus", description: "Bionda Chiara Pils 5,1% – Foresta Nera (GER)", price: "€4 | €6 | €22", logo: "/logos/rothaus.png" },
   { name: "Distelhäuser", description: "Bionda Keller 5,4% – Franconia (GER)", price: "€4 | €6 | €22", logo: "/logos/distelhauser.png" },
-  { name: "Italian Bock", description: "Bock Rossa 6,5% – Roma (ITA) – Progetti Open Hub", price: "€4 | €6 | €22", logo: "/logos/italian-bock.png" },
+  { name: "Tongerlo Brun", description: "Birra Bruna d'Abbazia, stile Belga. 33 cl, 6,5% — misura unica", price: "€5", logo: "/logos/tongerlo.png" },
 ];
 
 // ── VINI ──
@@ -214,17 +208,16 @@ export const dopoCena: MenuItem[] = [
 
 // ── CUCINA – CARNE ──
 export const cucinaCarne: MenuItem[] = [
-  { name: "Costata di Manzo 600g", description: "su richiesta servita come la Tagliata", price: "€5,5 all'etto" },
+  { name: "Costata di Manzo 600g", description: "su richiesta servita come la Tagliata", price: "€24" },
   { name: "Cotoletta di Petto di Pollo", description: "con patate fritte", price: "€12" },
   { name: "Hamburger di Manzo", description: "Fassona Piemontese gr. 200, con patate fritte", price: "€14" },
 ];
 
 // ── CUCINA – PESCE ──
 export const cucinaPesce: MenuItem[] = [
-  { name: "Insalata di Piovra", description: "con patate e misticanza", price: "€14" },
-  { name: "Insalata di Mare, Pomodorini e Misticanza", description: "Calamaretti, mazzancolle, cozze, seppioline, piovra, sedano, zucchine e peperoni", price: "€15" },
-  { name: "Frittura Mista di Pesce", description: "Mazzancolle, calamari, merluzzo, totani, sarde, con carote e zucchine fritte — solo con farina di riso", price: "€18" },
+  { name: "Frittura Mista di Pesce", description: "Mazzancolle, calamari, merluzzo, totani, sarde, con carote e zucchine fritte — solo con farina di riso", price: "€16" },
   { name: "Filetto di Branzino al Forno", description: "con pomodorini, olive leccino e timo", price: "€18" },
+  { name: "Baccalà alla vicentina", description: "servito con polenta", price: "€15" },
 ];
 
 // ── CUCINA – CONTORNI ──
