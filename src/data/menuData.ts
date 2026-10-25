@@ -162,7 +162,6 @@ export const bevande: MenuItem[] = [
 export const birreNovita: MenuItem[] = [
   { name: "Rothaus", description: "Bionda Chiara Pils 5,1% – Foresta Nera (GER)", price: "€4 | €6 | €22", logo: "/logos/rothaus.png" },
   { name: "Distelhäuser", description: "Bionda Keller 5,4% – Franconia (GER)", price: "€4 | €6 | €22", logo: "/logos/distelhauser.png" },
-  { name: "Tongerlo Brun", description: "Birra Bruna d'Abbazia, stile Belga. 33 cl, 6,5% — misura unica", price: "€5", logo: "/logos/tongerlo.png" },
 ];
 
 // ── VINI ──

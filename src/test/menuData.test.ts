@@ -7,6 +7,7 @@ import {
   cucinaCarne,
   cucinaPesce,
   birreNovita,
+  birreSpeciali,
 } from "@/data/menuData";
 
 const names = (items: { name: string }[]) => items.map((i) => i.name);
@@ -36,11 +37,11 @@ describe("menu prices and items (Carinostri)", () => {
     expect(baccala?.description).toBe("servito con polenta");
   });
 
-  it("serves Tongerlo on tap at a single €5 price and drops Italian Bock", () => {
+  it("keeps Tongerlo only in Birre Speciali and drops Italian Bock from the tap list", () => {
     expect(names(birreNovita)).not.toContain("Italian Bock");
-    const tongerlo = birreNovita.find((i) => i.name === "Tongerlo Brun");
+    expect(names(birreNovita)).not.toContain("Tongerlo Brun");
+    const tongerlo = birreSpeciali.find((i) => i.name === "Tongerlo Brun");
     expect(tongerlo?.price).toBe("€5");
-    expect(tongerlo?.price.includes("|")).toBe(false);
     expect(tongerlo?.description).toContain("Birra Bruna d'Abbazia");
   });
 });
