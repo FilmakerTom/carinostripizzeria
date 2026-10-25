@@ -53,7 +53,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import pattern from "@/assets/pattern.svg";
 import {
-  focaccia, taglieri, fritti, aperitivi,
+  taglieri, fritti, aperitivi,
   pizzePorchetta, pizzeTonno, pizzeStagione, pizzeDoc,
   pizzeTagliateClassiche,
   carenestreRosse, carenestreBianche,
@@ -139,7 +139,6 @@ const categories: CategoryDef[] = [
     label: "Antipasti",
     subsections: [
       { id: "aperitivi", label: "Aperitivi" },
-      { id: "tradizionale", label: "Tradizionale" },
       { id: "taglieri", label: "Taglieri" },
       { id: "fritti", label: "Fritti" },
     ],
@@ -429,7 +428,6 @@ const MenuPage = () => {
                 <div className="px-6 pb-6 pt-2">
                   {[
                     { id: "aperitivi", subtitle: "PER INIZIARE", title: "Aperitivi", items: aperitivi, note: undefined as string | undefined },
-                    { id: "tradizionale", subtitle: "ANTIPASTI & FRITTI", title: "Focaccia Tradizionale", items: focaccia, note: undefined },
                     { id: "taglieri", subtitle: "ANTIPASTI & FRITTI", title: "Taglieri di Affettati e Formaggi", items: taglieri, note: "Servito con pane pizza caldo" },
                     { id: "fritti", subtitle: "ANTIPASTI & FRITTI", title: "Fritti", items: fritti, note: undefined },
                   ].map((sec, idx) => (
