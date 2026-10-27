@@ -171,7 +171,7 @@ export const bollicine: MenuItem[] = [
   { name: "Valdobbiadene D.O.C.G. Brut \"Le Bertole\" (TV)", description: "", price: "€3,5 | €21" },
   { name: "Valdobbiadene D.O.C.G. Extra Brut Franco Mill. \"Le Bertole\" (TV)", description: "", price: "€4 | €24" },
   { name: "Oltrepo' Pavese Brut D.O.C.G. Tda metodo classico abbreviato", description: "", price: "€4,5 | €27" },
-  { name: "Trento D.O.C. Brut Nature Pedrotti metodo classico (TN)", description: "", price: "€5 | €21" },
+  { name: "Trento D.O.C. Brut Nature Pedrotti metodo classico (TN)", description: "", price: "€5 | €32" },
 ];
 
 export const viniBianchi: MenuItem[] = [
