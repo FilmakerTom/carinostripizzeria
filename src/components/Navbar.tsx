@@ -25,12 +25,14 @@ const Navbar = () => {
   }, []);
 
   // On home page: transparent until scrolled. On other pages: always solid.
+  // When the mobile menu is open, force solid style so the close icon stays visible.
   const solid = !isHome || scrolled;
+  const solidUi = solid || menuOpen;
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        solid
+        solidUi
           ? "bg-background/95 backdrop-blur-md shadow-sm"
           : "bg-transparent"
       }`}
