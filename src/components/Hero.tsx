@@ -88,9 +88,9 @@ const Hero = () => {
             className="border-foreground/30 text-foreground hover:bg-foreground/10 text-sm px-8 py-6 tracking-widest uppercase"
             asChild
           >
-            <a href="tel:0422547305" aria-label="Chiamaci allo 0422 547305">
+            <a href="tel:+393406264069" aria-label="Chiamaci allo 340 6264069">
               <span className="md:hidden">Chiamaci</span>
-              <span className="hidden md:inline">Chiamaci · 0422 547305</span>
+              <span className="hidden md:inline">Chiamaci · 340 6264069</span>
             </a>
           </Button>
         </div>
