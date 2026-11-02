@@ -85,7 +85,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div id="mobile-navigation" className="md:hidden bg-background/98 backdrop-blur-md border-t border-border">
+        <div id="mobile-navigation" className="md:hidden bg-background/[0.98] backdrop-blur-md border-t border-border">
           <div className="flex flex-col py-4 px-6 gap-4">
             {navLinks.map((link) => (
               <Link
