@@ -1,10 +1,23 @@
 import { Link } from "react-router-dom";
 import logoNegative from "@/assets/logo-negative.png";
+import heroPizza from "@/assets/hero-pizza.jpg";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
   const [loaded, setLoaded] = useState(false);
+  const [showVideo, setShowVideo] = useState(() => window.matchMedia("(min-width: 768px)").matches);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia("(min-width: 768px)");
+    const onChange = () => {
+      setShowVideo(media.matches);
+      setVideoLoaded(false);
+    };
+    media.addEventListener("change", onChange);
+    return () => media.removeEventListener("change", onChange);
+  }, []);
 
   useEffect(() => {
     const t = setTimeout(() => setLoaded(true), 100);
@@ -12,20 +25,22 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
       <div
         className={`absolute inset-0 transition-transform duration-[1.5s] ease-out overflow-hidden ${
           loaded ? "scale-100" : "scale-110"
         }`}
       >
-        <div className="video-background-wrapper">
+        <img src={heroPizza} alt="" aria-hidden="true" fetchPriority="high" className="absolute inset-0 h-full w-full object-cover" />
+        {showVideo && <div className={`video-background-wrapper transition-opacity duration-500 ${videoLoaded ? "opacity-100" : "opacity-0"}`}>
           <iframe
             src="https://player.vimeo.com/video/1202835789?background=1&title=0&byline=0&portrait=0"
             style={{ width: "100%", height: "100%", border: "none", pointerEvents: "none" }}
             allow="autoplay; fullscreen"
             title="Carinostri Pizzeria background"
+            onLoad={() => setVideoLoaded(true)}
           />
-        </div>
+        </div>}
       </div>
       <div className="absolute inset-0 bg-foreground/70" />
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">

@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/pittogramma-1.png";
 import logoNegative from "@/assets/logo-negative.png";
+import { Button } from "@/components/ui/button";
 
 const navLinks: { label: string; to: string; soon?: boolean }[] = [
   { label: "Home", to: "/" },
@@ -69,18 +70,22 @@ const Navbar = () => {
         </div>
 
         {/* Mobile hamburger */}
-        <button
+        <Button
+          variant="ghost"
+          size="icon"
           onClick={() => setMenuOpen(!menuOpen)}
-          className={`md:hidden p-2 ${solid ? "text-foreground" : "text-primary-foreground"}`}
+          className={`md:hidden p-2 hover:bg-transparent hover:text-current [&_svg]:size-6 ${solid ? "text-foreground" : "text-primary-foreground"}`}
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        </Button>
       </div>
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-background/98 backdrop-blur-md border-t border-border">
+        <div id="mobile-navigation" className="md:hidden bg-background/98 backdrop-blur-md border-t border-border">
           <div className="flex flex-col py-4 px-6 gap-4">
             {navLinks.map((link) => (
               <Link
@@ -90,9 +95,7 @@ const Navbar = () => {
                 className={`text-sm tracking-[0.15em] uppercase py-2 transition-colors flex items-center gap-2 ${
                   location.pathname === link.to
                     ? "text-primary"
-                    : solid
-                    ? "text-foreground/70 hover:text-primary"
-                    : "text-primary-foreground/80 hover:text-primary-foreground"
+                    : "text-foreground/70 hover:text-primary"
                 } ${link.soon ? "opacity-70" : ""}`}
                 style={{ fontFamily: "var(--font-body)" }}
               >
