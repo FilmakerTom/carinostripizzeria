@@ -40,7 +40,7 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         <Link to="/">
           <img
-            src={solid ? logo : logoNegative}
+            src={solidUi ? logo : logoNegative}
             alt="Logo Carinostri Pizzeria"
             className="h-8 md:h-10 w-auto transition-all"
           />
@@ -76,7 +76,7 @@ const Navbar = () => {
           variant="ghost"
           size="icon"
           onClick={() => setMenuOpen(!menuOpen)}
-          className={`md:hidden p-2 hover:bg-transparent hover:text-current [&_svg]:size-6 ${solid ? "text-foreground" : "text-primary-foreground"}`}
+          className={`md:hidden p-2 hover:bg-transparent hover:text-current [&_svg]:size-6 ${solidUi ? "text-foreground" : "text-primary-foreground"}`}
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
           aria-controls="mobile-navigation"
