@@ -207,16 +207,16 @@ export const dopoCena: MenuItem[] = [
 
 // ── CUCINA – CARNE ──
 export const cucinaCarne: MenuItem[] = [
-  { name: "Costata di Manzo 600g", description: "su richiesta servita come la Tagliata", price: "€24" },
+  { name: "Tagliata di Manzo agli Aromi", description: "", price: "€22" },
   { name: "Cotoletta di Petto di Pollo", description: "con patate fritte", price: "€12" },
-  { name: "Hamburger di Manzo", description: "Fassona Piemontese gr. 200, con patate fritte", price: "€14" },
+  { name: "Hamburger di Manzo", description: "gr. 200, con patate fritte", price: "€14" },
 ];
 
 // ── CUCINA – PESCE ──
 export const cucinaPesce: MenuItem[] = [
-  { name: "Frittura Mista di Pesce", description: "Mazzancolle, calamari, merluzzo, totani, sarde, con carote e zucchine fritte — solo con farina di riso", price: "€16" },
+  { name: "Seppie in Umido", description: "servite con polenta", price: "€15" },
+  { name: "Frittura Mista di Pesce", description: "Mazzancolle, calamari, merluzzo, totani, sarde, servita con polenta — solo con farina di riso", price: "€16" },
   { name: "Filetto di Branzino al Forno", description: "con pomodorini, olive leccino e timo", price: "€18" },
-  { name: "Baccalà alla vicentina", description: "servito con polenta", price: "€15" },
 ];
 
 // ── CUCINA – CONTORNI ──

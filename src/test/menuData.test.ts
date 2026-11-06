@@ -24,17 +24,22 @@ describe("menu prices and items (Carinostri)", () => {
     expect(names(insalatone)).not.toContain("Tartare di Manzo");
   });
 
-  it("prices the costata at €24", () => {
-    expect(cucinaCarne.find((i) => i.name === "Costata di Manzo 600g")?.price).toBe("€24");
+  it("prices the tagliata at €22 and drops the costata", () => {
+    expect(names(cucinaCarne)).not.toContain("Costata di Manzo 600g");
+    const tagliata = cucinaCarne.find((i) => i.name === "Tagliata di Manzo agli Aromi");
+    expect(tagliata?.price).toBe("€22");
+    expect(tagliata?.description).toBe("");
+    expect(cucinaCarne.find((i) => i.name === "Hamburger di Manzo")?.description).toBe("gr. 200, con patate fritte");
   });
 
-  it("keeps only frittura, branzino and baccalà in fish", () => {
-    expect(names(cucinaPesce)).not.toContain("Insalata di Piovra");
-    expect(names(cucinaPesce)).not.toContain("Insalata di Mare, Pomodorini e Misticanza");
+  it("serves seppie, frittura and branzino in fish", () => {
+    expect(names(cucinaPesce)).toEqual(["Seppie in Umido", "Frittura Mista di Pesce", "Filetto di Branzino al Forno"]);
     expect(cucinaPesce.find((i) => i.name === "Frittura Mista di Pesce")?.price).toBe("€16");
-    const baccala = cucinaPesce.find((i) => i.name === "Baccalà alla vicentina");
-    expect(baccala?.price).toBe("€15");
-    expect(baccala?.description).toBe("servito con polenta");
+    expect(cucinaPesce.find((i) => i.name === "Frittura Mista di Pesce")?.description).toContain("servita con polenta");
+    const seppie = cucinaPesce.find((i) => i.name === "Seppie in Umido");
+    expect(seppie?.price).toBe("€15");
+    expect(seppie?.description).toBe("servite con polenta");
+    expect(names(cucinaPesce)).not.toContain("Baccalà alla vicentina");
   });
 
   it("keeps Tongerlo only in Birre Speciali and drops Italian Bock from the tap list", () => {
