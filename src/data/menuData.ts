@@ -1,5 +1,5 @@
-import stagRad01 from "@/assets/stagionale-radicchio-01.jpg.asset.json";
-import stagRad02 from "@/assets/stagionale-radicchio-02.jpg.asset.json";
+import stagRad01 from "@/assets/stagionale-radicchio-zola-noci.jpg.asset.json";
+import stagRad02 from "@/assets/stagionale-radicchio-sopressa.jpg.asset.json";
 import stagRad03 from "@/assets/stagionale-radicchio-03.jpg.asset.json";
 
 export interface MenuItem {
