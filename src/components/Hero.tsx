@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import logoNegative from "@/assets/logo-negative.png";
 import heroPizza from "@/assets/hero-pizza.jpg";
+import heroMobileVino from "@/assets/hero-mobile-vino.jpg";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
@@ -31,7 +32,13 @@ const Hero = () => {
           loaded ? "scale-100" : "scale-110"
         }`}
       >
-        <img src={heroPizza} alt="" aria-hidden="true" fetchPriority="high" className="absolute inset-0 h-full w-full object-cover" />
+        <img
+          src={showVideo ? heroPizza : heroMobileVino}
+          alt=""
+          aria-hidden="true"
+          fetchPriority="high"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
         {showVideo && <div className={`video-background-wrapper transition-opacity duration-500 ${videoLoaded ? "opacity-100" : "opacity-0"}`}>
           <iframe
             src="https://player.vimeo.com/video/1202835789?background=1&title=0&byline=0&portrait=0"
