@@ -1,6 +1,6 @@
-import stag08 from "@/assets/stagionale-08.jpg.asset.json";
-import stag05 from "@/assets/stagionale-05.jpg.asset.json";
-import stag11 from "@/assets/stagionale-11.jpg.asset.json";
+import stagRad01 from "@/assets/stagionale-radicchio-01.jpg.asset.json";
+import stagRad02 from "@/assets/stagionale-radicchio-02.jpg.asset.json";
+import stagRad03 from "@/assets/stagionale-radicchio-03.jpg.asset.json";
 
 export interface MenuItem {
   name: string;
@@ -80,9 +80,9 @@ export const pizzeTonno: MenuItem[] = [
 
 // ── LE PIZZE DI STAGIONE ──
 export const pizzeStagione: MenuItem[] = [
-  { name: "Zucca Pomodorini e Zola", description: "Crema di zucca, fiordilatte, gorgonzola, pomodorini e noci", price: "€13", image: stag08.url, imagePosition: "center 62%" },
-  { name: "Zucca e N'duja", description: "Crema di zucca, bufala campana DOP, nduja Calabra IGP, basilico", price: "€13", image: stag05.url, imagePosition: "center 58%" },
-  { name: "Zucca Asiago Friarielli e Salsiccia", description: "Crema di zucca, Asiago, friarielli, salsiccia e timo", price: "€14", image: stag11.url, imagePosition: "center 55%" },
+  { name: "Radicchio Zola e Noci", description: "Radicchio di Treviso, salsa di pomodoro, fiordilatte, gorgonzola e noci", price: "€13", image: stagRad01.url, imagePosition: "center 60%" },
+  { name: "Radicchio Sopressa e Morlacco", description: "Radicchio di Treviso, fiordilatte, sopressa veneta e morlacco", price: "€13", image: stagRad02.url, imagePosition: "center 55%" },
+  { name: "Radicchio Alici e Pomodorini", description: "Salsa di radicchio e alici, radicchio di Treviso, pomodorini confit e timo", price: "€14", image: stagRad03.url, imagePosition: "center 60%" },
 ];
 
 // ── LE PIZZE D.O.C. ──

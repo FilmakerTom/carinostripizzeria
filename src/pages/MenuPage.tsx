@@ -476,7 +476,7 @@ const MenuPage = () => {
             <div id="pizze-stagionali">
               <div className="mb-16">
                 <p className="text-primary tracking-[0.3em] uppercase text-xs mb-2">Stagionali</p>
-                <h3 className="text-3xl md:text-4xl font-normal text-foreground mb-2">La Zucca</h3>
+                <h3 className="text-3xl md:text-4xl font-normal text-foreground mb-2">Il Radicchio</h3>
                 <div className="w-10 h-px bg-primary mb-8" />
                 <div className="space-y-4">
                   {pizzeStagione.map((item) => (

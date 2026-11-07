@@ -8,6 +8,7 @@ import {
   cucinaPesce,
   birreNovita,
   birreSpeciali,
+  pizzeStagione,
 } from "@/data/menuData";
 
 const names = (items: { name: string }[]) => items.map((i) => i.name);
@@ -40,6 +41,16 @@ describe("menu prices and items (Carinostri)", () => {
     expect(seppie?.price).toBe("€15");
     expect(seppie?.description).toBe("servite con polenta");
     expect(names(cucinaPesce)).not.toContain("Baccalà alla vicentina");
+  });
+
+  it("lists the three radicchio seasonal pizzas with their photos", () => {
+    expect(names(pizzeStagione)).toEqual([
+      "Radicchio Zola e Noci",
+      "Radicchio Sopressa e Morlacco",
+      "Radicchio Alici e Pomodorini",
+    ]);
+    expect(pizzeStagione.map((i) => i.price)).toEqual(["€13", "€13", "€14"]);
+    pizzeStagione.forEach((i) => expect(i.image).toBeTruthy());
   });
 
   it("keeps Tongerlo only in Birre Speciali and drops Italian Bock from the tap list", () => {
