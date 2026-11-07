@@ -82,7 +82,7 @@ export const pizzeTonno: MenuItem[] = [
 export const pizzeStagione: MenuItem[] = [
   { name: "Radicchio Zola e Noci", description: "Radicchio di Treviso, salsa di pomodoro, fiordilatte, gorgonzola e noci", price: "€13", image: stagRad01.url, imagePosition: "center 60%" },
   { name: "Radicchio Sopressa e Morlacco", description: "Radicchio di Treviso, fiordilatte, sopressa veneta e morlacco", price: "€13", image: stagRad02.url, imagePosition: "center 55%" },
-  { name: "Radicchio Alici e Pomodorini", description: "Salsa di radicchio e alici, radicchio di Treviso, pomodorini confit e timo", price: "€14", image: stagRad03.url, imagePosition: "center 60%" },
+  { name: "Radicchio Alici e Pomodorini", description: "Salsa di radicchio e alici, radicchio di Treviso, pomodorini confit e timo", price: "€13", image: stagRad03.url, imagePosition: "center 60%" },
 ];
 
 // ── LE PIZZE D.O.C. ──
