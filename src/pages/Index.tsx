@@ -1,4 +1,7 @@
 import Hero from "@/components/Hero";
+import BirthdayEvent from "@/components/BirthdayEvent";
+import { useBirthdayEvent } from "@/contexts/BirthdayEventContext";
+import { birthdayEventJsonLd } from "@/config/birthday-event";
 import MenuSection from "@/components/MenuSection";
 import Gallery from "@/components/Gallery";
 import About from "@/components/About";
@@ -40,15 +43,17 @@ const restaurantJsonLd = {
 };
 
 const Index = () => {
+  const { eventVisible } = useBirthdayEvent();
   return (
     <div className="min-h-screen">
       <SEO
         title="Carinostri · Pizzeria con Pasta Madre a Istrana (TV)"
         description="Pizzeria artigianale a Sala d'Istrana (TV) con pasta madre viva, lievitazione lunga, taglieri, birre alla spina e vini selezionati."
         path="/"
-        jsonLd={restaurantJsonLd}
+        jsonLd={eventVisible ? { "@context": "https://schema.org", "@graph": [restaurantJsonLd, birthdayEventJsonLd] } : restaurantJsonLd}
       />
       <Hero />
+      <BirthdayEvent />
       <MenuSection />
       <Gallery />
       <About />

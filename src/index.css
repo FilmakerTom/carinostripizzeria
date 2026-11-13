@@ -99,6 +99,27 @@
 }
 
 @layer components {
+  .event-promotion-active .site-navbar {
+    top: 2.5rem;
+  }
+
+  .birthday-event {
+    scroll-margin-top: 5rem;
+  }
+
+  .event-promotion-active .birthday-event {
+    scroll-margin-top: 7.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .birthday-event {
+      scroll-margin-top: 6rem;
+    }
+    .event-promotion-active .birthday-event {
+      scroll-margin-top: 8.5rem;
+    }
+  }
+
   .video-background-wrapper {
     position: absolute;
     top: 50%;

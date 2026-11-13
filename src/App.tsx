@@ -5,6 +5,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { CookieConsentProvider } from "@/contexts/CookieConsentContext";
 import Navbar from "@/components/Navbar";
+import EventTopBar from "@/components/EventTopBar";
+import { BirthdayEventProvider } from "@/contexts/BirthdayEventContext";
 import ScrollToTop from "@/components/ScrollToTop";
 import BackToTop from "@/components/BackToTop";
 import CookieBanner from "@/components/CookieBanner";
@@ -30,7 +32,9 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <CookieConsentProvider>
+          <BirthdayEventProvider>
           <ScrollToTop />
+          <EventTopBar />
           <Navbar />
           <BackToTop />
           <CookieBanner />
@@ -48,6 +52,7 @@ const App = () => (
             <Route path="/admin/change-password" element={<AdminChangePassword />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          </BirthdayEventProvider>
         </CookieConsentProvider>
       </BrowserRouter>
     </TooltipProvider>
