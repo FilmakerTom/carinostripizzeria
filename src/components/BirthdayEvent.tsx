@@ -9,7 +9,7 @@ const BirthdayEvent = () => {
   if (!eventVisible) return null;
 
   return (
-    <section id="compleanno" className="birthday-event py-20 md:py-28 px-4 bg-background" aria-labelledby="birthday-title">
+    <section id="compleanno" className="birthday-event pt-28 pb-16 md:pt-40 md:pb-20 px-4 bg-background" aria-labelledby="birthday-title">
       <div ref={ref} className={`max-w-4xl mx-auto bg-card text-card-foreground rounded-lg shadow-sm overflow-hidden transition-all duration-700 ease-out motion-reduce:transition-none motion-reduce:transform-none motion-reduce:opacity-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
         <header className="relative isolate px-6 pt-10 md:px-12 md:pt-12 overflow-hidden">
           <span aria-hidden="true" className="absolute inset-x-0 top-4 text-center font-display text-[120px] md:text-[200px] leading-none text-primary/15 pointer-events-none select-none">2026</span>
