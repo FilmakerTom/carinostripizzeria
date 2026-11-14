@@ -3,12 +3,22 @@ import logoNegative from "@/assets/logo-negative.png";
 import heroPizza from "@/assets/hero-pizza.jpg";
 import heroMobileVino from "@/assets/hero-mobile-vino.jpg";
 import { Button } from "@/components/ui/button";
+import { useBirthdayEvent } from "@/contexts/BirthdayEventContext";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
   const [loaded, setLoaded] = useState(false);
   const [showVideo, setShowVideo] = useState(() => window.matchMedia("(min-width: 768px)").matches);
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const { eventVisible } = useBirthdayEvent();
+
+  const scrollToEvent = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    document.getElementById("compleanno")?.scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
+      block: "start",
+    });
+  };
 
   useEffect(() => {
     const media = window.matchMedia("(min-width: 768px)");
@@ -101,6 +111,18 @@ const Hero = () => {
             </a>
           </Button>
         </div>
+        {eventVisible && (
+          <a
+            href="#compleanno"
+            onClick={scrollToEvent}
+            className={`inline-block mt-10 text-primary-foreground/90 hover:text-primary-foreground text-xs md:text-sm tracking-[0.15em] uppercase border-b border-primary-foreground/40 hover:border-primary-foreground pb-1 transition-all duration-700 ease-out delay-700 ${
+              loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
+            style={{ fontFamily: 'var(--font-body)' }}
+          >
+            27 novembre · 16° Compleanno Carinostri · Scopri la serata →
+          </a>
+        )}
       </div>
     </section>
   );

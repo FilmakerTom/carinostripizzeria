@@ -52,8 +52,8 @@ const Index = () => {
         path="/"
         jsonLd={eventVisible ? { "@context": "https://schema.org", "@graph": [restaurantJsonLd, birthdayEventJsonLd] } : restaurantJsonLd}
       />
-      <BirthdayEvent />
       <Hero />
+      <BirthdayEvent />
       <MenuSection />
       <Gallery />
       <About />
