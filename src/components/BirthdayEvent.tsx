@@ -56,7 +56,11 @@ const BirthdayEvent = () => {
             <div className="h-px bg-primary/60" />
           </div>
           <div className="grid md:grid-cols-2 gap-4 md:gap-12 py-4 md:py-10 items-center">
-            <p className="font-script text-primary text-2xl md:text-5xl leading-snug md:leading-relaxed" style={step(0.55)}>Sedici anni di forno acceso.&nbsp;{`\n`}Festeggiamo con voi.</p>
+            <div className="text-center" style={step(0.55)}>
+              <span aria-hidden="true" className="mx-auto block h-px w-16 bg-primary/50" />
+              <p className="font-display text-primary text-base md:text-xl uppercase tracking-[0.12em] leading-relaxed py-4 md:py-6"><span className="md:whitespace-nowrap">Sedici anni di forno acceso.</span><br />Festeggiamo con voi.</p>
+              <span aria-hidden="true" className="mx-auto block h-px w-16 bg-primary/50" />
+            </div>
             <ol className="space-y-2 md:space-y-7 border-l border-primary/40 pl-6" style={step(0.65)}>
               <li className="relative"><span aria-hidden="true" className="absolute -left-[29px] top-3 h-2 w-2 rounded-full bg-primary" /><p className="font-display text-xl md:text-3xl md:mb-1">Dalle 18.00</p><p className="text-sm leading-relaxed text-background/70">aperitivo aperto a tutti per brindare assieme</p></li>
               <li className="relative"><span aria-hidden="true" className="absolute -left-[29px] top-3 h-2 w-2 rounded-full bg-primary" /><p className="font-display text-xl md:text-3xl md:mb-1">Dalle 20.00</p><p className="text-sm leading-relaxed text-background/70">cena con spiedo cotto a legna</p></li>
