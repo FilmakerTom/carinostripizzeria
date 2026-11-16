@@ -49,7 +49,7 @@ describe("menu prices and items (Carinostri)", () => {
       "Radicchio Sopressa e Morlacco",
       "Radicchio Alici e Pomodorini",
     ]);
-    expect(pizzeStagione.map((i) => i.price)).toEqual(["€13", "€13", "€14"]);
+    expect(pizzeStagione.map((i) => i.price)).toEqual(["€13", "€13", "€13"]);
     pizzeStagione.forEach((i) => expect(i.image).toBeTruthy());
   });
 

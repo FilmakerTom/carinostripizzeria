@@ -80,7 +80,7 @@ const Hero = () => {
           Pizza Artigianale · La bontà della Pasta Madre Viva
         </h1>
         <div
-          className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 ease-out delay-500 ${
+          className={`flex flex-col sm:flex-row sm:flex-wrap gap-4 justify-center transition-all duration-700 ease-out delay-500 ${
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
@@ -110,19 +110,17 @@ const Hero = () => {
               <span className="hidden md:inline">Chiamaci · 340 6264069</span>
             </a>
           </Button>
+          {eventVisible && (
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-foreground/30 text-foreground hover:bg-foreground/10 text-sm px-8 py-6 tracking-widest uppercase"
+              asChild
+            >
+              <a href="#compleanno" onClick={scrollToEvent}>Compleanno Carinostri – Scopri di più</a>
+            </Button>
+          )}
         </div>
-        {eventVisible && (
-          <a
-            href="#compleanno"
-            onClick={scrollToEvent}
-            className={`inline-block mt-10 text-primary-foreground/90 hover:text-primary-foreground text-xs md:text-sm tracking-[0.15em] uppercase border-b border-primary-foreground/40 hover:border-primary-foreground pb-1 transition-all duration-700 ease-out delay-700 ${
-              loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
-            style={{ fontFamily: 'var(--font-body)' }}
-          >
-            27 novembre · 16° Compleanno Carinostri · Scopri la serata →
-          </a>
-        )}
       </div>
     </section>
   );
